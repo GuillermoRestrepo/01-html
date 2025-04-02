@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+</head>
+<body>
+    <header>
+        <a href="/">Ir A La Raíz Del Proyecto</a>
+    </header>
+    <main>
+        <h1>ENLACES</h1>
+        <p>Los enlaces, popularmente conocidos por su nombre en inglés (Links)</p>
+
+        <h2>Tipos De Rutas</h2>
+        <p>Existen dos tipos de rutas.</p>
+
+        <h3 id="rutas-relativas">1. Rutas Relativas</h3>
+        <p>Son todas las rutas que se utilizan para desplazarce entre los archivos del proyecto.</p>
+
+        <h4><code>href="/"</code></h4>
+        <p>Es una ruta relativa a la raíz del proyecto, la cual permite acceder a los archivos q se encuentren en el directorio de mayor jerearquia (el directorio q contiene todo el proyecto) en caso de solo estar escrito el "/", se dirigirá al archivo index.html, es por eso q es aconsejable q el arcihvo principal de cada proyecto sea index.html.</p>
+
+        <h4><code>href="archivo"</code></h4>
+        <p>Para moverse a archivos del mismo directorio. Ejemplo:</p>
+        <a><a href="02-contact-link-I.html">Ir A Enlace De Prueba I</a></a>
+        
+        <h4><code>href="capeta/archivo"</code></h4>
+        <p>Para moverse a archivos que se encuentre en directorios dentro del directorio en el q nos encontramos.</p>
+        <a href="03-test-folder/03-contact-link-II.html">Ir A Enlace De Prueba II</a>
+
+        <h4><code>href="../archivo"</code></h4>
+        <p>Para moverse a archivos de directorios superiores "retroceder de directorio".</p>
+        <a href="../index.html">Ir A Index</a>
+
+        <h3>2. Rutas Absolutas</h3>
+        <p>Utilizan un protocolo (http:// o https://), y es un enlance externo. Ejemplo:</p>
+        <a href="https://www.google.com/" target="_blank">Ir A Google</a>
+        
+        <h2>Atributos De Los Enlaces</h2>
+        <p><code>target=""</code></p>
+        <p>indica donde mostrar el contenido del link presionado.</p>
+        <p><code>target="_self"</code>: sirve para abrir el recurso en la misma pestaña y es el valor q viene por defecto.</p>
+        <p><code>target="_blank"</code>: sirve para abrir el recurso en una pestaña diferente</p>
+        <p>Nota: investigar este atributo y el como afecta a la etiqueta frame.</p>
+
+        <p><code>download</code></p>
+        <p>es un atributo booleano, si existe será un link de descarga y si no existe será un link normal. Ejemplo:</p>
+        <a href="assets/images/gato.webp" download>Descargar Imagen De Un Gato</a>
+
+        <p>NOTA: el recurso a descargar debe de existir en el "servidor".</p>
+
+        <h2>Navegación Por Anclas</h2>
+        <p>La navegacion con anclas sirve para crear un enlace que nos posicione en un punto específico de una página web.</p>
+        <p>Para utilizarlo, se necesita colocar el atributo <code>id</code>, en la etiqueta que contiene el punto en el q nos queremos posicionar, mientras que al enlace, en el atributo <code>href</code> hay q colocar el valor del atributo id precedido de una almoadilla (#). EJemplo:</p>
+        <p>Colocar id:</p>
+        <code>&lt;h3 id="rutas-relativas"&gt;Rutas Relativas&lt;/h3&gt;</code>
+        <p>Nombrar el href:</p>
+        <code>&lt;a href="#rutas-relativas"&gt;Ir A Rutas Relativas&lt;/a&gt;</code><br>
+        <a href="#rutas-relativas">Ir A Rutas Relativas</a>
+
+        
+    </main>
+    <aside>
+
+    </aside>
+    <footer>
+
+    </footer>
+</body>
+</html>
