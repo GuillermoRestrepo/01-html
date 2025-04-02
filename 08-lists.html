@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas en HTML</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <u>
+                <li><a href="#ol">Listas Ordenadas</a></li>
+                <li><a href="#ul">Listas Desordenadas</a></li>
+                <li><a href="#dl">Listas De Definición</a></li>
+            </u>
+        </nav>
+    </header>
+    <main>
+        <h1>LISTAS EN HTML</h1>
+        <p>Siver para listar contenido según su tipo. Existen 3 tipos principales de listas, las cuales son:</p>
+        <ul>
+            <li>Listas ordenadas.</li>
+            <li>Listas desordenadas.</li>
+            <li>Listas de definición.</li>
+        </ul>
+
+        <h2 id="ol">Listas Ordenadas</h2>
+        <p>Las listas ordenadas (<code>&lt;ol&gt;</code>) muestran elementos en un orden numérico o alfabético. Ejemplo:</p>
+        <ol type="1" start="1">
+            <li>Primer Elemento.</li>
+        </ol>
+        <ol type="A" start="2">
+            <li>Segundo Elemento.</li>
+        </ol>
+        <ol type="I" start="3">
+            <li>Terecer Elemento.</li>
+        </ol>
+        <p>La etiqueta <code>&lt;li&gt;</code> sirve para representar cada elemento de la lista, tanto ordenada como desordenada.</p>
+
+        <h3>Atributos De Las Listas Ordenadas</h3>
+        <h4><code>type=""</code></h4>
+        <p>Sirve para cambiar el estilo de las viñetas.</p>
+        <ul>
+            <li>1 (números, por defecto)</li>
+            <li>A (mayúsculas)</li>
+            <li>a (minúsculas)</li>
+            <li>I (romanos mayúscula)</li>
+            <li>i (romanos minúscula)</li>
+        </ul>
+
+        <h4><code>start=""</code></h4>
+        <p>Como valor recibe el numero con el cual va a iniciar el orden de la lista, ejemplo:
+        </p>
+        <p>Si recibe el numero 3 y el estilo de la lista es letra minuscula, la primer viñeta de la lista comenzará con la letra (c).</p>
+        <ol start="3" type="a">
+            <li>Primer Elemento.</li>
+            <li>Segundo Elemento.</li>
+            <li>Terecer Elemento.</li>
+        </ol>
+
+        <h4><code>reverse</code></h4>
+        <p>Invierte el orden de la numeración, más no el orden de los elementos, es decir, solo afecta a las viñetas. Ejemplo:</p>
+        <ol reversed>
+            <li>Primer Elemento.</li>
+            <li>Segundo Elemento.</li>
+            <li>Terecer Elemento.</li>
+        </ol>
+
+        <h2 id="ul">Listas Desordenadas</h2>
+        <p>Las listas desordenadas (&lt;ul&gt;) muestran los elementos sin un orden específico, ejemplo:</p>
+        <ul type="disc">
+            <li>Hojas de cuadros.</li>
+        </ul>
+        <ul type="circle">
+            <li>Hojas de líneas.</li>
+        </ul>
+        <ul type="square">
+            <li>Hojas de dibujo.</li>
+        </ul>
+        
+
+        <h3>Atributos De Las Listas Desordenadas</h3>
+        <p><code>type=""</code></p>
+        <p>Sirve para cambiar el estilo de las viñetas.</p>
+        <ul>
+            <li>disc (circulo relleno)</li>
+            <li>circle (circulo sin relleno)</li>
+            <li>square (cuadrado relleno)</li>
+        </ul>
+        
+        <h2 id="dl">Listas De Definición</h2>
+        <p>Las listas de definición (&lt;dl&gt;) se usan para definir términos y sus descripciones, similar a un diccionario. Ejemplo:</p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Lenguaje de marcado para crear páginas web.</dd>
+            
+            <dt>CSS</dt>
+            <dd>Hojas de estilo en cascada para dar diseño a HTML.</dd>
+        </dl>
+        <p>Aquí &lt;dt&gt; define el término y &lt;dd&gt; su descripción</p>
+    </main>
+    <aside>
+
+    </aside>
+    <hr>
+    <footer>
+        <p>Fecha de creación: <time datetime="2025-04-01">01 de abril de 2025</time>.</p>
+    </footer>
+</body>
+</html>
