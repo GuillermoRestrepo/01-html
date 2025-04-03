@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas En HTML</title>
+    <style>
+        col:nth-child(1){
+            background-color: lightgreen;
+        }
+        col:nth-child(2){
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <h1>TABLAS EN HTML</h1>
+        <p>Las tablas en HTML permiten organizar datos en filas y columnas. Se usan comúnmente para mostrar información estructurada, como horarios, reportes o datos tabulares.</p>
+
+        <h2>Etiquetas</h2>
+        <dl>
+            <dt><code>&lt;table&gt;</code>:</dt>
+            <dd>Sirve para crear una tabla, contiene todo lo referente a esta misma.</dd>
+
+            <dt><code>&lt;tr&gt;</code>:</dt>
+            <dd>(Table row), definir filas.</dd>
+
+            <dt><code>td</code>:</dt>
+            <dd>(Table data), definir las celdas/columnas de cada fila.</dd>
+
+            <dt><code>&lt;caption&gt;</code>:</dt>
+            <dd>Definir el título de una tabla</dd>
+
+            <dt><code>&lt;thead&gt;</code>:</dt>
+            <dd>Definir la cabecera de una tabla "título de cada columna", utilizar <code>&lt;tr&gt;</code> para las filas, y <code>&lt;th&gt;</code> para las celda/columnas.</dd>
+
+            <dt><code>&lt;tbody&gt;</code>:</dt>
+            <dd>Encapsular el contenido principal de la tabla, utilizar <code>&lt;tr&gt;</code> para las filas, y <code>&lt;td&gt;</code> para las celda/columnas.</dd>
+
+            <dt><code>&lt;tfoot&gt;</code>:</dt>
+            <dd>Encapsular datos adicionales, como total de columans, notas, entre otras, utilizar <code>&lt;tr&gt;</code> para las filas, y <code>&lt;td&gt;</code> para las celda/columnas.</dd>
+
+            <dt><code>&lt;colgroup&gt;</code>:</dt>
+            <dd>Permite identificar las columnas de una tabla, dentro de esta irá, tantas etiquetas <code>&lt;col&gt;</code> como el número de columnas se desea identificar.</dd>
+        </dl>
+
+        <h2>Atributos</h2>
+        <dl>
+            <dt><code>rowspan=""</code></dt>
+            <dd>
+                <ul>
+                    <li>Atributo valido para las etiquetas <code>&lt;td&gt;</code> y <code>&lt;th&gt;</code>.</li>
+                    <li>Hace que una celda ocupe más de una fila</li>
+                    <li>El valor del atributo debe de ser el número de filas a ocupar por la celda</li>
+                    <li>Asegurarse que la tabla no se rompa, eliminando el lugar que ocupan en las siguientes filas.</li>
+                </ul>
+            </dd>
+
+            <dt><code>colspan=""</code></dt>
+            <dd>
+                <ul>
+                    <li>Atributo valido para las etiquetas <code>&lt;td&gt;</code> y <code>&lt;th&gt;</code>.</li>
+                    <li>Hace que una celda ocupe más de una columna</li>
+                    <li>El valor del atributo debe de ser el número de columnas a ocupar por la celda</li>
+                    <li>Asegurarse que la tabla no se rompa, eliminando el lugar que ocupan en las siguientes columnas.</li>
+                </ul>
+            </dd>
+
+            <dt><code>span=""</code></dt>
+            <dd>
+                <ul>
+                    <li>Atributo valido para la etiqueta <code>&lt;col&gt;</code>.</li>
+                    <li>Hace que una etiqueta <code>&lt;col&gt;</code> pueda abarcar más columnas</li>
+                    <li>El valor del atributo debe de ser el número de columnas que se desea cubrir con la etiqueta <code>&lt;col&gt;</code></li>
+                    <li>Util para dar estilos a una o varias columans en específico.</li>
+                </ul>
+            </dd>
+        </dl>
+        <h2>Ejemplo</h2>
+        <table>
+            <caption>HORARIO DE CLASES</caption>
+            <colgroup>
+                <col span="3">
+                <col span="2">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">Matemáticas</td>
+                    <td>Sociales</td>
+                    <td colspan="2">Matemáticas</td>
+                </tr>
+                <tr>
+                    <td>Lengua</td>
+                    <td rowspan="2">Lengua</td>
+                    <td>Matemáticas</td>
+                    <td rowspan="2">Ciencias</td>
+                    <td>Lengua</td>
+                </tr>
+                <tr>
+                    <td>Educación Física</td>
+                    <td>Lengua</td>
+                    <td>Educación Física</td>
+                </tr>
+                <tr>
+                    <td colspan="5">Recreo</td>
+                </tr>
+                <tr>
+                    <td>Ingés</td>
+                    <td>Sociales</td>
+                    <td>Ingés</td>
+                    <td>Tutoría</td>
+                    <td>Ingés</td>
+                </tr>
+                <tr>
+                    <td>Música</td>
+                    <td>Educación Física</td>
+                    <td>Plástica</td>
+                    <td>Religión</td>
+                    <td>Música</td>
+                </tr>
+                <tr>
+                    <td>Tecnología</td>
+                    <td>Francés</td>
+                    <td>Tecnología</td>
+                    <td>Francés</td>
+                    <td>Tecnología</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Total De Aignaturas</td>
+                    <td>12</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <hr>
+    <footer>
+        <p>Fecha de creación: <time datetime="2025-04-02">02 de abril del 2025</time>.</p>
+    </footer>
+</body>
+</html>
