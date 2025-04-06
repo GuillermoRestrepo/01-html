@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios En HTML</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Formularios En HTML</h1>
+        <p>Los formularios permiten que los usuarios interactuen con el sistema, dando la oportunidad de que el usuario ingrese datos que serán procesados por el servidor. Útiles en encuestas, registros, inicios de sesión, entre otros.</p>
+        
+        <h2>Estructura</h2>
+        <p>La estructura basica de un formulario está compuesta por 4 etiquetas.</p>
+        <dl>
+            <dt><code>&lt;form&gt;</code></dt>
+            <dd>Es la etiqueta que encapsula el formulario.</dd>
+            
+            <dt><code>&lt;label&gt;</code></dt>
+            <dd>Sirve para escribir el nombre del campo a rellenar.</dd>
+
+            <dt><code>&lt;input&gt;</code></dt>
+            <dd>Crea el campo a rellenar.</dd>
+
+            <dt><code>&lt;button&gt;</code></dt>
+            <dd>Crea el boton que permite enviar el formulario.</dd>
+        </dl>
+        <p>Ejemplo:</p>
+        <pre>
+            <code>
+                &lt;form action="" method=""&gt;
+                    &lt;label for=""&gt;Campo De Ejemplo&lt;/label&gt;
+                    &lt;input type="" id=""&gt;
+                    &lt;button type=""&gt;Enviar&lt;/button&gt;
+                &lt;/from&gt;
+            </code>
+        </pre>
+        <p>Se muestra:</p>
+        <form action="" method="">
+            <label for="">Campo De Ejemplo</label>
+            <input type="" id="">
+            <button type="">Enviar</button>
+        </from>
+
+        <h2>Atributos</h2>
+        <dl>
+            <dt><code>action=""</code></dt>
+            <dd>Define la URL o archivo al que se enviarán los datos.</dd>
+
+            <dt><code>method=""</code></dt>
+            <dd>Especifica cómo se envían los datos (GET o POST).</dd>
+
+            <dt><code>for=""</code></dt>
+            <dd>Indica a que a que <code>&lt;input&gt;</code> pertenece el <code>&lt;label&gt;</code>.</dd>
+
+            <dt><code>type=""</code></dt>
+            <dd>Sirve para especificar el tipo de contenido hay q ingresar o que acción va a realizar la etiqueta <code>&lt;input&gt;</code> y <code>&lt;button&gt;</code>.</dd>
+        </dl>
+
+        <h2>Relacionar la etiqueta <code>&lt;label&gt;</code> con la etiqueta <code>&lt;input&gt;</code></h2>
+        Esto se hace para evitar errores al llenar los formularios, anunciar que se debe de colocar en cada campo, ampliar el area cliqueable, entre otras funcionalidades.
+        <p>Puede hacerce mediante 2 formas, las cuales son:</p>
+        <ul>
+            <li>
+                <p>Colocar la etiqueta <code>&lt;input&gt;</code> dentro de la etiqueta <code>&lt;label&gt;</code>, ejemplo:</p>
+                <pre>
+                    <code>
+                        &lt;form&gt;
+                            &lt;label&gt;
+                                Nombre
+                                &lt;input&gt;
+                            &lt;/label&gt;
+                            &lt;button&gt;Enviar&lt;/button&gt;
+                        &lt;/form&gt;
+                    </code>
+                </pre>
+                <p>Se muestra:</p>
+                <form>
+                    <label>
+                        Nombres
+                        <input>
+                    </label>
+                    <button>Enviar</button>
+                </form>
+            </li>
+            <li>
+                <p>Haciendo que el valor del atributo <code>for=""</code> de la etiqueta <code>&lt;label&gt;</code> sea igual al valor del atributo <code>id=""</code> de la etiqueta <code>&lt;input&gt;</code>, ejemplo.</p>
+                <pre>
+                    <code>
+                        &lt;form&gt;
+                            &lt;label for="name"&gt;Nombre&lt;/label&gt;
+                            &lt;input id="name"&gt;
+                            &lt;button&gt;Enviar&lt;/button&gt;
+                        &lt;/form&gt;
+                    </code>
+                </pre>
+                <p>Se muestra:</p>
+                <form>
+                    <label for="name">Nombre</label>
+                    <input id="name">
+                    <button>Enviar</button>
+                </form>
+            </li>
+        </ul>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
