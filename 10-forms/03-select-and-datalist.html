@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select And Datalist</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1><code>&lt;select&gt;</code> & <code>&lt;datalist&gt;</code></h1>
+        <p>Sin listas desplegables que permiten al usuario elegir una o varias opciones.</p>
+
+        <h2><code>&lt;select&gt;</code></h2>
+        <p>Etiquetas:</p>
+        <ul>
+            <li>
+                <p><code>&lt;select&gt;</code>: Crea el menú desplegable.</p>
+                <p>Atributos:</p>
+                <ul>
+                    <li><code>name=""</code>: es como la variable q contendrá el valor de la opcion seleccionado.</li>
+
+                    <li><code>multiple</code>: atributo booleano, permite seleccionar más de una opcion, para esto hay q presionar <kbd>Ctrl + Clic</kbd> en cada nueva opción.</li>
+
+                    <li><code>size=""</code>:en el estado de no desplegado, muestra la cantidad de opciones q se le indicque</li>
+                </ul>
+            </li>
+            <li>
+                <p><code>&lt;option&gt;</code>: Crea las opciones de la lista desplegable.</p>
+                <p>Atributos:</p>
+                <ul>
+                    <li><code>value=""</code>: es el valor q se enviará al servidor en caso de ser una opción seleccionada.</li>
+                    
+                    <li><code>selected</code>: hace q una opción esté preseleccionada, solo se puede usar una vez en un &lt;select&gt; que no cuenta con el atributo <code>multiple</code>.</li>
+
+                    <li><code>label=""</code>: Proporciona una etiqueta alternativa al texto visible. es decir puede utilizarce como texto de la etiqueta (revisar mejor)</li>
+
+                    <li><code>disable</code>: deja la opcion visible pero no es seleccionable</li>
+                </ul>
+            </li>
+            <li>
+                <p><code>&lt;optgroup&gt;</code>: Se usa dentro de un <code>&lt;select&gt;</code> para agrupar visualmente varias etiquetas <code>&lt;option&gt;</code> bajo un mismo título o categoría.</p>
+                <p>Atributos:</p>
+                <ul>
+                    <li><code>label=""</code>: establece el nombre del grupo</li>
+
+                    <li><code>disable</code>: desactiva todo el grupo de opciones</li>
+                </ul>
+            </li>
+        </ul>
+        <p>Ejemplo de <code>&lt;select&gt;</code> simple:</p>
+        <form>
+            Select sin multiple <br>
+            <select name="ruta">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js" selected>JavaScript</option>
+            </select><br>
+            Select con multiple <br>
+            <select name="ruta" multiple size="2">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+            </select>
+        </form>
+
+        <p>Ejemplo de <code>&lt;select&gt;</code> agrupado:</p>
+        <form>
+            <select name="paises">
+                <optgroup label="america-norte">
+                    <option value="ca">Canadá</option>
+                    <option value="usa">Estados Unidos</option>
+                </optgroup>
+                <optgroup label="america-centro">
+                    <option value="hond">Honduras</option>
+                    <option value="sv">El Salvador</option>
+                </optgroup>
+                <optgroup label="america-sur" disabled>
+                    <option value="col">Colombia</option>
+                    <option value="ec">Ecuador</option>
+                </optgroup>
+            </select>
+        </form>
+
+        <h2><code>&lt;datalist&gt;</code></h2>
+        <p>Es parecido a <code>&lt;select&gt;</code>, con la diferencia de q no funciona con la etiqueta <code>&lt;optgroup&gt;</code>, y si contenido principal va dentro del atributo value, la etiqueta de cierre de option es opcional,ademas de, apoyarse en una etiqueta <code>&lt;input&gt;</code> de tipo lista (<code>type="list"</code>) con el atributo <code>list=""</code>, en conjuto crearan un buscador para poder acceder de forma mas sencilla a las opciones.</p>
+        <p><strong>Nota</strong>: El atributo<code>list=""</code> de la etiqueta <code>&lt;input&gt;</code> y el atributo <code>id=""</code> de la etiqueta <code>&lt;datalist&gt;</code> deberán de llevar el mismo valor.</p>
+        <p>Ejemplo de datalist:</p>
+        <form>
+            <input type="list" list="paises">
+            <datalist id="paises">
+                <option value="ca">Canadá</option>
+                <option value="usa">Estados Unidos</option>
+                <option value="hond">Honduras</option>
+                <option value="sv">El Salvador</option>
+                <option value="col">Colombia</option>
+                <option value="ec">Ecuador</option>
+            </datalist>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
