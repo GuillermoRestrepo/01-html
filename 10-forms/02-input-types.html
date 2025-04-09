@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos De (input)</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>TIPOS DE <code>&lt;input&gt;</code></h1>
+        <p>Existe gran variedad de tipos de input, los cuales pueden ser utilizados al cambiar el valor del atributo (<code>type=""</code>), algunos de estos son:</p>
+
+        <h2><code>&lt;inputs&gt;</code> Para Botones</h2>
+        <p>Existen 3 tipos principales de botones, los cuales pueden ser creados tanto con la etiqueta <code>&lt;input&gt;</code>, como con la etiqueta <code>&lt;button&gt;</code>, lo q marca la diferencia es la capacidad de personalización de cada etiqueta, siendo <code>&lt;button&gt;</code> la etiqueta q cuenta con más posibilidades al permitirse contener otras etiquetas. Los tipos de botones son:</p>
+
+        <ul>
+            <li><code>type="submit"</code>: sirve para enviar enviar el contenido de los campos al servidor. (Es igual a (<code>&lt;butto type="submit"&gt;</code>")</li>
+            
+            <li><code>type="button"</code>: sirve para hacer botones que ejecuten eventos con JS. Es igual a (<code>&lt;butto type="button"&gt;</code>")</li>
+            
+            <li><code>type="reset"</code>: Limpia todos los campos del formulario y los deja como estaban originalmente. Sin enviar contenido al servidor. Es igual a (<code>&lt;butto type="reset"&gt;</code>")</li>
+        </ul>
+       
+        <h2><code>&lt;inputs&gt;</code> Para Fecha Y Hora</h2>
+        <p>Estos campos permiten a los usuarios seleccionar fechas, horas o ambas cosas de forma práctica, y son muy útiles en formularios que requieren agendar, reservar, programar, etc.</p>
+        <ul>
+            <li><code>type="date"</code>: permite ingresar una fecha (Día / Mes / Año).</li>
+
+            <li><code>type="time"</code>: Permite ingresar una hora.</li>
+
+            <li><code>type="datetime-local"</code>: Permite ingresar una fecha y hora.</li>
+
+            <li><code>type="month"</code>: Permite ingresar mes y año.</li>
+
+            <li><code>type="week"</code>: permite ingresar el numero de una semana y un año.</li>
+        </ul>
+
+        <h3>Ejemplos:</h3>
+        <form action="prueba.py" method="Post">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha"><br>
+            
+            <label for="hora">Hora</label>
+            <input type="time" id="hora"><br>
+
+            <label for="fecha-hora">Fecha Y Hora</label>
+            <input type="datetime-local" id="fecha-hora"><br>
+
+            <label for="mes-anio">Mes Y Año</label>
+            <input type="month" id="mes-anio"><br>
+
+            <label for="semana-anio">Semana Y Año</label>
+            <input type="week" id="semana-anio"><br>
+
+            <input type="reset" value="Resablecer Valores" id="">
+        </form>
+
+        <h3>Notas:</h3>
+        <ul>
+            <li>No es aconsejable utilizar <code>type="datetime-local"</code>, ya que no todos los navegadores lo soportan, es mejor utilizar un campo de tipo fecha y uno de tipo hora por separado.</li>
+            
+            <li>Los estilos que se presentan por defectos para los campos pueden ser modificados mediante el uso de CSS.</li>
+        </ul>
+
+        <h3>Atributos</h3>
+        <ul>
+            <li><code>max=""</code>: establecer una fechau Hora maxima</li>
+            
+            <li><code>min=""</code>: establecer una fecha u hora minima</li>
+
+            <li><code>step=""</code>: establecer un salto de valores, ya sea en segundos minutos y dias.</li>
+
+            <li><code>value=""</code>: establecer un valor por defecto.</li>
+
+            <li><code>required=""</code>: establece un campo como obligatorio</li>
+            
+            <li><code>readonly / disable</code>: desactiva o bloquea el input.</li>
+        </ul>
+
+        <h2><code>&lt;inputs&gt;</code> Para Moviles</h2>
+        <p>Estos inputs tienen la cualidad de modificar el teclado de las pantallas de los moviles y las sugerencias de autocompletado.</p>
+
+        <ul>
+            <li><code>type="search"</code>: Se usa para campos de búsqueda.</li>
+
+            <li><code>tytpe="email"</code>: Para ingresar direcciones de correo electrónico.</li>
+
+            <li><code>input type="tel"</code>: Para ingresar números telefónicos.</li>
+        
+            <li><code>type="password"</code>:Para ingresar contraseñas. El contenido se oculta con puntos o asteriscos (•••••).</li>
+
+            <li><code>type="url"</code>: Para ingresar URLs o dire.Valida automáticamente que el texto comience con http:// o https://.</li>
+        </ul>
+
+        <h3>Ejemplos:</h3>
+        <p>Para ver su mejor funcionamiento ingrese desde un dispositivo movil.</p>
+        <form action="prueba.py" method="Post">
+            <label for="buscar">Buscador</label>
+            <input type="search" id="buscar"><br>
+            
+            <label for="correo">Correo</label>
+            <input type="email" id="correo"><br>
+
+            <label for="cell">Teléfono</label>
+            <input type="tel" id="cell"><br>
+
+            <label for="enlace">Link</label>
+            <input type="url" id="enlace"><br>
+
+            <label for="contrasenia">Contraseña</label>
+            <input type="password" id="contrasenia"><br>
+
+            <input type="reset" value="Resablecer Valores" id="">
+        </form>
+
+        <h3>Notas:</h3>
+        <ul>         
+            <li><code>type="password"</code>: a pesar de ser muy usado, no es del todo seguro ya q peude ser modificado desde las herramienta s de desarrollador del navegador.</li>
+
+            <li>todos estos valores para el atributo type, se caracterizan por odificar el teclado tactil de los dsositivos moviles, es decir, no puede ser apreciado desde el navegador.</li>
+        </ul>
+
+        <h2><code>&lt;inputs&gt;</code> Adicionales</h2>
+        <p>son inputs q no guardan cierta relacion entre si ni con algun otro pero pueden ser útiles en diversas situaciones.</p>
+        <ul>
+            <li><code>type="color"</code>: Muestra un selector de color (color picker) para que el usuario elija un color (formato hexadecimal: #RRGGBB).</li>
+
+            <li><code>type="number"</code>: Permite ingresar solo números. Puedes definir rangos, pasos, valores iniciales, etc. Atributos adicionales: (max, min, step, value)</li>
+
+            <li><code>type="range"</code>: Muestra una barra deslizante para seleccionar un valor numérico entre un rango. Atributos adicionales: (max, min, step, value)</li>
+
+            <li><code>type="reset"</code>: Reinicia todos los campos del formulario a sus valores iniciales (como estaban al cargarse la página).</li>
+
+            <li><code>type="text"</code> Es el tipo más común. Se usa para cualquier tipo de texto libre: nombres, apellidos, direcciones, etc. Atributos adicionales: (maxlength, minlength, pattern, placeholder, required)</li>
+
+            <li><code>type="hidden"</code>: Sirve para guardar datos ocultos que no se muestran al usuario, pero que se envían al servidor cuando se envía el formulario. ejemplos: (Tokens de sesión, IDs de usuario, Valores generados automáticamente.)</li>
+        </ul>
+
+        <h3>Ejemplos:</h3>
+        <form action="prueba.py" method="Post">
+            <label for="color">Selecciona un color</label>
+            <input type="color" id="color"><br>
+            
+            <label for="numero">Ingesa Un Número</label>
+            <input type="number" step="2" min="10" max="20" id="numero"><br>
+
+            <label for="barra">Teléfono</label>
+            <input type="range" step="2" min="10" max="20" id="barra"><br>
+
+            <label for="texto">Escribe Un Texto</label>
+            <input type="text" id="texto"><br>
+
+            <label for="escondido">Campo oculto</label>
+            <input type="hidden" id="escondido"><br>
+            
+            <input type="reset" value="Resablecer Valores" id="">
+        </form>
+
+        <h2>Elementos Seleccionables</h2>
+        <p>Permiten elegir entre una y varias opciones previamente definidas.</p>
+
+        <h3><code>&lt;input type="radio"&gt;</code></h3>
+        <p>permite lstar un numero de opciones de entre las cuaes poremos seleccionar una. Ejemplo:</p>
+        
+        <form>
+            <input type="radio" name="genero" id="m" value="male" checked>
+            <label for="m">Masculino</label><br>
+
+            <input type="radio" name="genero" id="f" value="female">
+            <label for="f">Femenino</label><br>
+
+            <input type="radio" name="genero" id="o" value="other">
+            <label for="o">Otro</label><br>
+        </form>
+
+        <p>El atributo <code>name=""</code> sirve para relacionar las opciones y hacer q solo se pueda seleccionar una y el atributo <code>value=""</code> el el valor q se le enviará al servidor de la opcion selecionada, y el atributo <code>checked</code> es para seleccionar un valor por defecto, solo se puede en una.</p>
+
+        <h3><code>&lt;input type="checkbox"&gt;</code></h3>
+        <p>permite listar un numero de opciones de entre las cuales podremos seleccionar varias. Ejemplo:</p>
+        
+        <form>
+            <input type="checkbox" name="ruta" id="uno" value="html" checked>
+            <label for="uno">HTML</label><br>
+
+            <input type="checkbox" name="ruta" id="dos" value="css">
+            <label for="dos">CSS</label><br>
+
+            <input type="checkbox" name="ruta" id="tres" value="js" checked>
+            <label for="tres">JavaScript</label><br>
+        </form>
+        
+        <p>los atributos son casi los mismos q <code>type="radio"</code>, con la diferencía de q aquí el atributo <code>name=""</code>, solo los relaciona las opcoones, permitiendo seleccionar varias opciones. y q el atributo <code>checked</code> aqui puede ser utilizado en varias opciones.</p>
+        
+        <h3><code>&lt;input type="file"&gt;</code></h3>
+        <p>Es un campo de entrada que permite al usuario seleccionar uno o varios archivos de su dispositivo para subir al servidor.</p>
+        <p>Atributos</p>
+        <dl>
+            <dt><code>multiple</code></dt>
+        	<dd>Permite seleccionar varios archivos a la vez.</dd>
+
+            <dt><code>accept=""</code></dt>
+            <dd>Filtra los tipos de archivo que se pueden seleccionar. Algunos valores son:(image/*, video/*, audio/*, .pdf, .doc, .docx, .jpg, .png)</dd>
+
+            <dt>required</dt>
+            <dd>Hace obligatorio seleccionar al menos un archivo.</dd>
+
+            <dt>capture</dt>
+            <dd>En móviles, puede activar la cámara o micrófono.</dd>
+        </dl>
+        <p>NOTAS:</p>
+        <p>Es necesario q el formulaio tenga metodo POST para su correcto funcionamiento</p>
+        <p>Consultar el funcionamiento del atributo enctype para el correcto envio de archivos.</p>
+        
+        <p>Ejemplo:</p>
+        <form action="c/dataform" method="POST" enctype="">
+            <label for="archivo">Sube Un Archivo</label>
+            <input type="file" id="archivo" accept=".pdf" multiple>
+            <button type="submit">Enviar Archivo</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
