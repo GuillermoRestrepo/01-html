@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas Adicionales De Formularios</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>ETIQUETAS ADICIONALES DE LOS FORMULARIOS</h1>
+        <p>Etiquetas q sirven para complementar el uso de formularios en html.</p>
+
+        <h2><code>&lt;fieldset&gt;</code> & <code>&lt;legend&gt;</code></h2>
+        <p><code>&lt;fieldset&gt;</code>: Se usa dentro de un formulario para agrupar elementos relacionados.</p>
+
+        <p><code>&lt;legend&gt;</code>:  Proporciona una descripción del grupo de campos que está contenido en un <code>&lt;fieldset&gt;</code>.</p>
+        
+        <p>Ejemplo:</p>
+
+        <form>
+            <fieldset>
+                <legend>
+                    Datos Personales
+                </legend>
+                <label for="names">Nombres</label>
+                <input type="text" id="names"><br>
+                
+                <label for="surnames">Apellidos</label>
+                <input type="text" id="surnames">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Informacion De Contacto
+                </legend>
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone"><br>
+                
+                <label for="mail">Correo</label>
+                <input type="email" id="mail">
+            </fieldset>
+        </form>
+
+        <h2><code>&lt;meter&gt;</code></h2>
+        <p>Se usa para representar un valor dentro de un rango conocido, como una nota, el nivel de batería o el uso de espacio en disco.</p>
+        <p>Atributos:</p>
+        <dl>
+            <dt>value</dt>
+            <dd>Valor actual.</dd>
+
+            <dt>min</dt>
+            <dd>Valor mínimo.</dd>
+
+            <dt>max</dt>
+            <dd>Valor máximo.</dd>
+
+            <dt>low</dt>
+            <dd>Umbral bajo. ()</dd>
+
+            <dt>high</dt>
+            <dd>Umbral alto. (Valor por debajo del cual se considera "bajo".)</dd>
+
+            <dt>optimum</dt>
+            <dd>Valor óptimo (Valor por encima del cual se considera "alto".)</dd>
+        </dl>
+
+        <p>Ejemplo:</p>
+        <form>
+            <label for="carga">Batería</label>
+            <meter id="carga" value="50" min="0" max="100" optimum="80" low="20" high="70">50%</meter>
+        </form>
+        
+        <h2><code>&lt;progress&gt;</code></h2>
+        <p>Representa el progreso de una tarea, como una descarga o carga. Muestra una barra de avance que va creciendo con el tiempo.</p>
+
+        <dl>
+            <dt>value</dt>
+            <dd>Valor actual (va de 0 al máximo).</dd>
+
+            <dt>max</dt>
+            <dd>Valor máximo que indica el fin del proceso.</dd>
+        </dl>
+
+        <p>Ejemplo:</p>
+        <form>
+            <label for="descarga">Subida de archivo:</label>
+            <progress id="descarga" value="65" max="100">65%</progress>
+        </form>
+
+        <h2><code>&lt;textarea&gt;</code></h2>
+        <p>Se usa para crear un campo de texto multilínea, donde el usuario puede escribir texto libremente, como comentarios, mensajes, descripciones, etc.</p>
+        <ul>
+            <li>name: Nombre que se usará al enviar el formulario.</li>
+
+            <li>id: Identificador único (para etiquetas <label> o JS).</li>
+
+            <li>rows: Número de filas visibles (líneas visibles a la vez).</li>
+
+            <li>cols: Número de columnas visibles (max caracteres visibles por línea).</li>
+
+            <li>placeholder: Texto de sugerencia (como en input).</li>
+
+            <li>required: Hace obligatorio completarlo.</li>
+
+            <li>maxlength: Límite máximo de caracteres.</li>
+
+            <li>readonly: Solo lectura.</li>
+
+            <li>disabled: Desactiva el campo.</li>
+
+            <li>wrap: Controla cómo se ajusta el texto al llegar al borde (soft, hard, off).</li>
+        </ul>
+
+        <p>Ejemplo:</p>
+        <form>
+            <label for="mensaje">Escribe tu mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" cols="50" rows="10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique maxime, commodi eos accusantium iure qui fuga harum laborum, modi veritatis maiores, neque quo magnam! Voluptate corporis commodi odio veniam culpa.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas atque minus possimus corrupti vero similique nam? Sed quasi in delectus hic vero, provident recusandae! Ab qui cupiditate optio animi veritatis.
+            </textarea>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
