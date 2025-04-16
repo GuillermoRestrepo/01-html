@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes En HTML</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>IMÁGENES EN HTML</h1>
+        <p>Las imágenes en HTML se usan para:</p>
+        <ul>
+            <li>Mejorar la apariencia visual de una página.
+            <li>Ilustrar contenido.
+            <li>Crear banners, iconos, botones, diagramas, etc.
+            <li>Representar contenido gráfico dinámico o decorativo.</li>
+        </ul>
+        <h2>Estructura</h2>
+        <p>Las imagenes en html se representan con la etiqueta <code>&lt;img>&gt;</p>
+        
+        <h3>Atributos</h3>
+        <ul>
+            <li><code>src=""</code> Dirección de la imágen (enlace local).</li>
+            <li><code>alt=""</code> Breve descripción que sirve en caso de q la imágen no se cargue por algún error, o para mejorar la accesibilidad para personas invidentes.</li>
+        </ul>
+
+        <h2>Páginas Para Convertir Las imagenes En Diferentes Formatos</h2>
+        <ul>
+            <li><a href="https://www.vectorizer.ai">Vectorizer</a> / <a href="https://es.vectormagic.com/">Vectormagic</a>: ambas son excelentes para convertir en svg, pero pero son de paga.</li>
+            <li><a href="https://image.online-convert.com/">Online-Convert</a>: buena para converitir (jpg, jpeg, png, gif) en (webp), también imagenes sencillas al estilo icono en (svg).</li>
+        </ul>
+        
+        <h2>Tipos De Formatos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Formato</th>
+                    <th>¿Para Que Se Usa?</th>
+                    <th>Características</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>     
+                    <td>    .jpg o .jpeg</td>
+                    <td>Fotos, imágenes con muchos colores</td>
+                    <td>Comprimido con pérdida. Buen equilibrio entre calidad y tamaño.</td>
+                </tr>
+                <tr>
+                    <td>.png</td>
+                    <td>Imágenes con transparencia o más calidad</td>
+                    <td>Sin pérdida, mayor peso. Soporta transparencia.</td>
+                </tr>
+                <tr>
+                    <td>.gif</td>
+                    <td>Animaciones simples o gráficos</td>
+                    <td>Hasta 256 colores, puede ser animado.</td>
+                </tr>
+                <tr>
+                    <td>.svg</td>                    
+                    <td>Gráficos vectoriales</td>
+                    <td>Escalable sin pérdida de calidad. Ideal para íconos, logos.</td>
+                </tr>  
+                <tr>
+                    <td>.webp</td>
+                    <td>Imágenes modernas optimizadas</td>
+                    <td>Alta compresión, buena calidad. Más liviano que PNG o JPG.</td>
+                </tr>
+                <tr>
+                    <td>.avif</td>
+                    <td>Nuevo formato eficiente</td>
+                    <td>Mejor compresión que WebP. No soportado por todos los navegadores aún.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Notas</h2>
+        <ul>
+            <li>Es aconsejable q toda imágen (.jpg / .jpeg / .png / .gif), sean convertidas a formato (.webp), ya qe esto disminuye el peso de la imágen.</li>
+
+            <li>Es aconsejable que toda imagen q no tenga mucho contenido, sea convertida a formato (.svg), su fdefinición es escalable, es decir, no pierde calidad y su peso es minimo, pero solo s epuede hacer con imagenes q sean simples.</li>
+        </ul>
+
+        <h2>Ejemplo De Imágenes A Webp</h2>
+        <p>Como se puede notar, la diferencia en la resolucion de las imagenes es mínima, pero cada imagen (.webp), le cuesta renderisar menos al navegador.</p>
+        <table>
+            <tr>
+                <td>Tanjiro (.jpg)</td>
+                <td>Tanjiro (.webp)</td>
+                <td>Zenitsu (.jpg)</td>
+                <td>Zenitsu (.webp)</td>
+                <td>Inosuke (.gif)</td>
+                <td>Inosuke (.webp)</td>
+            </tr>
+            <tr>
+                <td><img src="assets/image/tanjiro.webp" alt="Tanjiro .jpg" height="300px"></td>
+                <td><img src="assets/image/tanjiro.webp" alt="Tanjiro .webp" height="300px"></td>
+                <td><img src="assets/image/zenitsu.webp" alt="Zenitsu .png" width="200px"></td>
+                <td><img src="assets/image/zenitsu.webp" alt="Zenitsu .webp" width="200px"></td>
+                <td><img src="assets/image/inosuke.webp" alt="Inosuke .gif" width="200px"></td>
+                <td><img src="assets/image/inosuke.webp" alt="Inosuke .webp" width="200px"></td>
+            </tr>
+        </table>
+
+        <h2>Ejemplo De svg</h2>
+        <p>Los .svg caracterizan por no perder resolucion ya q como tal no son imágenes. Muy util para iconos e imagenes que no tienen mucho detalle</p>
+        <table>
+            <tr>
+                <td>Imágen normal (.jpg)</td>
+                <td>Imágen De Mapa De Bits (.svg)</td>
+            </tr>
+            <tr>
+                <td><img src="assets/image/web.jpg" alt="globo web jpg" width="300"></td>
+                <td><img src="assets/image/web.svg" alt="globo web svg" width="300"></td>
+            </tr>
+        </table>
+    </main>
+    <footer></footer>
+</body>
+</html>
