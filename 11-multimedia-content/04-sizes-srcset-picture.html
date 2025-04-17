@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sizes, srcset & picture</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1><code>sizes=""</code>, <code>srcset=""</code> & <code>&lt;picture&gt;</code></h1>
+        <p>Los atributos<code>sizes=""</code> y <code>srcset=""</code>, son útiles en la optimización y el diseño responsivo de una página web, por otro lado, la etiqueta <code>&lt;picture&gt;</code> sirve como una versión más actualizada de los atributos mencionados anteriormente.</p>
+
+        <h2>1. <code>sizes=""</code></h2>
+        <p>Este atributo permite modificar el tamaño de una imágen dependiendo del tamaño de la pantalla.</p>
+        
+        <p><strong>Nota:</strong>Únicamente funciona sí, y solo sí, se usa en conjunto al atributo <code>srcset=""</code></p>
+            
+        <h2>2. <code>srcset=""</code></h2>
+        <p>El atributo <code>srcset=""</code> se usa dentro de la etiqueta <code>&lt;img&gt;</code> para especificar diferentes versiones de una imagen. Esto le permite al navegador elegir la imagen más adecuada dependiendo del dispositivo, basandose en el tamaño o la resolución de pantalla, proporcionando beneficios como:</p>
+        <ul>
+            <li><strong>Optimización de velocidad:</strong> se evitan imágenes demasiado grandes en pantallas pequeñas.</li>
+            <li><strong>Ahorro de datos:</strong> especialmente útil para dispositivos móviles.</li>
+            <li><strong>Mejor visualización:</strong> en pantallas de alta resolución o retina, se puede mostrar una versión de mayor calidad.</li>
+        </ul>
+        <h3>Formas De Utilizar El Atributo <code>srcset=""</code></h3>
+        <p> El atributo <code>srcset</code> se puede usar de dos formas, y cada una se encarga de resolver una necesidad distinta.</p>
+
+        <h4>Forma #1: Utilizando Anchos (w)</h4>
+        <p>De esta forma el navegador escogerá la imágen adecuada dependiendo del tamaño de la pantalla del dispositivo (tamaño real de la pantalla, No DPR).</p>
+        <p>Ejemplo:</p>
+        <pre><code>
+            &lt;img src="assets/image/doraemon-700.webp"
+                srcset="assets/image/doraemon-700.webp 700w,
+                    assets/image/doraemon-500.webp 500w,
+                    assets/image/doraemon-300.webp 300w"
+                sizes="(max-width: 300px) 80vw,
+                    (max-width: 500px) 60vw, 40vw"
+                alt="Doraemon"&gt;
+        </code></pre>
+        <p>Hay q tomar en consideracion que:</p>
+        <ul>
+            <li><strong><code>max-width</code> Y <code>min-width</code>:</strong> equivale a decir "menor o igual que" y "mayor o igual que" respectivamente.</li>
+            <li><strong>80vw y 60vw:</strong> es el tamaño que la imágen ocupará, dependiendo de la condición indicada en <code>max-width</code> o en <code>min-width</code>.</li>
+            <li><strong>40vw:</strong> el es tamaño que la imágen ocupará para el resto de tamaños que no tengan condición.</li>
+            <li><strong>vw:</strong> es una medida, se verá más de medidas en css.</li>
+            <li><strong>700w, 500w, 300w:</strong> le indica al navegador el tamaño de cada imágen.</li>
+        </ul>
+        <p>Para ver el resultado, hay q configuarar la vista de dispositivo movil en el navegador, y comenzar desde un ancho de pantalla menor a 187 pixeles.</p>
+        <img src="assets/image/doraemon-700.webp"
+            srcset="assets/image/doraemon-700.webp 700w,
+                assets/image/doraemon-500.webp 500w,
+                assets/image/doraemon-300.webp 300w"
+            sizes="(max-width: 300px) 80vw,
+                (max-width: 500px) 60vw, 40vw"
+            alt="Doraemon">
+
+
+        <h4>Forma #2: Utilizando Densidad De Píxeles (x)</h4>
+        <p>Esta forma el navegador carga la versión que coincida con la densidad de píxeles del dispositivo.</p>
+        <p>Ejemplo:</p>
+        
+        <img width="25%" src="assets/image/goku-x3.webp"
+            srcset="assets/image/goku-x1.webp 1x,
+                assets/image/goku-x2.webp 2x,
+                assets/image/goku-x3.webp 3x"
+            alt="goku">
+        <p>Hay q tomar en consideracion que:</p>
+        <ul>
+            <li>Entre más grande sea el DPR de un dispositivo, mayor resolución deberá de tener la imagen en cuestión.</li>
+            <li><strong>1x, 2x y 3x:</strong> es el DPR de la pantalla.</li>
+            <li>Cada imagen se mostrara cuando el DPR sea menor o igual al indicado.</li>
+        </ul>
+
+        <h2>3. <code>&lt;picture&gt;</code></h2>
+        <p>La etiqueta <code>&lt;picture&gt;</code> es una herramienta diseñada para servir imágenes adaptativas según diferentes condiciones: tamaño de pantalla, tipo de dispositivo, soporte del navegador, formato de imagen, etc.</p>
+
+        <h3>Notas</h3>
+        <ul>
+            <li>Trabaja en conjunto a la etiqueta <code>&lt;source&gt;</code>.</li>
+            <li>Sí o sí debe de llevar la etiqueta <code>&lt;img&gt;</code> como imágen de respaldo también conocido como fallback.</li>
+        </ul>
+        
+        <h3>¿Cómo funciona?</h3>
+        <ul>
+            <li>El navegador analiza los <source>, de arriba hacia abajo.</li>
+
+            <li>Elige el primero que cumpla con las condiciones (media, type, etc.).</li>
+
+            <li>Si ninguno aplica, usa la imagen del <img> como último recurso (fallback).</li>
+        </ul>
+
+        <h3>Formas De Utilizarlo</h3>
+        <h4>a. Por formato de imagen (WebP, AVIF, JPEG, PNG, etc.)</h4>
+        <p>Esta es la forma mas usual en la q se utiliza, sirve para proveer formatos de imágenes más actuales, como (avif o webp), y en caso de que el navegador no soporte estos formatos, permite dar mas opciones que por logica, deben de ser formatos mas comunes como (jpg o png). Ejemplo:</p>
+        <pre><code>
+            &lt;picture&gt;
+                &lt;source srcset="foto.avif" type="image/avif"&gt;
+                &lt;source srcset="foto.webp" type="image/webp"&gt;
+                &lt;img src="foto.jpg" alt="Ejemplo con formatos"&gt;
+            &lt;/picture&gt;
+        </code></pre>
+        <p>En este ejemplo, el navegador busca recursos en orden avif, webp y jpg, y muestra la primera q soporte.</p>
+
+        <h4>b. Por tamaño de pantalla (responsive con media queries)</h4>
+        <p>Usás diferentes imágenes para distintos tamaños (mobile, tablet, desktop). Ejemplo:</p>
+        <pre><code>
+            &lt;picture&gt;
+                &lt;source media="(max-width: 600px)" srcset="img-mobile.jpg"&gt;
+                &lt;source media="(min-width: 601px)" srcset="img-desktop.jpg"&gt;
+                &lt;img src="img-desktop.jpg" alt="Responsive"&gt;
+            &lt;/picture&gt;
+        </code></pre>
+        <p>En este ejemplo se usará una u otra imagen dependiendo del tamaño de la pantalla del dispositivo.</p>
+
+
+        <h4>c. Por resolución (pantallas retina: 1x, 2x, 3x)</h4>
+        <p>Similar al uso de <code>srcset</code>, pero en <code>&lt;picture&gt;</code>. Ejemplo:</p>
+        <pre><code>
+            &lt;picture&gt;
+                &lt;source srcset="img@1x.jpg 1x, img@2x.jpg 2x"&gt;
+                &lt;img src="img@1x.jpg" alt="Alta resolución"&gt;
+            &lt;/picture&gt;
+        </code></pre>
+        <p>En este ejemplo el navegador selecciona la imagen segun su DPR.</p>
+        
+        <h4>d. Por orientación del dispositivo (horizontal o vertical)</h4>
+        <p>Ideal para adaptar imágenes según cómo sostiene el usuario el dispositivo. Ejemplo:</p>
+        <pre><code>
+            &lt;picture&gt;
+                &lt;source media="(orientation: landscape)" srcset="paisaje.jpg"&gt;
+                &lt;source media="(orientation: portrait)" srcset="retrato.jpg"&gt;
+                &lt;img src="paisaje.jpg" alt="Orientación"&gt;
+            &lt;/picture&gt;
+        </code></pre>
+
+        <h4>e. Por preferencias del usuario (modo oscuro, accesibilidad, etc.)</h4>
+        <p>Se puede servir diferentes imágenes si el usuario tiene configurado modo oscuro.</p>
+        <pre><code>
+            &lt;picture&gt;
+                &lt;source media="(prefers-color-scheme: dark)" srcset="logo-dark.png"&gt;
+                &lt;source media="(prefers-color-scheme: light)" srcset="logo-light.png"&gt;
+                &lt;img src="logo-light.png" alt="Logo adaptable"&gt;
+              &lt;/picture&gt;
+        </code></pre>
+
+        <p><strong>IMPORTANTE:</strong> Se pueden combinar entre sí. Ejemplo:</p>
+        <pre><code>
+            &lt;picture&gt;
+                &lt;source 
+                    media="(min-width: 601px)" 
+                    type="image/webp" 
+                    srcset="img-desktop@1x.webp 1x, img-desktop@2x.webp 2x"&gt;
+
+                &lt;source 
+                    media="(min-width: 601px)" 
+                    type="image/jpeg" 
+                    srcset="img-desktop@1x.jpg 1x, img-desktop@2x.jpg 2x"&gt;
+
+                &lt;img src="img-desktop@1x.jpg" alt="Imagen completa"&gt;
+            &lt;/picture&gt;
+        </code></pre>
+        <p>En este ejemplo, se toma en consideracion el tamaño de la pantalla, el DPR de la pantalla y el formato de la imagen.</p>
+    </main>
+    <footer></footer>
+</body>
+</html>
