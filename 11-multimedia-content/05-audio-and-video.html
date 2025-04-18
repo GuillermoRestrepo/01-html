@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Y Video</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 5px 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header></header>
+    <>
+        <h1><code>&lt;audio&gt;</code> & <code>&lt;video&gt;</code></h1>
+        
+        <h2><code>&lt;audio&gt;</code></h2>
+        <p>La etiqueta <code>&lt;audio&gt;</code> en HTML sirve para reproducir archivos de sonido en una página web.</p>
+        <p>Puede ser utilizada para música, efectos de sonido, podcasts, mensajes de voz, etc.</p>
+
+        <h3>Formatos Comunes</h3>
+        <table>
+            <thead>
+                <th>Formato</th>
+                <th>Valor Type</th>
+                <th>Soportado por</th>
+            </thead>
+            <tr>
+                <td>mp3</td>
+                <td>audio/mpeg</td>
+                <td>Casi todos</td>
+            </tr>
+
+            <tr>
+                <td>ogg</td>
+                <td>audio/ogg</td>
+                <td>No en Safari/iOS</td>
+            </tr>
+
+            <tr>
+                <td>wav</td>
+                <td>audio/wav</td>
+                <td>pero archivos más grandes</td>
+            </tr>
+        </table>
+        
+        <h3>Ejemplo</h3>
+        <ul>
+            <li><em>Lilo & Stitch - He Mele No Lilo:</em><br>
+                <audio muted src="assets/audio/LiloAndStitch-HeMeleNoLilo.mp3" controls></audio></li>
+            <li><em>Moana - Sound Of The Ancestros:</em><br>
+                <audio muted autoplay src="assets/audio/Moana-SongOfTheAncestors.mp3" controls></audio></li>
+        </ul>
+
+        <h3>Atributos</h3>
+        <dl>
+            <dt>controls</dt>
+            <dd>
+                <p>Muestra los controles (play, pausa, volumen, etc.)</p>
+                <p>en caso de no existir este atributo, el audio nisiquiera se mostrará en pantalla.</p>
+            </dd>
+            
+            <dt>autoplay</dt>
+            <dd>Reproduce el audio automáticamente (no siempre permitido).</dd>
+            
+            <dt>loop</dt>
+            <dd>Repite el audio cuando termina.</dd>
+           
+            <dt>muted</dt>
+            <dd>hace q por defecto el audio se encuentre muteado (sin volumen).</dd>
+
+            <dt>preload</dt>
+            <dd>Indica si el navegador debe cargar el audio al cargar la página, los valores son:
+                <ul>
+                    <li>auto: Le deja al navegador decidir cuánto cargar. A veces carga todo, a veces solo parte, depende del navegador y conexión.</li>
+                    <li>none: No carga nada del audio hasta que el usuario interactúe. Ahorra datos. Ideal si no sabés si el usuario va a escuchar el audio.</li>
+                    <li>metadata: Carga solo los metadatos (duración, tipo, etc.), pero no el contenido de audio en sí.</li>
+                </ul>
+            </dd>
+        </dl>
+
+        <h3>Notas</h3>
+        <ul>
+            <li>Si usás autoplay, no pongas preload="none", porque no tendría sentido: se requiere q se reproduzca el audio sin esperar, pero no estás cargando nada.</li>
+            <li>Algunos navegadores ignoran preload si tienen autoplay.</li>
+        </ul>
+
+        <h3>Uso de <code>&lt;source&gt;</code></h3>
+        <p>La etiqueta <code>&lt;source&gt;</code> se usa dentro de <code>&lt;audio&gt;</code> para indicar una o más versiones del mismo archivo, en distintos formtos, porque no todos los navegadores soportan todos los formatos de audio, así que le damos opciones al navegador para que use la que pueda reproducir. Ejemplo:</p>
+
+        <pre><code>
+            &lt;audio controls&gt;
+                &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+                &lt;source src="audio.ogg" type="audio/ogg"&gt;
+                Tu navegador no soporta audio HTML5.
+            &lt;/audio&gt;
+        </code></pre>
+
+        <p>el navegador analiza recurso por recurso y muestra el primero q sea compatible con le navegador.</p>
+        <p>En este caso, la frase "Tu navegador no soporta audio HTML5." se utiliza como fallback, es decir, contenido de respaldo en caso de q no se soporte ningun formato del audio o hay un error al cargar el archivo.</p>
+
+
+        <h2><code>&lt;video&gt;</code></h2>
+        <p>La etiqueta <code>&lt;video&gt;</code> en HTML sirve para incrustar y reproducir videos directamente en una página web, sin necesidad de plugins externos como Flash.</p>
+        <p><strong>IMPORTANTE:</strong> Funciona exactamente igual a la etiqueta audio, con la diferencia de que cuenta con un par de atributos mas.</p>
+        
+        <h3>Atributos adicionales de <code>&lt;video&gt;</code></h3>
+        <dl>
+            <dt>poster</dt>
+            <dd>Magen que se muestra antes de que empiece el video (el valor del atributo es el enlace de la imagen)</dd>
+            
+            <dt>width / height</dt>
+            <dd>definir el tamaño de la ventana del video.</dd>
+        </dl>
+
+        <h3>Formatos Comunes</h3>
+        <table>
+            <thead>
+                <th>Formato</th>
+                <th>Valor Type</th>
+                <th>Soportado por</th>
+            </thead>
+            <tr>
+                <td>mp4</td>
+                <td>video/mp4</td>
+                <td>Todos los navegadores.</td>
+            </tr>
+
+            <tr>
+                <td>webm</td>
+                <td>video/webm</td>
+                <td>Modernos (Chrome, Firefox, etc).</td>
+            </tr>
+
+            <tr>
+                <td>ogv</td>
+                <td>video/ogg</td>
+                <td>Algunos navegadores, uso menos comun.</td>
+            </tr>
+        </table>
+        
+        <h3>Ejemplo</h3>
+        <table>
+            <tr>
+                <td><em>Lilo & Stitch - Hawaiian Roller Coaster Ride</em></td>
+                <td><em>Moana - Where Youy Are</em></td>
+            </tr>
+            <tr>
+                <td><video width="500px" src="assets/video/LiloAndStitch-HawaiianRollerCoasterRide.mp4" controls poster="assets/image/lilo-y-stitch.webp"></video></td>
+                <td><video width="500px" src="assets/video/Moana-WhereYouAre.mp4" controls></video></td>
+            </tr>
+        </table>
+
+        <p>TAMBIEN FUNCIONA SOURCE</p>
+    </main>
+    <footer></footer>
+</body>
+</html>
