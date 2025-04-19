@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta "figure"</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 5px 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Etiqueta &lt;figure&gt;</h1>
+    <p>La etiqueta &lt;figure&gt; es un contenedor semántico en HTML que agrupa contenido multimedia o visual (como imágenes, diagramas, ilustraciones, fragmentos de código, etc.) junto con su descripción o pie usando &lt;figcaption&gt;.</p>
+    
+    <h2>Usos</h2>
+    <ul>
+        <li>Asociar una imagen o gráfico con su descripción.</li>
+
+        <li>Agrupar elementos visuales con sentido semántico.</li>
+
+        <li>Hacer que la relación imagen + texto sea clara para navegadores, lectores de pantalla y SEO.</li>
+
+        <li>Separar contenido principal del contenido ilustrativo o complementario.</li>
+    </ul>
+        
+    <table>
+        <thead>
+            <th>Uso</th>
+            <th>Estructura</th>
+        </thead>
+
+        <tr>
+            <td>Imagen con descripción</td>
+            <td>
+                <pre><code>
+                    &lt;figure&gt;
+                        &lt;img&gt;
+                        &lt;figcaption&gt;  &lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                </code></pre>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Video con explicación</td>
+            <td>
+                <pre><code>
+                    &lt;figure&gt;
+                        &lt;video&gt;
+                        &lt;figcaption&gt;  &lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                </code></pre>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Código con título</td>
+            <td>
+                <pre><code>
+                    &lt;figure&gt;
+                        &lt;pre&gt;&lt;code&gt;
+                            (Código)
+                        &lt;/code&gt;&lt;pre&gt;
+                        &lt;figcaption&gt;  &lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                </code></pre>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Gráficos o tablas explicadas</td>
+            <td>Lo mismo, agrupados con <code>&lt;figcaption&gt;</code></td>
+        </tr>
+    </table>
+    
+    <h2>Ejemplo</h2>
+    <figure>
+        <video width="500px" autoplay muted src="assets/video/TheLionKing-CircleOfLife-AlexBoye.mp4" controls></video>
+        <figcaption>The Lion King - Circle Of Life - Alex Boyé</figcaption>
+    </figure>
+
+    <p>Un <code>&lt;figure&gt;</code> puede proporcionar una descripción a más de un solo recurso. Ejemplo:</p>
+    <pre><code>
+        &lt;figure&gt;
+            &lt;audio src="/audio"&gt;  &lt;/audio&gt;
+            &lt;video src="/video"&gt;  &lt;/video&gt;
+            &lt;figcaption&gt;Descripcion de la imágen y del video.&lt;/figcaption&gt;
+        &lt;/figure&gt;
+    </code></pre>
+
+    <h2>¿Cuál es la diferencia con solo usar <code>&lt;img&gt;</code></h2>
+    <ul>
+        <li><code>&lt;img&gt;</code> solo muestra la imagen.</li>
+
+        <li><code>&lt;figure&gt;</code> da significado semántico al grupo imagen + descripción.</li>
+
+        <li>Mejora la accesibilidad y SEO.</li>
+    </ul>
+</body>
+</html>
