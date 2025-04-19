@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta "ifram"</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>ETIQUETA <code>&lt;iframe&gt;</code></h1>
+        <p>La etiqueta <code>&lt;iframe&gt;</code> (inline frame) sirve para incrustar otro documento HTML dentro del actual.</p>
+        <p>Es como una ventanita que muestra otra página web dentro de tu propia página.</p>
+        
+        <h2>Sirve para:</h2>
+        <ul>
+            <li>Mostrar otras páginas web dentro de la tuya.</li>
+
+            <li>Incrustar videos de YouTube, mapas de Google, formularios externos, etc.</li>
+
+            <li>Insertar documentos PDF, presentaciones o contenidos de otras plataformas.</li>
+
+            <li>Mostrar contenido externo sin redirigir al usuario.</li>
+        </ul>
+        
+        <h2>Ejemplo</h2>
+        <p>Este ejemplo cargará un vide de yutube en esta página web.</p>
+        <p>Código:</p>
+        <pre><code>
+            &lt;iframe width="560" height="315"
+                src="https://www.youtube.com/embed/9ThO76peOw0?si=7PwNoFwEJOVWo5AC"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen&gt;&lt;/iframe&gt;
+        </code></pre>
+
+        <p>Como se muestra:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9ThO76peOw0?si=7PwNoFwEJOVWo5AC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h2>Atributos</h2>
+        <table>
+            <thead>
+                <th>Atributo</th>
+                <th>¿Qué Hace?</th>
+            </thead>
+            <tr>
+                <td>src</td>
+                <td>URL del contenido que querés mostrar.</td>
+            </tr>
+            <tr>
+                <td>width / height</td>
+                <td>Tamaño del iframe.</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>Texto accesible para describir el contenido (muy importante para accesibilidad).</td>
+            </tr>
+            <tr>
+                <td>loading</td>
+                <td>Controla la carga: lazy (carga cuando entra en pantalla) o eager.</td>
+            </tr>
+            <tr>
+                <td>allowfullscreen</td>
+                <td>Permite que el contenido del iframe se muestre en pantalla completa.</td>
+            </tr>
+            <tr>
+                <td>frameborder (obsoleto)</td>
+                <td>Define si se muestra un borde (0 o 1). Mejor usar CSS.</td>
+            </tr>
+            <tr>
+                <td>sandbox</td>
+                <td>Restringe funcionalidades del contenido embebido (mejora la seguridad).</td>
+            </tr>
+            <tr>
+                <td>allow</td>
+                <td>Define permisos como micrófono, cámara, geolocalización, etc.</td>
+            </tr>
+            <tr>
+                <td>referrerpolicy</td>
+                <td>Controla cómo se envía el encabezado de referencia.</td>
+            </tr>
+        </table>
+
+        <h2>Nota Sobre Su Uso</h2>
+        <p>En la mayoría de las ocaciones, se utilizará la etiqueta <code>&lt;iframe&gt;</code> extraida directamete de otro sitio web.</p>
+        <p></p>
+    </main>
+    <footer></footer>
+</body>
+</html>
