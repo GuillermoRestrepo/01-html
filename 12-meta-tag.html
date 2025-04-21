@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta Meta</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>ETIQUETA <code>&lt;meta&gt;</code></h1>
+        <p>La etiqueta <code>&lt;meta&gt;</code> sirve para definir metadatos sobre página una página web.</p>
+        <ul>
+            <li>Es una etiqueta vacía, es decir, no tiene contenido ni etiqueta de cierre.</li>
+            <li>Esta tiene que estar ubicada dentro de la etiqueta <code>&lt;head&gt;</code></li>
+            <li>Los metadatos son datos sobre referentes a otros datos.</li>
+        </ul>
+
+        <h2>¿Para Qué Sirve La Etiqueta <code>&lt;meta&gt;</code>?</h2>
+        <p>Sirve para:</p>
+        <ul>
+            <li>Definir la codificación de caracteres.</li>
+            <li>Controlar el comportamiento de la página (ej: recarga automática, redireccionamiento).</li>
+            <li>Establecer descripciones para SEO.</li>
+            <li>Añadir palabras clave.</li>
+            <li>Controlar la visualización en móviles (viewport).</li>
+            <li>Configurar el autor, idioma, robots, redes sociales, etc.</li>
+        </ul>
+
+        <h2>Atributos</h2>
+        <table>
+            <thead>
+                <th>Atributo</th>
+                <th>Para Que Sirve</th>
+            </thead>
+            <tr>
+                <td>name</td>
+                <td>El tipo de metadato (ej: "description", "keywords")</td>
+            </tr>
+            <tr>
+                <td>content</td>
+                <td>El valor del metadato</td>
+            </tr>
+            <tr>
+                <td>charset</td>
+                <td>Define la codificación del texto (ej: "UTF-8")</td>
+            </tr>
+            <tr>
+                <td>http-equiv</td>
+                <td>Comportamiento del navegador (ej: "refresh", "X-UA-Compatible")</td>
+            </tr>
+        </table>
+        
+        <h2>Ejemplos Comunes Y Utiles</h2>
+        <ol>
+            <li>
+                <h3>Codificación De Caracteres (debe ir al inicio de la etiqueta <code>&lt;head&gt;</code>)</h3>
+                <p>Define la codificación de caracteres de la página, evitando errores con acentos, símbolos, etc.</p>
+                <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+            </li>
+            <li>
+                <h3>Viewport (para diseño responsivo)</h3>
+                <p>Controla cómo se muestra el sitio en dispositivos móviles y es esencial para diseño responsive.</p>
+                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+            </li>
+            <li>
+                <h3>Autor</h3>
+                <p>Útil para atribución, aunque no visible para el usuario.</p>
+                <pre><code>&lt;meta name="author" content="NombreAutor"&gt;</code></pre>
+            </li>
+            <li>
+                <h3>Descripción para SEO</h3>
+                <p>Describe el contenido de la página para buscadores (SEO), este se muestra como texto en los resultados de Google.</p>
+                <pre><code>&lt;meta name="description" content="Esta es una página sobre diseño web y HTML."&gt;</code></pre>
+            </li>
+            <li>
+                <h3>Palabras clave (menos usadas hoy en SEO)</h3>
+                <p>Lista de palabras clave relacionadas con la página, hoy en día tiene muy poco peso SEO, pero sigue siendo usada a veces.</p>
+                <pre><code>&lt;meta name="keywords" content="HTML, CSS, programación, web."&gt;</code></pre>
+            </li>
+        </ol>
+    </main>
+    <footer></footer>
+</body>
+</html>
