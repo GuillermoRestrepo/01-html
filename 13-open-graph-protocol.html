@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Graph Protocol</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          padding: 5px 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>OPEN GRAPH PROTOCOL</h1>
+        <p>Open Graph Protocol es un conjunto de etiquetas <code>&lt;meta&gt;</code> que permiten a las páginas web mostrar información sobre su contenido cuando se comparte la url de estas en algún otro sitio web o red social.</p>
+
+        <h2>Estructura</h2>
+        <p>La estructura de una propiedad del protocolo open graph, se basa en una etiqueta <code>&lt;meta&gt;</code> q contiene los atributos <code>property</code> y <code>content</code>, en los cuales pueden ir los siguientes valores.</p>
+        
+        <table>
+            <thead>
+                <th>Valores del atributo (<code>property</code>)</th>
+                <th>Valores del atrbuto (<code>content</code>)</th>
+            </thead>
+            <tr>
+                <td>og:title</td>
+                <td>El título que se mostrará en la tarjeta del enlace.</td>
+            </tr>
+            <tr>
+                <td>og:description</td>
+                <td>Descripción breve del contenido.</td>
+            </tr>
+            <tr>
+                <td>og:image</td>
+                <td>URL absoluta de la imagen de vista previa.</td>
+            </tr>
+            <tr>
+                <td>og:url</td>
+                <td>Enlace canónico de la página (URL final que representa el contenido).</td>
+            </tr>
+            <tr>
+                <td>og:type</td>
+                <td>Tipo de objeto (ej: website, article, video, music.song, etc).</td>
+            </tr>
+            <tr>
+                <td>og:site_name</td>
+                <td>Nombre del sitio web (opcional).</td>
+            </tr>
+            <tr>
+                <td>og:locale</td>
+                <td>Idioma del contenido (ej: es_ES para español de España).</td>
+            </tr>
+        </table>
+
+        <h2>Ejemplo Código:</h2>
+        <pre><code>
+            &lt;head&gt;
+                &lt;meta property="og:title" content="Mi increíble sitio web"&gt;
+                &lt;meta property="og:description" content="Explora artículos y recursos sobre desarrollo web."&gt;
+                &lt;meta property="og:image" content="https://miweb.com/img/preview.jpg"&gt;
+                &lt;meta property="og:url" content="https://miweb.com/"&gt;
+                &lt;meta property="og:type" content="website"&gt;
+            &lt;/head&gt;
+        </code></pre>
+        <p><strong>Nota:</strong> el valor del atributo (<code>content</code>) cuando el valor del atributo (<code>property</code>) es igual a (<code>og:image</code>), debe de ser una ruta absoluta que un protocolo http o https.</p>
+
+        <h2>Ejemplo Visual:</h2>
+        <table>
+            <tr>
+                <td>Asi se ve cuando se pega un enlace de un video de youtube en un mensaje de WhatsApp gracias a la propiedad open graph:</td>
+                <td>Asi se ve cuando se pega un enlace de un video de youtube en un mensaje de Facebook gracias a la propiedad open graph:</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><img width="600px" src="11-multimedia-content/assets/image/og-whatsapp.png" alt="Como se muestra la ventana del protocolo open graph en whatsapp."></td>
+                <td style="text-align: center;"><img width="400px" src="11-multimedia-content/assets/image/og-facebook.png" alt="Como se muestra la ventana del protocolo open graph en facebook."></td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>Creditos del video: midudev</td>
+                    <td><a target="_blank" href="https://youtu.be/pY_4ho8eNdM?si=d3V3sBWqiW0ySuO3">Enlace del video</a></td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <footer></footer>
+</body>
+</html>
