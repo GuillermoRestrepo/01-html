@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="11-multimedia-content/assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="11-multimedia-content/assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="11-multimedia-content/assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="11-multimedia-content/assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="11-multimedia-content/assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="11-multimedia-content/assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="11-multimedia-content/assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="11-multimedia-content/assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="11-multimedia-content/assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="11-multimedia-content/assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="11-multimedia-content/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="11-multimedia-content/assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="11-multimedia-content/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="11-multimedia-content/assets/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Iconos en HTML</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>ICONOS EN HTML</h1>
+        <h2>Icono Pestaña Navegador</h2>
+        <p>Para colocar un icono en la pestaña del navegador se utiliza la etiqueta <code>&lt;link&gt;</code>, la cual irá ubicada dentro de la etiqueta <code>&lt;head&gt;</code></p>
+
+        <h3>Ejemplo:</h3>
+        <pre><code>
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;link rel="icon" href="11-multimedia-content/assets/icons/favicon.ico" type="image/x-icon"&gt;
+              &lt;/head&gt;
+        </code></pre>
+
+        <p>El atributo (<code>rel</code>) hace que el navegador entienda el proposito de la etiqueta <code>&lt;link&gt;</code> y el atributo (<code>type</code>), al igual que en las etiquetas de contenido multimedia, le indica al navegador el tipo de recurso que se está proporcionando.</p>
+
+        <h3>Notas</h3>
+        <ul>
+            <li>Usá imágenes cuadradas (los iconos no deben estar estirados).</li>
+            <li>Idealmente usa el formato .png o .ico, también puede ser en formato .svg pero es probable q no funcione en todos los casos, ya sea porq el novegador no lo soporta o porq no está actualizado a su última versión.</li>
+            <li>Si se puede, hay que probarlo en diferentes navegadores y dispositivos.</li>
+            <li>Usá el formato .svg para escalabilidad en sitios modernos, pero añade fallback (versión de respaldo) en formato .png o .ico.</li>
+        </ul>
+
+        <h3>Forma Facil</h3>
+        <p>Usa una herramienta como <a target="_blank" href="https://www.favicon-generator.org/">favicon-generator.org</a> en donde unicamente con cargar la imagen del icono, generará los diferentes formatos que serviran para los distintos dispositivos y navegadores. Ejemplo:</p>
+        <img src="11-multimedia-content/assets/image/favicon-generator.png" alt="ejemplo de uso de favicon-generator">
+
+
+        <h2>Iconos Página Web</h2>
+        <p>Son iconos q normalmente suelen ser utilizados para botones, para menús, para logos de redes sociales, entre otros, podemos encontrar sitios webs, que cuentan con estos iconos prefabricados. Algunos sitios webs son:</p>
+        <ul>
+            <li><a target="_blank" href="https://fontawesome.com/icons">FontAwesome</a></li>
+            <li><a target="_blank" href="https://tabler.io/icons">TablerIcons</a></li>
+            <li><a target="_blank" href="https://www.radix-ui.com/icons">Radix</a></li>
+            <li><a target="_blank" href="https://svgl.app/">Svgl</a></li>
+            <li><a target="_blank" href="https://fonts.google.com/icons">Google</a></li>
+            <li><a target="_blank" href="Iconoir">https://iconoir.com</a></li>
+            <li><a target="_blank" href="https://lucide.dev/">Lucide</a></li>
+            <li><a target="_blank" href="https://css.gg/">CSSgo</a></li>
+            <li><a target="_blank" href="https://animatedicons.co/icons/minimalistic">Animatedicons</a></li>
+            <li><a target="_blank" href="https://react-icons.github.io/react-icons/icons/di/">ReactIcons</a></li>
+            <li><a target="_blank" href="https://heroicons.com/">Heroic</a></li>
+        </ul>
+        <p>Cada uno proporciona diferentes medios para poder usar los iconos q predisponen. Ya sea CDN (red de distribución de contenido), codigo svg, descargar como imagen, entre otras. Ejemplo:</p>
+
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="50"  height="50"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-camera"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /><path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
+
+        <img width="45" src="11-multimedia-content/assets/icons/github_light.svg" alt="logo github">
+            
+            
+    </main>
+    <footer></footer>
+</body>
+</html>
