@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>Accesibilidad</h1>
+        <p>Este tema está orientado a personas con discapacidades visuales, para q estas puedan navegar de una forma sencilla en un sitio web.</p>
+
+        <h2>Atributo <code>tabindex=""</code></h2>
+        <p>Este atributo nos permite navegar mediante el uso de la tecla tabulador.</p>
+        <p>codigo</p>
+        <pre><code>
+            &lt;p&gt; tabindex="3">Párrafo 3&lt;/p&gt;
+            &lt;p&gt; tabindex="2">Párrafo 2&lt;/p&gt;
+            &lt;p&gt; tabindex="1">Párrafo 1&lt;/p&gt;
+        </code></pre>
+
+        <p>Presiona la tecla tabulador para ver su funcionamiento:</p>
+        <p tabindex="1">Párrafo 1</p>
+        <p tabindex="3">Párrafo 3</p>
+        <p tabindex="2">Párrafo 2</p>
+        <p>No solo es util para la accesibilidad, sino para comodida de usuarios que desen desplazarce de forma mas rápida por las opciones del sitio web.</p>
+
+
+        <h2>Atributo <code>aria-label=""</code></h2>
+        <p>Este atributo permite escribir una descripcion adicional q puede ser leida por medio de una extencion de screamreader (lector de pantalla).</p>
+        <p>EJEMPLO DE EXTENCION:(ChromeVox Classic Extension)</p>
+        <p>Codigo:</p>
+        &lt;a href="#" aria-label="Leer mas sobre la guerra comercial"&gt;Leer más&lt;/a&gt;<br>
+        <p>Como se muestra:</p>
+        <a href="#" aria-label="Leer mas sobre la guerra comercial">Leer más</a>
+
+        <h2>Atributo <code>role</code></h2>
+        <p>Este atributo le indica al lector de pantalla qué tipo de "componente" es ese elemento: botón, encabezado, barra de navegación, alerta, diálogo, etc.</p>
+
+        <p>sirve para:</p>
+        <ul>
+            <li>Ayuda a que los usuarios con discapacidad entiendan mejor la estructura y funcionalidad de una página web.</li>
+
+            <li>Hace accesibles elementos que no lo son de forma natural (como <code>&lt;div&gt;</code> o <code>&lt;span&gt;</code> usados con JS).</li>
+
+            <li>Refuerza el significado semántico cuando los elementos HTML no lo comunican por sí solos.</li>
+        </ul>
+        <pre><code>
+            &lt;img src="#" rol="img" alt="imagen vacia"&gt;
+        </code></pre>
+        <p>Por ejemplo, aquí se le indica al navegador que este elemento es una imagen y el asistente de voz se lo comunicará al usuario.</p>
+
+        <p><strong>EXISTE MUCHO MAS ACERCA DE ACCESIBILIDAD, ESTO ES LO BÁSICO O MENOS DE LO BÁSICO.</strong></p>
+    </main>
+    <footer></footer>
+</body>
+</html>
