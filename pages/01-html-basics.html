@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/01-style.css">
+    <title>Fundamentos</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+    <main>
+        <h1>FUNDAMENTOS DE HTML</h1>
+        <hr>
+        <nav id="navigation">
+            <ul>
+                <li><a href="#naming">Nombrar Archivos (.html)</a></li>
+                <li><a href="#comments">Comentarios</a></li>
+                <li><a href="#syntax">Sintaxis</a></li>
+                <li><a href="#tag-types">Tipos De Etiquetas</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <article>
+            <h2 id="naming">Nombrar Archivos (.html)</h2>
+
+            <section>
+                <h3>Caracteres Permitidos</h3>
+                <p>Los nombres para archivos <strong>HTML</strong> pueden contener:</p>
+                <ul>
+                    <li>Letras minúsculas.</li>
+                    <li>Números.</li>
+                    <li>Guiones medios para reemplazar espacios (kebab-case).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Caracteres A Evitar</h3>
+                <p>Es importante evitar el uso de:</p>
+                <ul>
+                    <li>Mayúsculas.</li>
+                    <li>Caracteres especiales y símbolos. (ñ, /, *, @, ?, !, etc.).</li>
+                    <li>Signos de puntuación (,, ., :, ;, etc.).</li>
+                    <li>Acentos (á, ê, ü, etc.).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Ejemplos</h3>
+                
+                <section>
+                    <h4>Forma correcta:</h4>
+                    <ul>
+                        <li>index.html</li>
+                        <li>mi-pagina-2.html</li>
+                        <li>01-basicos.html</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h4>Forma incorrecta:</h4>
+                    <ul>
+                        <li>índice.html</li>
+                        <li>mí_página(2).html</li>
+                        <li>01 basicos.html</li>
+                    </ul>
+                </section>
+            </section>
+            <a href="#navigation">↑ Menú</a>
+        </article>
+        <hr>
+        <article>
+            <h2 id="comments">Comentarios</h2>
+            <p>Para representar comentarios en un documento <strong>HTML</strong>, hay que encerrar el comentario entre los siguientes símbolos:</p>
+            <ul>
+                <li>Apertura: <code>&lt;!--</code></li>
+                <li>Cierre: <code>--&gt;</code></li>
+            </ul>
+
+            <section>
+                <h3>Ejemplos:</h3>
+                <section>
+                    <h4>Comentario de línea:</h4>
+                    <pre><code>    &lt;!-- Esto es un comentario de línea. --&gt;</code></pre>
+                </section>
+                
+                <section>
+                    <h4>Comentario de bloque:</h4>
+                    <pre><code>    &lt;!--
+        Esto es
+        un comentario
+        de bloque.
+    --&gt;</code></pre>
+                </section>
+            </section>
+            <a href="#navigation">↑ Menú</a>
+        </article>
+        <hr>
+        <article>
+            <h2 id="syntax">Sintaxis</h2>
+            <p>Existen dos tipos de etiquetas en <strong>HTML</strong>, las cuales son:</p>
+
+            <section>
+                <h3>Etiqueta De Apertura</h3>
+                <p>Se representa escribiendo el nombre de la etiqueta entre signos de mayor que (&lt;) y menor que (&gt;):</p>
+                <pre><code>    &lt;nombre&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>Etiqueta De Cierre</h3>
+                <p>Se representa de igual forma que una etiqueta de apertura, pero con la diferencia de que una etiqueta de cierre lleva un carácter de barra diagonal (/) antes del nombre:</p>
+                <pre><code>    &lt;/nombre&gt;</code></pre>
+            </section>
+            <a href="#navigation">↑ Menú</a>
+        </article>
+        <hr>
+        <article>
+            <h2 id="tag-types">Tipos De Etiquetas</h2>
+            <section>
+                <h3>Según Su Estructura</h3>
+                <section>
+                    <h4>Etiquetas de apertura y cierre</h4>
+                    <p>Son etiquetas que, para representarlas, es necesario escribir tanto su etiqueta de apertura como su etiqueta de cierre. Ejemplo:</p>
+                    <pre><code>    &lt;p&gt;Contenido de la etiqueta.&lt;/p&gt;</code></pre>
+                </section>
+
+                <section>
+                    <h4>Etiquetas autocerradas</h4>
+                    <p>Son etiquetas que, para representarlas, únicamente es necesario escribir la etiqueta de apertura. Ejemplo:</p>
+                    <pre><code>    &lt;img&gt;</code></pre>
+                </section>
+            </section>
+
+            <section>
+                <h3>Según su comportamiento</h3>
+                <section>
+                    <h4>Etiquetas de bloque</h4>
+                    <p>Se caracterizan por ocupar todo el ancho disponible del elemento que las contiene y por generar un salto de línea. Ejemplo:</p>
+                    <pre><code>    &lt;div&gt;Elemento de bloque&lt;/div&gt;</code></pre>
+                </section>
+                
+                <section>
+                    <h4>Etiquetas de línea</h4>
+                    <p>Se caracterizan por ocupar únicamente el ancho que necesita su contenido. Ejemplo:</p>
+                    <pre><code>    &lt;span&gt;Elemento de línea&lt;/span&gt;</code></pre>
+                </section>
+            </section>
+            <a href="#navigation">↑ Menú</a>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
