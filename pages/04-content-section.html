@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/01-style.css">
+    <title>Etiquetas de sección de contenido</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+
+    <main>
+        <h1>ETIQUETAS DE SECCIÓN DE CONTENIDO</h1>
+        
+        <hr>
+
+        <nav id="navigation">
+            <ul>
+                <li><a href="#header-topic"><code>&lt;header&gt;</code></a></li>
+                <li><a href="#main-topic"><code>&lt;main&gt;</code></a></li>
+                <li><a href="#footer-topic"><code>&lt;footer&gt;</code></a></li>
+                <li><a href="#aside-topic"><code>&lt;aside&gt;</code></a></li>
+                <li><a href="#section-topic"><code>&lt;section&gt;</code></a></li>
+                <li><a href="#article-topic"><code>&lt;article&gt;</code></a></li>
+                <li><a href="#nav-topic"><code>&lt;nav&gt;</code></a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <section>
+            <h2 id="header-topic">1. <code>&lt;header&gt;</code></h2>
+            <ul>
+                <li>Define la cabecera de una página o sección.</li>
+                <li>Suele contener logotipos, títulos o menús de navegación.</li>
+                <li>Puedes usar varios <code>&lt;header&gt;</code> en un documento.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;header&gt;
+    &lt;h1&gt;Mi sitio web&lt;/h1&gt;
+    &lt;nav&gt;Menú&lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="main-topic">2. <code>&lt;main&gt;</code></h2>
+            <ul>
+                <li>Contiene el contenido principal de la página.</li>
+                <li>Debe haber solo un <code>&lt;main&gt;</code> por documento.</li>
+                <li>No debe incluir cabeceras, barras laterales o pies de página.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;main&gt;
+    &lt;h2&gt;Contenido principal&lt;/h2&gt;
+    &lt;p&gt;Aquí va lo más importante de la página.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="footer-topic">3. <code>&lt;footer&gt;</code></h2>
+            <ul>
+                <li>Representa el pie de página de un sitio o sección.</li>
+                <li>Suele contener información de contacto, derechos de autor o enlaces secundarios.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2025 Mi sitio web&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="aside-topic">4. <code>&lt;aside&gt;</code></h2>
+            <ul>
+                <li>Representa contenido complementario o secundario.</li>
+                <li>Puede usarse como barra lateral con enlaces, anuncios o notas.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;aside&gt;
+    &lt;h3&gt;Noticias relacionadas&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Artículo 1&lt;/li&gt;
+        &lt;li&gt;Artículo 2&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;</code></pre>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="section-topic">5. <code>&lt;section&gt;</code></h2>
+            <ul>
+                <li>Agrupa contenido relacionado en bloques temáticos.</li>
+                <li>Debe incluir un encabezado con <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, etc.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;section&gt;
+    &lt;h2&gt;Servicios&lt;/h2&gt;
+    &lt;p&gt;Ofrecemos desarrollo web y diseño gráfico.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="article-topic">6. <code>&lt;article&gt;</code></h2>
+            <ul>
+                <li>Representa contenido independiente y autocontenido.</li>
+                <li>Puede ser una noticia, entrada de blog o publicación.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;article&gt;
+    &lt;h2&gt;Nuevo lanzamiento&lt;/h2&gt;
+    &lt;p&gt;Hoy publicamos nuestra nueva aplicación.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="nav-topic">7. <code>&lt;nav&gt;</code></h2>
+            <ul>
+                <li>Define un bloque de enlaces de navegación.</li>
+                <li>Puede estar dentro de <code>&lt;header&gt;</code> o en otro lugar.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
