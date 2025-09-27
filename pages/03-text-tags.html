@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/01-style.css">
+    <title>Etiquetas de texto</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+    <main>
+        <h1>ETIQUETAS DE TEXTO</h1>
+        <hr>
+        <nav id="navigation">
+            <ul>
+                <li><a href="#heading">&lt;h1&gt;...&lt;h6&gt;</a></li>
+                <li><a href="#paragraph">&lt;p&gt;</a></li>
+                <li><a href="#less-emphasis">&lt;small&gt;</a></li>
+                <li><a href="#emphasis">&lt;em&gt;</a></li>
+                <li><a href="#more-emphasis">&lt;strong&gt;</a></li>
+                <li><a href="#italic">&lt;i&gt;</a></li>
+                <li><a href="#bold">&lt;b&gt;</a></li>
+                <li><a href="#underline">&lt;u&gt;</a></li>
+                <li><a href="#delete">&lt;del&gt;</a></li>
+                <li><a href="#insert">&lt;ins&gt;</a></li>
+                <li><a href="#supindex">&lt;sup&gt;</a></li>
+                <li><a href="#subindex">&lt;sub&gt;</a></li>
+                <li><a href="#special-entities">Entidades especiales</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <section>
+            <h2 id="heading">1. <code>&lt;h1&gt;</code> ... <code>&lt;h6&gt;</code></h2>
+            <ul>
+                <li>Representan títulos o encabezados.</li>
+                <li><code>&lt;h1&gt;</code> es el más importante (solo debe haber uno por página).</li>
+                <li><code>&lt;h6&gt;</code> es el menos relevante.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;h4&gt;Encabezado de 4º nivel&lt;/h4&gt;
+&lt;h5&gt;Subtítulo de 5º nivel&lt;/h5&gt;</code></pre>
+            <h4>Encabezado de 4º nivel</h4>
+            <h5>Subtítulo de 5º nivel</h5>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="paragraph">2. <code>&lt;p&gt;</code></h2>
+            <ul>
+                <li>Define un párrafo de texto.</li>
+                <li>Es el bloque básico para texto en HTML.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;Este es un párrafo en HTML.&lt;/p&gt;</code></pre>
+            <p>Este es un párrafo en HTML.</p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="less-emphasis">3. <code>&lt;small&gt;</code></h2>
+            <ul>
+                <li>Representa texto de menor importancia.</li>
+                <li>Muestra texto en tamaño más pequeño.</li>
+                <li>Se usa para notas, aclaraciones o contenido secundario.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;Texto principal &lt;small&gt;(nota al pie)&lt;/small&gt;&lt;/p&gt;</code></pre>
+            <p>Texto principal <small>(nota al pie)</small></p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="emphasis">4. <code>&lt;em&gt;</code></h2>
+            <ul>
+                <li>Significa énfasis.</li>
+                <li>Se muestra en cursiva por defecto.</li>
+                <li>Importante para accesibilidad: los lectores de pantalla lo leen con énfasis.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;Es muy &lt;em&gt;importante&lt;/em&gt; estudiar.&lt;/p&gt;</code></pre>
+            <p>Es muy <em>importante</em> estudiar.</p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="more-emphasis">5. <code>&lt;strong&gt;</code></h2>
+            <ul>
+                <li>Indica gran importancia.</li>
+                <li>Se muestra en negrita por defecto.</li>
+                <li>Tiene peso semántico para SEO y accesibilidad.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;Este es un dato &lt;strong&gt;muy relevante&lt;/strong&gt;.&lt;/p&gt;</code></pre>
+            <p>Este es un dato <strong>muy relevante</strong>.</p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="italic">6. <code>&lt;i&gt;</code></h2>
+            <ul>
+                <li>Texto en cursiva (solo visual).</li>
+                <li>No implica importancia semántica; se usa para términos extranjeros, nombres de obras, etc.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;La palabra &lt;i&gt;carpe diem&lt;/i&gt; es latina.&lt;/p&gt;</code></pre>
+            <p>La palabra <i>carpe diem</i> es latina.</p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="bold">7. <code>&lt;b&gt;</code></h2>
+            <ul>
+                <li>Texto en negrita (solo visual).</li>
+                <li>Sin importancia semántica.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;Este es un texto &lt;b&gt;destacado&lt;/b&gt;.&lt;/p&gt;</code></pre>
+            <p>Este es un texto <b>destacado</b>.</p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="underline">8. <code>&lt;u&gt;</code></h2>
+            <ul>
+                <li>Texto subrayado.</li>
+                <li>Uso recomendado para señalar nombres propios, errores ortográficos o términos especiales.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;Nombre del autor: &lt;u&gt;Miguel de Cervantes&lt;/u&gt;&lt;/p&gt;</code></pre>
+            <p>Nombre del autor: <u>Miguel de Cervantes</u></p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="delete">9. <code>&lt;del&gt;</code></h2>
+            <ul>
+                <li>Indica texto eliminado o tachado.</li>
+                <li>Útil en documentos editables o para mostrar cambios.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;Precio anterior: &lt;del&gt;50€&lt;/del&gt; Ahora: 30€&lt;/p&gt;</code></pre>
+            <p>Precio anterior: <del>50€</del> Ahora: 30€</p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="insert">10. <code>&lt;ins&gt;</code></h2>
+            <ul>
+                <li>Indica texto insertado.</li>
+                <li>Por defecto, se muestra subrayado.</li>
+                <li>Útil para marcar adiciones recientes en un documento.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;Versión final: &lt;ins&gt;Aprobado&lt;/ins&gt;&lt;/p&gt;</code></pre>
+            <p>Versión final: <ins>Aprobado</ins></p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="supindex">11. <code>&lt;sup&gt;</code></h2>
+            <ul>
+                <li>Texto en superíndice (arriba y más pequeño).</li>
+                <li>Se usa en exponentes, notas al pie, etc.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;La fórmula es: E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+            <p>La fórmula es: E = mc<sup>2</sup></p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <section>
+            <h2 id="subindex">12. <code>&lt;sub&gt;</code></h2>
+            <ul>
+                <li>Texto en subíndice (abajo y más pequeño).</li>
+                <li>Se usa en fórmulas químicas o matemáticas.</li>
+            </ul>
+            <h3>Ejemplo:</h3>
+<pre><code>&lt;p&gt;La fórmula química del agua es: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;</code></pre>
+            <p>La fórmula química del agua es: H<sub>2</sub>O</p>
+            <a href="#navigation">↑ Menú</a>
+        </section>
+
+        <hr>
+
+        <article>
+            <h2 id="special-entities">Entidades especiales en HTML</h2>
+            <p>Se usan para representar caracteres que, de otro modo, se interpretarían como código <strong>HTML</strong> o que no están en el teclado.</p>
+            <ul>
+                <li>&amp;lt; → &lt; (menor que)</li>
+                <li>&amp;gt; → &gt; (mayor que)</li>
+                <li>&amp;amp; → &amp; (ampersand)</li>
+                <li>&amp;quot; → &quot; (comillas dobles)</li>
+                <li>&amp;apos; → &apos; (comilla simple)</li>
+                <li>&amp;copy; → &copy; (símbolo de copyright)</li>
+                <li>&amp;reg; → &reg; (registrado)</li>
+                <li>&amp;euro; → &euro; (euro)</li>
+                <li>&amp;#62; → &#62; (código numérico en Unicode, decimal 62).</li>
+            </ul>
+            <a href="#navigation">↑ Menú</a>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+</html>
