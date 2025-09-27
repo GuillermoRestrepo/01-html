@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/01-style.css">
+    <title>Etiquetas de texto II</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+
+    <main>
+        <h1>ETIQUETAS DE TEXTO II</h1>
+        <hr>
+        <nav id="menu">
+            <ul>
+                <li><a href="#hr-topic"><code>&lt;hr&gt;</code></a></li>
+                <li><a href="#br-topic"><code>&lt;br&gt;</code></a></li>
+                <li><a href="#wbr-topic"><code>&lt;wbr&gt;</code></a></li>
+                <li><a href="#time-topic"><code>&lt;time&gt;</code></a></li>
+                <li><a href="#address-topic"><code>&lt;address&gt;</code></a></li>
+                <li><a href="#div-topic"><code>&lt;div&gt;</code></a></li>
+                <li><a href="#span-topic"><code>&lt;span&gt;</code></a></li>
+                <li><a href="#pre-topic"><code>&lt;pre&gt;</code></a></li>
+                <li><a href="#code-topic"><code>&lt;code&gt;</code></a></li>
+                <li><a href="#q-topic"><code>&lt;q&gt;</code></a></li>
+                <li><a href="#bq-topic"><code>&lt;blockquote&gt;</code></a></li>
+                <li><a href="#cite-topic"><code>&lt;cite&gt;</code></a></li>
+                <li><a href="#kbd-topic"><code>&lt;kbd&gt;</code></a></li>
+            </ul>
+        </nav>
+        <hr>
+        <article id="hr-topic">
+            <h2>1. <code>&lt;hr&gt;</code></h2>
+            <ul>
+                <li>Representa un cambio temático o de contexto en el contenido.</li>
+                <li>Se muestra como una línea horizontal.</li>
+                <li>No tiene etiqueta de cierre.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;p&gt;Párrafo uno.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Párrafo dos.&lt;/p&gt;</code></pre>
+
+                <p>Párrafo uno.</p>
+                <hr>
+                <p>Párrafo dos.</p>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        
+        <article id="br-topic">
+            <h2>2. <code>&lt;br&gt;</code></h2>
+            <ul>
+                <li>Inserta un salto de línea en el texto.</li>
+                <li>No tiene etiqueta de cierre.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;p&gt;Primera línea.&lt;br&gt;Segunda línea.&lt;/p&gt;</code></pre>
+
+                <p>Primera línea.<br>Segunda línea.</p>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="wbr-topic">
+            <h2>3. <code>&lt;wbr&gt;</code></h2>
+            <ul>
+                <li>Indica una posible ruptura de palabra si no cabe en la misma línea.</li>
+                <li>No tiene etiqueta de cierre.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;p&gt;TextoMuyLargoQue&lt;wbr&gt;PodríaRomperse&lt;wbr&gt;EnVariasPartes&lt;/p&gt;</code></pre>
+
+                <p>TextoMuyLargoQue<wbr>PodríaRomperse<wbr>EnVariasPartes</p>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="time-topic">
+            <h2>4. <code>&lt;time&gt;</code></h2>
+            <ul>
+                <li>Representa fechas u horas.</li>
+                <li>Atributo <code>datetime</code>: almacena la fecha/hora en un formato estándar.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;p&gt;Hoy es &lt;time datetime="2025-09-27"&gt;27 de septiembre de 2025&lt;/time&gt;.&lt;/p&gt;</code></pre>
+
+                <p>Hoy es <time datetime="2025-09-27">27 de septiembre de 2025</time>.</p>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="address-topic">
+            <h2>5. <code>&lt;address&gt;</code></h2>
+            <ul>
+                <li>Representa información de contacto.</li>
+                <li>Suele incluirse en el pie de página.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;address&gt;
+    Escrito por Guillermo Restrepo.&lt;br&gt;
+    Visítanos en:&lt;br&gt;
+    123, Avenida Siempre Viva
+&lt;/address&gt;</code></pre>
+
+                <address>
+                    Escrito por Guillermo Restrepo.<br>
+                    Visítanos en:<br>
+                    123, Avenida Siempre Viva
+                </address>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="div-topic">
+            <h2>6. <code>&lt;div&gt;</code></h2>
+            <ul>
+                <li>Elemento contenedor genérico en bloque.</li>
+                <li>Se usa para agrupar contenido y aplicar estilos o scripts.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;div&gt;
+    &lt;p&gt;Esto es un párrafo dentro de un div.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <div>
+                <p>Esto es un párrafo dentro de un div.</p>
+                </div>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="span-topic">
+            <h2>7. <code>&lt;span&gt;</code></h2>
+            <ul>
+                <li>Elemento contenedor genérico en línea.</li>
+                <li>Se usa para resaltar o aplicar estilos a partes del texto.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;p&gt;Texto con un &lt;span&gt;fragmento resaltado&lt;/span&gt;.&lt;/p&gt;</code></pre>
+
+                <p>Texto con un <span>fragmento resaltado</span>.</p>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="pre-topic">
+            <h2>8. <code>&lt;pre&gt;</code></h2>
+            <ul>
+                <li>Muestra el texto respetando los espacios y saltos de línea tal como se escribieron.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;pre&gt;
+    Texto con formato
+        que respeta espacios
+            y saltos de línea.
+&lt;/pre&gt;</code></pre>
+
+                <pre>
+    Texto con formato
+        que respeta espacios
+            y saltos de línea.
+                </pre>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="code-topic">
+            <h2>9. <code>&lt;code&gt;</code></h2>
+            <ul>
+                <li>Representa fragmentos de código.</li>
+                <li>Normalmente se muestra en fuente monoespaciada.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;p&gt;Ejemplo en JavaScript: &lt;code&gt;let x = 10;&lt;/code&gt;&lt;/p&gt;</code></pre>
+
+                <p>Ejemplo en JavaScript: <code>let x = 10;</code></p>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="q-topic">
+            <h2>10. <code>&lt;q&gt;</code></h2>
+            <ul>
+                <li>Define una cita breve en línea.</li>
+                <li>Los navegadores suelen mostrarla entre comillas.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;p&gt;Mi madre siempre decía: &lt;q cite="https://es.wikipedia.org/wiki/Proverbio"&gt;A quien madruga, Dios le da más tiempo de hacer su trabajo&lt;/q&gt;.&lt;/p&gt;</code></pre>
+
+                <p>Mi madre siempre decía: <q cite="https://es.wikipedia.org/wiki/Proverbio">A quien madruga, Dios le da más tiempo de hacer su trabajo</q>.</p>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="bq-topic">
+            <h2>11. <code>&lt;blockquote&gt;</code></h2>
+            <ul>
+                <li>Define una cita larga o en bloque.</li>
+                <li>Atributo <code>cite</code>: especifica la fuente de la cita.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;blockquote cite="https://es.wikipedia.org/wiki/HTML"&gt;
+    HTML es el lenguaje estándar para la creación de páginas web.
+&lt;/blockquote&gt;</code></pre>
+
+                <blockquote cite="https://es.wikipedia.org/wiki/HTML">
+                HTML es el lenguaje estándar para la creación de páginas web.
+                </blockquote>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="cite-topic">
+            <h2>12. <code>&lt;cite&gt;</code></h2>
+            <ul>
+                <li>Se usa para referenciar el título de una obra, libro, película, artículo, etc.</li>
+                <li>Generalmente los navegadores lo muestran en cursiva.</li>
+                <li>No tiene atributos específicos, pero puede combinarse con otros como <code>title</code>.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;p&gt;Mi libro favorito es &lt;cite&gt;Cien años de soledad&lt;/cite&gt; de Gabriel García Márquez.&lt;/p&gt;</code></pre>
+
+                <p>Mi libro favorito es <cite>Cien años de soledad</cite> de Gabriel García Márquez.</p>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+
+        <article id="kbd-topic">
+            <h2>13. <code>&lt;kbd&gt;</code></h2>
+            <ul>
+                <li>Representa la entrada de texto por parte del usuario (teclado u otro dispositivo).</li>
+                <li>Se suele mostrar en fuente monoespaciada.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;p&gt;Presiona &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt; para copiar.&lt;/p&gt;</code></pre>
+
+                <p>Presiona <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.</p>
+            </section>
+
+            <p><a href="#menu">Volver al menú</a></p>
+        </article>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
