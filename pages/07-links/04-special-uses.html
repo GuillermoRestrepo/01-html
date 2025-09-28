@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/01-style.css">
+    <title>Usos especiales</title>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">Regresar al índice</a>
+    </header>
+    <main>
+        <h1>USOS ESPECIALES DE LOS ENLACES</h1>
+        <p>
+            Además de enlazar a páginas web o documentos, los enlaces en HTML pueden usarse para ejecutar acciones especiales como enviar correos, realizar llamadas telefónicas o abrir aplicaciones externas. Esto se logra utilizando esquemas específicos en el atributo <code>href</code>.
+        </p>
+
+        <section>
+            <h2>Correo electrónico: <code>mailto:</code></h2>
+            <p>
+                Permite abrir el cliente de correo del usuario para redactar un nuevo mensaje a una dirección determinada.
+            </p>
+            <pre><code>&lt;a href="mailto:ejemplo@correo.com"&gt;Enviar correo&lt;/a&gt;</code></pre>
+            <p>
+                Incluso se pueden agregar parámetros como asunto o cuerpo del mensaje:
+            </p>
+            <pre><code>&lt;a href="mailto:ejemplo@correo.com?subject=Consulta&amp;body=Hola"&gt;Correo con asunto&lt;/a&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Llamadas telefónicas: <code>tel:</code></h2>
+            <p>
+                Abre la aplicación de teléfono en dispositivos compatibles para realizar una llamada al número indicado.
+            </p>
+            <pre><code>&lt;a href="tel:+593987654321"&gt;Llamar al número&lt;/a&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>WhatsApp</h2>
+            <p>
+                Se puede abrir un chat de WhatsApp utilizando un enlace especial con el número de teléfono y, opcionalmente, un mensaje predefinido.
+            </p>
+            <pre><code>&lt;a href="https://wa.me/593987654321"&gt;Abrir chat en WhatsApp&lt;/a&gt;</code></pre>
+            <pre><code>&lt;a href="https://wa.me/593987654321?text=Hola%20quiero%20información"&gt;Enviar mensaje por WhatsApp&lt;/a&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Otros esquemas comunes</h2>
+            <article>
+                <h3>Enlace a ubicación (Google Maps)</h3>
+                <pre><code>&lt;a href="https://www.google.com/maps?q=-2.170998, -79.922359"&gt;Ver ubicación&lt;/a&gt;</code></pre>
+            </article>
+            <article>
+                <h3>Enlace para descargar un archivo directo</h3>
+                <pre><code>&lt;a href="https://ejemplo.com/archivo.pdf"&gt;Descargar PDF&lt;/a&gt;</code></pre>
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
