@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/01-style.css">
+    <title>Atributos de los enlaces</title>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">Regresar al índice</a>
+    </header>
+    <main>
+        <h1>ATRIBUTOS DE LOS ENLACES</h1>
+        <section>
+            <article>
+                <h2>href</h2>
+                <p>
+                    El atributo <code>href</code> define la dirección del recurso al cual apunta el enlace.
+                </p>
+                <p>Ejemplos:</p>
+                <pre><code>&lt;a href="pagina.html"&gt;Enlace a una página local&lt;/a&gt;</code></pre>
+                <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Enlace externo&lt;/a&gt;</code></pre>
+            </article>
+
+            <article>
+                <h2>target</h2>
+                <p>
+                    El atributo <code>target</code> indica dónde se abrirá el recurso vinculado.
+                </p>
+                <p>Valores posibles:</p>
+                <ul>
+                    <li><code>_self</code>: Abre en la misma pestaña (valor por defecto).</li>
+                    <li><code>_blank</code>: Abre en una pestaña o ventana nueva.</li>
+                    <li><code>_parent</code>: Abre en el marco padre.</li>
+                    <li><code>_top</code>: Abre en toda la ventana, ignorando marcos.</li>
+                </ul>
+                <p>Ejemplo:</p>
+                <pre><code>&lt;a href="pagina.html" target="_blank"&gt;Abrir en nueva pestaña&lt;/a&gt;</code></pre>
+            </article>
+
+            <article>
+                <h2>download</h2>
+                <p>
+                    El atributo <code>download</code> indica que, en lugar de abrir el recurso, este debe descargarse. Opcionalmente, se puede especificar el nombre del archivo.
+                </p>
+                <p>Ejemplos:</p>
+                <pre><code>&lt;a href="documento.pdf" download&gt;Descargar documento&lt;/a&gt;</code></pre>
+                <pre><code>&lt;a href="imagen.png" download="foto-usuario.png"&gt;Descargar imagen&lt;/a&gt;</code></pre>
+            </article>
+
+            <article>
+                <h2>hreflang</h2>
+                <p>
+                    El atributo <code>hreflang</code> especifica el idioma del recurso enlazado, 
+                    lo cual es útil para navegadores y motores de búsqueda.
+                </p>
+                <p>Ejemplo:</p>
+                <pre><code>&lt;a href="pagina-en.html" hreflang="en"&gt;Versión en inglés&lt;/a&gt;</code></pre>
+            </article>
+
+            <article>
+                <h2>rel</h2>
+                <p>
+                    El atributo <code>rel</code> define la relación entre el documento actual 
+                    y el recurso enlazado.
+                </p>
+                <p>Algunos valores comunes son:</p>
+                <ul>
+                    <li><code>noopener</code>: Evita que la nueva página acceda a <code>window.opener</code>.</li>
+                    <li><code>noreferrer</code>: Evita enviar información de referencia.</li>
+                    <li><code>nofollow</code>: Indica a los motores de búsqueda que no sigan el enlace.</li>
+                    <li><code>alternate</code>: Indica que el recurso es una versión alternativa.</li>
+                    <li><code>stylesheet</code>: Enlaces a hojas de estilo.</li>
+                </ul>
+                <p>Ejemplo:</p>
+                <pre><code>&lt;a href="https://www.ejemplo.com" rel="nofollow"&gt;Enlace con nofollow&lt;/a&gt;</code></pre>
+            </article>
+
+            <article>
+                <h2>type</h2>
+                <p>
+                    El atributo <code>type</code> indica el tipo de medio (MIME type) del recurso al que se enlaza. 
+                    Es más usado en enlaces a recursos distintos a páginas HTML.
+                </p>
+                <p>Ejemplos:</p>
+                <pre><code>&lt;a href="documento.pdf" type="application/pdf"&gt;Abrir PDF&lt;/a&gt;</code></pre>
+                <pre><code>&lt;a href="estilos.css" rel="stylesheet" type="text/css"&gt;Enlazar CSS&lt;/a&gt;</code></pre>
+            </article>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
