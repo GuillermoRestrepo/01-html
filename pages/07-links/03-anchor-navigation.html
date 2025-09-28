@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/01-style.css">
+    <title>Navegación por anclas</title>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">Regresar al índice</a>
+    </header>
+    <main>
+        <h1>NAVEGACIÓN POR ANCLAS</h1>
+        <p>
+            La navegación por anclas permite desplazarse dentro de un mismo documento o a una parte específica de otro documento.
+        </p>
+
+        <section>
+            <h2>Cómo funciona</h2>
+            <p>
+                1. Se asigna un <code>id</code> a un elemento, lo cual lo convierte en un punto de referencia.
+            </p>
+            <p>
+                2. Se crea un enlace con <code>href="#id-del-elemento"</code>, que permite desplazarse hacia dicho punto.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ejemplo básico</h2>
+            <article>
+                <h3>Definir anclas</h3>
+                <pre><code>&lt;h2 id="seccion1"&gt;Sección 1&lt;/h2&gt;
+&lt;p&gt;Contenido de la sección 1...&lt;/p&gt;
+
+&lt;h2 id="seccion2"&gt;Sección 2&lt;/h2&gt;
+&lt;p&gt;Contenido de la sección 2...&lt;/p&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>Enlaces hacia las anclas</h3>
+                <pre><code>&lt;a href="#seccion1"&gt;Ir a la Sección 1&lt;/a&gt;
+&lt;a href="#seccion2"&gt;Ir a la Sección 2&lt;/a&gt;</code></pre>
+            </article>
+        </section>
+
+        <section>
+            <h2>Navegación entre documentos</h2>
+            <p>
+                También es posible enlazar a una sección específica en otro documento HTML 
+                usando la misma técnica.
+            </p>
+            <pre><code>&lt;a href="pagina.html#contacto"&gt;Ir directamente a Contacto en otra página&lt;/a&gt;</code></pre>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
