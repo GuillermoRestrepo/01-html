@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/01-style.css">
+    <title>Enlaces (fundamentos)</title>
+</head>
+<body>
+    <header>
+        <a href="../../index.html">Regresar al índice</a>
+    </header>
+    <main>
+        <h1>ENLACES (FUNDAMENTOS)</h1>
+        <p>
+            Los enlaces en HTML permiten conectar un documento con otro recurso, ya sea otra página web, un archivo dentro del mismo proyecto o incluso un lugar específico dentro de la misma página. Su propósito principal es la navegación entre documentos.
+        </p>
+        <p>
+            La estructura básica de un enlace utiliza la etiqueta <code>&lt;a&gt;</code>, que envuelve el texto o elemento en el cual el usuario puede hacer clic.
+        </p>
+        <pre><code>&lt;a href="ruta/del/recurso"&gt;Texto del enlace&lt;/a&gt;</code></pre>
+
+        <section>
+            <h2>Tipos de rutas</h2>
+
+            <article>
+                <h3>Rutas relativas</h3>
+                <p>
+                    Son aquellas que indican la ubicación de un recurso en relación con la posición del archivo HTML actual. Para navegar entre carpetas se utilizan:
+                </p>
+                <ul>
+                    <li><code>/</code> para entrar en una carpeta.</li>
+                    <li><code>../</code> para retroceder a la carpeta anterior.</li>
+                </ul>
+                <p>Ejemplos:</p>
+                <pre><code>&lt;a href="paginas/contacto.html"&gt;Ir a contacto&lt;/a&gt;</code></pre>
+                <pre><code>&lt;a href="../index.html"&gt;Regresar al inicio&lt;/a&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>Rutas absolutas</h3>
+                <p>
+                    Son aquellas que indican la dirección completa de un recurso, sin depender de la ubicación del archivo HTML actual. Se utilizan generalmente para acceder a recursos en internet.
+                </p>
+                <p>Ejemplo:</p>
+                <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Visitar Ejemplo&lt;/a&gt;</code></pre>
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
