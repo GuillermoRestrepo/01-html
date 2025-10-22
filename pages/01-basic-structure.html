@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/01-styles.css">
+    <title>Estructura básica de HTML</title>
+</head>
+<body id="beginning">
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+
+    <main>
+        <h1>ESTRUCTURA BÁSICA DE UN DOCUMENTO HTML</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#doctype"><code>&lt;!DOCTYPE html&gt;</code></a></li>
+                <li><a href="#html"><code>&lt;html lang="es"&gt;</code></a></li>
+                <li><a href="#head"><code>&lt;head&gt;</code></a></li>
+                <li><a href="#charset"><code>&lt;meta charset="UTF-8"&gt;</code></a></li>
+                <li><a href="#viewport"><code>&lt;meta name="viewport"&gt;</code></a></li>
+                <li><a href="#title"><code>&lt;title&gt;</code></a></li>
+                <li><a href="#body"><code>&lt;body&gt;</code></a></li>
+            </ul>
+        </nav>
+
+        <p>La estructura básica de un documento HTML es la siguiente:</p>
+
+        <pre><code>    &lt;!DOCTYPE html&gt;
+    &lt;html lang="es"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    
+        <article>
+            <h2 id="doctype">1. <code>&lt;!DOCTYPE html&gt;</code></h2>
+            <ul>
+                <li>No es una etiqueta HTML, sino una declaración especial.</li>
+                <li>No tiene cierre.</li>
+                <li>Debe colocarse en la primera línea del documento.</li>
+                <li>Informa al navegador sobre el tipo de documento que está ejecutando.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="html">2. <code>&lt;html lang="es"&gt;</code></h2>
+            <ul>
+                <li>Es la etiqueta raíz de todo documento HTML.</li>
+                <li>Encierra todo el contenido del documento, excepto la declaración <code>&lt;!DOCTYPE html&gt;</code>.</li>
+                <li>Indica el inicio y el fin del documento HTML con <code>&lt;html&gt;</code> y <code>&lt;/html&gt;</code>.</li>
+                <li>El atributo <code>lang</code> especifica el idioma principal del contenido.</li>
+                <li>El atributo <code>lang</code> ayuda a los navegadores, buscadores y lectores de pantalla a interpretar correctamente el idioma del texto.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="head">3. <code>&lt;head&gt;</code></h2>
+            <ul>
+                <li>Es una etiqueta contenedora que agrupa metadatos y configuraciones del documento HTML.</li>
+                <li>Se coloca dentro de <code>&lt;html&gt;</code> y antes de <code>&lt;body&gt;</code>.</li>
+                <li>No contiene contenido visible directamente en la página web (excepto el título en la pestaña del navegador).</li>
+                <li>Su función principal es proporcionar información sobre el documento, no mostrar contenido.</li>
+                <li>Contiene etiquetas esenciales para el correcto funcionamiento y presentación del sitio.</li>
+                <li>Ayuda al navegador, a los motores de búsqueda y a las redes sociales a interpretar correctamente el documento.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="charset">4. <code>&lt;meta charset="UTF-8"&gt;</code></h2>
+            <ul>
+                <li>Pertenece al grupo de etiquetas <code>&lt;meta&gt;</code>.</li>
+                <li>Se coloca dentro de la etiqueta <code>&lt;head&gt;</code>.</li>
+                <li>No tiene etiqueta de cierre.</li>
+                <li>Su función principal es definir la codificación de caracteres del documento HTML.</li>
+                <li>El atributo <code>charset</code> indica el conjunto de caracteres que se usará para interpretar el texto.</li>
+                <li>UTF-8 (Unicode Transformation Format – 8 bits) es la codificación estándar universal recomendada por el W3C.</li>
+                <li>Permite representar todos los caracteres y símbolos de prácticamente todos los idiomas del mundo (acentos, eñes, letras especiales, emojis, etc.).</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="viewport">5. <code>&lt;meta name="viewport"&gt;</code></h2>
+            <ul>
+                <li>Pertenece al grupo de etiquetas <code>&lt;meta&gt;</code>.</li>
+                <li>Se coloca dentro de la etiqueta <code>&lt;head&gt;</code>.</li>
+                <li>No tiene etiqueta de cierre.</li>
+                <li>Permite que las páginas sean responsivas (adaptables) y se visualicen correctamente en distintos tamaños de pantalla.</li>
+                <li>El atributo <code>name="viewport"</code> indica que la etiqueta configura la ventana gráfica (viewport) del navegador.</li>
+                <li>El viewport es el área visible de una página web en la pantalla del dispositivo.</li>
+                <li>El valor <code>width=device-width</code> indica que el ancho del contenido debe ajustarse al ancho del dispositivo.</li>
+                <li>El valor <code>initial-scale=1.0</code> define que la escala inicial de la página será del 100 %, es decir, sin hacer zoom al cargar.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="title">6. <code>&lt;title&gt;</code></h2>
+            <ul>
+                <li>Es una etiqueta obligatoria en todos los documentos HTML.</li>
+                <li>Define el título del documento, que aparece en la pestaña del navegador, en los marcadores (favoritos) y en los resultados de búsqueda.</li>
+                <li>Se coloca dentro de la etiqueta <code>&lt;head&gt;</code>.</li>
+                <li>Solo puede haber una por documento HTML.</li>
+                <li>No admite etiquetas HTML dentro de ella, solo texto plano.</li>
+                <li>El texto contenido entre las etiquetas <code>&lt;title&gt;</code> y <code>&lt;/title&gt;</code> representa el nombre oficial del documento.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="body">7. <code>&lt;body&gt;</code></h2>
+            <ul>
+                <li>Representa el cuerpo del documento HTML.</li>
+                <li>Es una etiqueta contenedora que agrupa todo el contenido visible de la página web.</li>
+                <li>Se coloca dentro de la etiqueta <code>&lt;html&gt;</code> y después de la sección <code>&lt;head&gt;</code>.</li>
+                <li>Solo puede haber una por documento.</li>
+                <li>Puede contener todo tipo de elementos estructurales, semánticos y multimedia.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+    </main>
+</body>
+</html>
