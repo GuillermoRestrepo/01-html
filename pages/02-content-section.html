@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/01-styles.css">
+    <title>Etiquetas de sección de contenido en HTML</title>
+</head>
+<body id="beginning">
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+
+    <main>
+        <h1>ETIQUETAS DE SECCIÓN DE CONTENIDO</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#header"><code>&lt;header&gt;</code></a></li>
+                <li><a href="#main"><code>&lt;main&gt;</code></a></li>
+                <li><a href="#footer"><code>&lt;footer&gt;</code></a></li>
+                <li><a href="#aside"><code>&lt;aside&gt;</code></a></li>
+                <li><a href="#article"><code>&lt;article&gt;</code></a></li>
+                <li><a href="#section"><code>&lt;section&gt;</code></a></li>
+                <li><a href="#nav"><code>&lt;nav&gt;</code></a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h2 id="header">1. <code>&lt;header&gt;</code></h2>
+            <ul>
+                <li>Representa la cabecera o encabezado de una página o de una sección del documento.</li>
+                <li>Se utiliza para agrupar contenido introductorio, de navegación o de identidad (como el logo, el título y el menú principal).</li>
+                <li>Puede aparecer una o varias veces dentro del documento:
+                    <ul>
+                        <li>Una en la parte superior del sitio (cabecera global).</li>
+                        <li>Otras dentro de secciones o artículos como encabezados específicos.</li>
+                    </ul>
+                </li>
+                <li>Se coloca normalmente dentro del <code>&lt;body&gt;</code> y antes del contenido principal (<code>&lt;main&gt;</code>).</li>
+                <li>No está limitada solo al principio de la página; puede usarse en cualquier elemento que represente una sección (por ejemplo, dentro de <code>&lt;article&gt;</code> o <code>&lt;section&gt;</code>).</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="main">2. <code>&lt;main&gt;</code></h2>
+            <ul>
+                <li>Representa el contenido principal y único del documento.</li>
+                <li>Su propósito es identificar la parte más importante del contenido, aquella directamente relacionada con el tema o propósito de la página.</li>
+                <li>Debe estar ubicada dentro del <code>&lt;body&gt;</code>, normalmente después del <code>&lt;header&gt;</code> y antes del <code>&lt;footer&gt;</code>.</li>
+                <li>Solo puede haber una etiqueta <code>&lt;main&gt;</code> por documento, ya que el contenido principal es único.</li>
+                <li>No debe incluirse dentro de etiquetas como <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;header&gt;</code> o <code>&lt;nav&gt;</code>.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="footer">3. <code>&lt;footer&gt;</code></h2>
+            <ul>
+                <li>Representa el pie de página o pie de sección de un documento o de una parte de él.</li>
+                <li>Se utiliza para contener información complementaria, como datos de autoría, derechos de autor, enlaces de contacto, mapas del sitio o políticas legales.</li>
+                <li>Puede aplicarse tanto al documento completo como a una sección específica (por ejemplo, dentro de <code>&lt;article&gt;</code> o <code>&lt;section&gt;</code>).</li>
+                <li>Puede haber varios <code>&lt;footer&gt;</code> en un documento: uno general (global) y otros locales dentro de artículos o secciones.</li>
+                <li>Se coloca normalmente al final del <code>&lt;body&gt;</code>, después del contenido principal (<code>&lt;main&gt;</code>).</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="aside">4. <code>&lt;aside&gt;</code></h2>
+            <ul>
+                <li>Representa un contenido complementario o secundario relacionado con el contenido principal del documento o de una sección.</li>
+                <li>Su propósito es agrupar información adicional o contextual que complemente el tema principal.</li>
+                <li>Puede contener elementos como barras laterales, citas, biografías, enlaces relacionados, publicidad, widgets o menús secundarios.</li>
+                <li>Puede aparecer fuera o dentro del <code>&lt;main&gt;</code>, dependiendo de si su contenido está directamente relacionado con la sección principal:
+                    <ul>
+                        <li>Dentro de <code>&lt;main&gt;</code>: cuando el contenido complementa directamente el contenido principal (por ejemplo, una nota al margen de un artículo).</li>
+                        <li>Fuera de <code>&lt;main&gt;</code>: cuando contiene elementos más generales, como un menú lateral o anuncios.</li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="article">5. <code>&lt;article&gt;</code></h2>
+            <ul>
+                <li>Representa un contenido independiente, autocontenido y reutilizable dentro de un documento o aplicación web.</li>
+                <li>Su propósito es agrupar información que puede tener sentido por sí misma, incluso fuera del contexto de la página.</li>
+                <li>Se utiliza principalmente para artículos, entradas de blog, publicaciones, noticias, comentarios, productos o foros.</li>
+                <li>Cada <code>&lt;article&gt;</code> debe poder distribuirse o republicarse de forma independiente, sin perder su significado.</li>
+                <li>Puede contener su propio <code>&lt;header&gt;</code> y <code>&lt;footer&gt;</code> con información relacionada, como título, autor o fecha.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="section">6. <code>&lt;section&gt;</code></h2>
+            <ul>
+                <li>Representa una sección temática o agrupación de contenido relacionado dentro de un documento.</li>
+                <li>Su función es dividir el contenido en bloques lógicos que traten sobre un mismo tema o propósito.</li>
+                <li>A diferencia de <code>&lt;div&gt;</code>, tiene un significado semántico, ya que indica que el contenido tiene una relación temática clara.</li>
+                <li>Se utiliza para organizar el contenido del documento en partes coherentes: capítulos, áreas temáticas, secciones de un informe, etc.</li>
+                <li>Puede estar dentro del <code>&lt;body&gt;</code>, del <code>&lt;main&gt;</code> o incluso dentro de un <code>&lt;article&gt;</code>.</li>
+                <li>Puede contener otros elementos de flujo, incluyendo texto, imágenes, encabezados, párrafos, listas, artículos o incluso otras secciones.</li>
+                <li>Debe contener generalmente un encabezado (<code>&lt;h1&gt;</code> – <code>&lt;h6&gt;</code>) que describa su tema o título.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="nav">7. <code>&lt;nav&gt;</code></h2>
+            <ul>
+                <li>Representa una sección del documento que contiene enlaces de navegación.</li>
+                <li>Su función principal es agrupar los enlaces que permiten desplazarse por el sitio web o dentro de una página.</li>
+                <li>Se utiliza para definir menús principales, barras laterales, menús de pie de página o enlaces internos.</li>
+                <li>Puede colocarse en varias partes del documento, comúnmente dentro del <code>&lt;header&gt;</code> o <code>&lt;footer&gt;</code>, pero también dentro de <code>&lt;aside&gt;</code> o <code>&lt;main&gt;</code>.</li>
+                <li>No debe contener todos los enlaces del documento, solo los de navegación importante o estructural.</li>
+            </ul>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+    </main>
+</body>
+</html>
