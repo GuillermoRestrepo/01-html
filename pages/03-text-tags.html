@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/01-styles.css">
+    <title>Etiquetas de texto</title>
+</head>
+<body id="beginning">
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+    
+    <main>
+        <h1>ETIQUETAS DE TEXTO</h1>
+        <nav>
+            <ul>
+                <li><a href="#heading">&lt;h1&gt;...&lt;h6&gt;</a></li>
+                <li><a href="#paragraph">&lt;p&gt;</a></li>
+                <li><a href="#less-emphasis">&lt;small&gt;</a></li>
+                <li><a href="#emphasis">&lt;em&gt;</a></li>
+                <li><a href="#more-emphasis">&lt;strong&gt;</a></li>
+                <li><a href="#italic">&lt;i&gt;</a></li>
+                <li><a href="#bold">&lt;b&gt;</a></li>
+                <li><a href="#underline">&lt;u&gt;</a></li>
+                <li><a href="#delete">&lt;del&gt;</a></li>
+                <li><a href="#insert">&lt;ins&gt;</a></li>
+                <li><a href="#supindex">&lt;sup&gt;</a></li>
+                <li><a href="#subindex">&lt;sub&gt;</a></li>
+                <li><a href="#hr-topic"><code>&lt;hr&gt;</code></a></li>
+                <li><a href="#br-topic"><code>&lt;br&gt;</code></a></li>
+                <li><a href="#wbr-topic"><code>&lt;wbr&gt;</code></a></li>
+                <li><a href="#time-topic"><code>&lt;time&gt;</code></a></li>
+                <li><a href="#address-topic"><code>&lt;address&gt;</code></a></li>
+                <li><a href="#div-topic"><code>&lt;div&gt;</code></a></li>
+                <li><a href="#span-topic"><code>&lt;span&gt;</code></a></li>
+                <li><a href="#pre-topic"><code>&lt;pre&gt;</code></a></li>
+                <li><a href="#code-topic"><code>&lt;code&gt;</code></a></li>
+                <li><a href="#q-topic"><code>&lt;q&gt;</code></a></li>
+                <li><a href="#bq-topic"><code>&lt;blockquote&gt;</code></a></li>
+                <li><a href="#cite-topic"><code>&lt;cite&gt;</code></a></li>
+                <li><a href="#kbd-topic"><code>&lt;kbd&gt;</code></a></li>
+                <li><a href="#special-entities">Entidades especiales</a></li>
+            </ul>
+        </nav>
+        
+        <article>
+            <h2 id="heading">1. <code>&lt;h1&gt;...&lt;h6&gt;</code></h2>
+            <p>Sirve para representar títulos y encabezados.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;h1&gt;Título 1&lt;/h1&gt;
+&lt;h2&gt;Título 2&lt;/h2&gt;
+&lt;h3&gt;Título 3&lt;/h3&gt;
+&lt;h4&gt;Título 4&lt;/h4&gt;
+&lt;h5&gt;Título 5&lt;/h5&gt;
+&lt;h6&gt;Título 6&lt;/h6&gt;</code></pre>
+                        </td>
+                        <td>
+                            <h1>Título 1</h1>
+                            <h2>Título 2</h2>
+                            <h3>Título 3</h3>
+                            <h4>Título 4</h4>
+                            <h5>Título 5</h5>
+                            <h6>Título 6</h6>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="paragraph">2. <code>&lt;p&gt;</code></h2>
+            <p>Sirve para representar párrafos.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;
+    Lorem ipsum dolor sit, amet consectetur
+    adipisicing elit. Aut, ea obcaecati tempore
+    labore earum, sunt suscipit libero placeat
+    voluptatem deserunt omnis iusto atque nostrum
+    totam porro recusandae quasi, rem aspernatur.
+&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, ea obcaecati tempore labore earum, sunt suscipit libero placeat voluptatem deserunt omnis iusto atque nostrum totam porro recusandae quasi, rem aspernatur.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="less-emphasis">3. <code>&lt;small&gt;</code></h2>
+            <p>Sirve para representar un texto que tiene <em>menor</em> imporancia que el texto normal.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;
+    &lt;small&gt;Lorem ipsum&lt;/small&gt; dolor sit, amet consectetur
+    adipisicing elit.
+&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p><small>Lorem ipsum</small> dolor sit, amet consectetur adipisicing elit.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="emphasis">4. <code>&lt;em&gt;</code></h2>
+            <p>Sirve para representar un texto que tiene <em>mayor</em> imporancia que el texto normal.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;
+    &lt;em&gt;Lorem ipsum&lt;/em&gt; dolor sit, amet consectetur
+    adipisicing elit.
+&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p><em>Lorem ipsum</em> dolor sit, amet consectetur adipisicing elit.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="more-emphasis">5. <code>&lt;strong&gt;</code></h2>
+            <p>Sirve para representar un texto que tiene <em>mucha mayor</em> imporancia que el texto normal.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;
+    &lt;strong&gt;Lorem ipsum&lt;/strong&gt; dolor sit, amet consectetur
+    adipisicing elit.
+&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p><strong>Lorem ipsum</strong> dolor sit, amet consectetur adipisicing elit.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="italic">6. <code>&lt;i&gt;</code></h2>
+            <p>Sirve para poner un texto en <em>cursiva</em> (italic).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;
+    &lt;i&gt;Lorem ipsum&lt;/i&gt; dolor sit, amet consectetur
+    adipisicing elit.
+&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p><i>Lorem ipsum</i> dolor sit, amet consectetur adipisicing elit.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="bold">7. <code>&lt;b&gt;</code></h2>
+            <p>Sirve para poner un texto en <em>negrita</em> (bold).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;
+    &lt;b&gt;Lorem ipsum&lt;/b&gt; dolor sit, amet consectetur
+    adipisicing elit.
+&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p><b>Lorem ipsum</b> dolor sit, amet consectetur adipisicing elit.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="underline">8. <code>&lt;u&gt;</code></h2>
+            <p>Sirve para <em>subrayar</em> un texto (underline).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;
+    &lt;u&gt;Lorem ipsum&lt;/u&gt; dolor sit, amet consectetur
+    adipisicing elit.
+&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p><u>Lorem ipsum</u> dolor sit, amet consectetur adipisicing elit.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="delete">9. <code>&lt;del&gt;</code></h2>
+            <p>Sirve para indicar texto que fue eliminado o tachado, es útil en documentos editables o para mostrar cambios.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;Precio anterior: &lt;del&gt;$50&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;Ahora: $30&lt;/p&gt;&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>Precio anterior: <del>50€</del></p>
+                            <p>Ahora: 30€</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="insert">10. <code>&lt;ins&gt;</code></h2>
+            <p>La etiqueta &lt;ins&gt; se utiliza para marcar texto que ha sido insertado en un documento después de su versión original. Es especialmente útil para mostrar cambios o actualizaciones en documentos.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;Versión anterior:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Comprar leche&lt;/li&gt;
+    &lt;li&gt;&lt;del&gt;Llamar al médico&lt;/del&gt;&lt;/li&gt;
+    &lt;li&gt;Reunión a las 15:00&lt;/li&gt;
+</ul>                            
+&lt;p&gt;Versión actual:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Comprar leche&lt;/li&gt;
+    &lt;li&gt;&lt;ins&gt;Enviar informe mensual&lt;/ins&gt;&lt;/li&gt;
+    &lt;li&gt;Reunión a las 15:00&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>Versión anterior:</p>
+                            <ul>
+                                <li>Comprar leche</li>
+                                <li><del>Llamar al médico</del></li>
+                                <li>Reunión a las 15:00</li>
+                            </ul>
+                            
+                            <p>Versión actual:</p>
+                            <ul>
+                                <li>Comprar leche</li>
+                                <li><ins>Enviar informe mensual</ins></li>
+                                <li>Reunión a las 15:00</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="supindex">11. <code>&lt;sup&gt;</code></h2>
+            <p>Sirve para indicar superindices.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;2&lt;sup&gt;3&lt;/sup&gt;= 8&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>2<sup>3</sup>= 8</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="subindex">12. <code>&lt;sub&gt;</code></h2>
+            <p>Sirve para indicar subindices.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>H<sub>2</sub>O</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="hr-topic">13. <code>&lt;hr&gt;</code></h2>
+            <p>Es una linea horizontal que sirve para indicar un cambio de tematica de contenido.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&amp;lt;p&amp;gt;Temática 1&amp;lt;/p&amp;gt;
+&amp;lt;hr&amp;gt;
+&amp;lt;p&amp;gt;Temática 2&amp;lt;/p&amp;gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>Temática 1</p>
+                            <hr>
+                            <p>Temática 2</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="br-topic">14. <code>&lt;br&gt;</code></h2>
+            <p>Sirve para generar un salto de línea.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;Lorem ipsum dolor sit amet consectetur,
+adipisicing elit.&lt;br&gt;Voluptatem
+voluptatum libero maiores mollitia quaerat
+iusto nihil vitae deleniti.&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>Voluptatem voluptatum libero maiores mollitia quaerat iusto nihil vitae deleniti.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="wbr-topic">15. <code>&lt;wbr&gt;</code></h2>
+            <p>Sirve para generar un salto de línea solo en caso de ser necesario. (usar un guíon medio funciona igual)</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;Lorem ipsum dolor sit amet consectetur,
+adipisicing elit.&lt;wbr&gt;Voluptatem
+voluptatum libero maiores mollitia quaerat
+iusto nihil vitae deleniti.&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<wbr>Voluptatem voluptatum libero maiores mollitia quaerat iusto nihil vitae deleniti.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="time-topic">16. <code>&lt;time&gt;</code></h2>
+            <p>Se utiliza para marcar fechas, horas y duraciones en un formato legible tanto para humanos como para máquinas. El atributo <code>datetime</code> sirve para proporcionar la versión legible por la maquina (machine-readable).</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;
+    La reunión es el &lt;time datetime="2024-03-20T14:30:00"&gt;
+    20 de marzo a las 2:30 PM&lt;/time&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+    El evento dura &lt;time datetime="PT2H30M"&gt;2 horas y 30
+    minutos&lt;/time&gt;.
+&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>La reunión es el <time datetime="2024-03-20T14:30:00">20 de marzo a las 2:30 PM</time>.</p>
+                            <p>El evento dura <time datetime="PT2H30M">2 horas y 30 minutos</time>.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="address-topic">17. <code>&lt;address&gt;</code></h2>
+            <p>Se utiliza para marcar información de una persona, organización o documento como autor, dirección física, email, teléfono, redes sociales.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;address&gt;
+    Escrito por:&lt;br&gt;
+    &lt;a href="mailto:simpsonhomero@gmail.com"&gt;
+        Homero Simpson
+    &lt;/a&gt;&lt;br&gt;
+    Visítanos en:&lt;br&gt;
+    Av. Siempre Viva 123&lt;br&gt;
+    Sprindfield, Estados Unidos&lt;br&gt;
+    Tel: &lt;a href="tel:+123456789"&gt;+1 234 56789&lt;/a&gt;
+&lt;/address&gt;</code></pre>
+                        </td>
+                        <td>
+                            <address>
+                                Escrito por:<br>
+                                <a href="mailto:simpsonhomero@gmail.com">
+                                    Homero Simpson
+                                </a><br>
+                                Visítanos en:<br>
+                                Av. Siempre Viva 123<br>
+                                Sprindfield, Estados Unidos<br>
+                                Tel: <a href="tel:+123456789">+1 234 56789</a>
+                            </address>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="div-topic">18. <code>&lt;div&gt;</code></h2>
+            <p>Representar un contenedor de bloque genérico que sirve para agrupar contenido, aplicar estilos o scripts.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;div&gt;
+    &lt;p&gt;Lorem ipsum dolor, sit amet adipisicing elit.&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor, sit amet adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </td>
+                        <td>
+                            <div>
+                                <p>Lorem ipsum dolor, sit amet adipisicing elit.</p>
+                                <p>Lorem ipsum dolor, sit amet adipisicing elit.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="span-topic">19. <code>&lt;span&gt;</code></h2>
+            <p>Representar un contenedor de línea genérico que sirve para agrupar contenido, aplicar estilos o scripts.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;&lt;span&gt;Lorem ipsum&lt;/span&gt; dolor, adipisicing elit.&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p><span>Lorem ipsum</span> dolor, adipisicing elit.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="pre-topic">20. <code>&lt;pre&gt;</code></h2>
+            <p>Se utiliza para mostrar texto preformateado, conservando espacios, saltos de línea y tabulaciones exactamente como están escritos en el código.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;pre&gt;
+function saludar() {
+    console.log("Hola Mundo");
+    return true;
+}
+&lt;/pre&gt;</code></pre>
+                        </td>
+                        <td>
+                            <pre>
+function saludar() {
+    console.log("Hola Mundo");
+    return true;
+}
+</pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="code-topic">21. <code>&lt;code&gt;</code></h2>
+            <p>Se utiliza para marcar fragmentos de código dentro de un texto normal.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;En JavaScript, usa &lt;code&gt;console.log()&lt;/code&gt;
+para imprimir en la consola.&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>En JavaScript, usa <code>console.log()</code> para imprimir en la consola.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="q-topic">22. <code>&lt;q&gt;</code></h2>
+            <p>Se utiliza para marcar citas cortas en línea dentro de un párrafo. Cuenta con el atributo <code>cite</code>, el cual sirve para especificar la fuente de la cita de forma opcional.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;
+    El autor afirmó: 
+    &lt;q cite="https://ejemplo.com/fuente"&gt;
+        El conocimiento es poder
+    &lt;/q&gt;.
+&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>El autor afirmó: <q cite="https://ejemplo.com/fuente">El conocimiento es poder</q>.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="bq-topic">23. <code>&lt;blockquote&gt;</code></h2>
+            <p>Se utiliza para marcar citas largas o bloques de texto citados de otras fuentes. Cuenta con el atributo <code>cite</code>, el cual sirve para especificar la fuente de la cita de forma opcional.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;Según el autor en su libro:&lt;/p&gt;
+&lt;blockquote cite="https://ejemplo.com/libro"&gt;
+    El éxito no es la clave de la felicidad. 
+    La felicidad es la clave del éxito. 
+    Si amas lo que haces, tendrás éxito.
+&lt;/blockquote&gt;
+&lt;p&gt;Esta frase ha inspirado a muchos emprendedores.&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>Según el autor en su libro:</p>
+                            <blockquote cite="https://ejemplo.com/libro">
+                                El éxito no es la clave de la felicidad. 
+                                La felicidad es la clave del éxito. 
+                                Si amas lo que haces, tendrás éxito.
+                            </blockquote>
+                            <p>Esta frase ha inspirado a muchos emprendedores.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="cite-topic">24. <code>&lt;cite&gt;</code></h2>
+            <p>Se utiliza para marcar títulos de obras creativas como libros, películas, canciones, pinturas, etc.</p>
+<table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;Mi libro favorito es &lt;cite&gt;Cien años de soledad&lt;/cite&gt; de 
+Gabriel García Márquez.&lt;/p&gt;
+&lt;p&gt;La película &lt;cite&gt;El padrino&lt;/cite&gt; es considerada
+una obra maestra del cine.&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>Mi libro favorito es <cite>Cien años de soledad</cite> de Gabriel García Márquez.</p>
+                            <p>La película <cite>El padrino</cite> es considerada una obra maestra del cine.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+        
+        <article>
+            <h2 id="kbd-topic">25. <code>&lt;kbd&gt;</code></h2>
+            <p>Se utiliza para representar entrada del usuario desde el teclado, como teclas, combinaciones o comandos.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <pre><code>&lt;p&gt;Para guardar un documento, presiona &lt;kbd&gt;Ctrl + S&lt;/kbd&gt;.&lt;/p&gt;
+&lt;p&gt;Escribe &lt;kbd&gt;git status&lt;/kbd&gt; para ver el estado.&lt;/p&gt;</code></pre>
+                        </td>
+                        <td>
+                            <p>Para guardar un documento, presiona <kbd>Ctrl + S</kbd>.</p>
+                            <p>Escribe <kbd>git status</kbd> para ver el estado.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="special-entities">26. Entidades Especiales</h2>
+            <p>Se utilizan para representar caracteres especiales que tienen significado en HTML o que no están disponibles en el teclado.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Símbolo</th>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Menor que</td>
+                        <td>&amp;lt;</td>
+                        <td>&lt;</td>
+                    </tr>
+                    <tr>
+                        <td>Mayor que</td>
+                        <td>&amp;gt;</td>
+                        <td>&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>Ampersand</td>
+                        <td>&amp;amp;</td>
+                        <td>&amp;</td>
+                    </tr>
+                    <tr>
+                        <td>Comillas dobles</td>
+                        <td>&amp;quot;</td>
+                        <td>&quot;</td>
+                    </tr>
+                    <tr>
+                        <td>Comilla simple</td>
+                        <td>&amp;apos;</td>
+                        <td>&apos;</td>
+                    </tr>
+                    <tr>
+                        <td>Símbolo de copyright</td>
+                        <td>&amp;copy;</td>
+                        <td>&copy;</td>
+                    </tr>
+                    <tr>
+                        <td>Registrado</td>
+                        <td>&amp;reg;</td>
+                        <td>&reg;</td>
+                    </tr>
+                    <tr>
+                        <td>Euro</td>
+                        <td>&amp;euro;</td>
+                        <td>&euro;</td>
+                    </tr>
+                    <tr>
+                        <td>Código numérico en Unicode, decimal 62</td>
+                        <td>&amp;#62;</td>
+                        <td>&#62;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+    </main>
+</body>
+</html>
