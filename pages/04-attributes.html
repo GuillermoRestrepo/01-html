@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/01-styles.css">
+    <title>Atributos</title>
+</head>
+<body id="beginning">
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+
+    <main>
+        <h1>Atributos en HTML</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#basic-syntax">Sintaxis básica</a></li>
+                <li>
+                    <a href="#attribute-types">Tipos de atributos</a>
+                    <ul>
+                        <li><a href="#global-attributes">Atributos globales</a></li>
+                        <li><a href="#specific-attributes">Atributos específicos</a></li>
+                        <li><a href="#boolean-attributes">Atributos booleanos</a></li>
+                        <li><a href="#custom-attributes">Atributos personalizados</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <p>
+            Los atributos son propiedades o características adicionales que se añaden a las etiquetas HTML
+            para modificar su comportamiento, cambiar su aspecto o aportar información adicional.
+        </p>
+
+        <article>
+            <h2 id="basic-syntax">Sintaxis básica</h2>
+            <p>La estructura de un atributo es la siguiente:</p>
+
+            <pre><code>&lt;etiqueta atributo="valor"&gt;Contenido&lt;/etiqueta&gt;</code></pre>
+
+            <section>
+                <h3>Ejemplo:</h3>
+
+                <pre><code>&lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;</code></pre>
+
+                <table>
+                    <tr>
+                        <td><code>&lt;a&gt;</code></td>
+                        <td>Etiqueta.</td>
+                    </tr>
+                    <tr>
+                        <td><code>href</code></td>
+                        <td>Atributo.</td>
+                    </tr>
+                    <tr>
+                        <td><code>"https://www.google.com"</code></td>
+                        <td>Valor del atributo.</td>
+                    </tr>
+                    <tr>
+                        <td><code>Ir a Google</code></td>
+                        <td>Contenido de la etiqueta.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="attribute-types">Tipos de atributos</h2>
+
+            <article>
+                <h3 id="global-attributes">Atributos globales</h3>
+                <p>Pueden usarse en cualquier etiqueta HTML. Algunos de ellos son:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id</td>
+                            <td>Identifica de forma única un elemento.</td>
+                            <td><code>&lt;div id="principal"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>class</td>
+                            <td>Agrupa elementos para CSS o JavaScript.</td>
+                            <td><code>&lt;p class="texto"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>style</td>
+                            <td>Aplica estilos en línea.</td>
+                            <td><code>&lt;h1 style="color:red;"&gt;Hola&lt;/h1&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>title</td>
+                            <td>Muestra un texto emergente al pasar el mouse.</td>
+                            <td><code>&lt;abbr title="Organización de las Naciones Unidas"&gt;ONU&lt;/abbr&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>lang</td>
+                            <td>Define el idioma del contenido.</td>
+                            <td><code>&lt;p lang="es"&gt;Hola&lt;/p&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>dir</td>
+                            <td>Dirección del texto (ltr o rtl).</td>
+                            <td><code>&lt;p dir="rtl"&gt;Texto árabe&lt;/p&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>hidden</td>
+                            <td>Oculta el elemento (booleano).</td>
+                            <td><code>&lt;p hidden&gt;Texto oculto&lt;/p&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>tabindex</td>
+                            <td>Orden de tabulación.</td>
+                            <td><code>&lt;input tabindex="1"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>contenteditable</td>
+                            <td>Permite editar el texto del elemento.</td>
+                            <td><code>&lt;div contenteditable="true"&gt;Editar&lt;/div&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>data-*</td>
+                            <td>Crea atributos personalizados.</td>
+                            <td><code>&lt;div data-user="123"&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a href="#beginning">☝️ Inicio</a>
+            </article>
+
+            <article>
+                <h3 id="specific-attributes">Atributos específicos (por etiqueta)</h3>
+                <p>Estos solo funcionan con determinadas etiquetas. Algunos de ellos son:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Etiqueta</th>
+                            <th>Atributo</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;a&gt;</code></td>
+                            <td><code>target</code></td>
+                            <td>Define dónde abrir el enlace (_blank, _self, etc.).</td>
+                            <td><code>&lt;a target="_blank"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;img&gt;</code></td>
+                            <td><code>src</code></td>
+                            <td>Ruta o fuente de la imagen.</td>
+                            <td><code>&lt;img src="foto.png"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;input&gt;</code></td>
+                            <td><code>placeholder</code></td>
+                            <td>Texto de ayuda.</td>
+                            <td><code>&lt;input placeholder="Tu nombre"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;form&gt;</code></td>
+                            <td><code>method</code></td>
+                            <td>Método de envío (GET o POST).</td>
+                            <td><code>&lt;form method="POST"&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <a href="#beginning">☝️ Inicio</a>
+            </article>
+
+            <article>
+                <h3 id="boolean-attributes">Atributos booleanos</h3>
+                <p>No necesitan valor; su sola presencia indica “verdadero”. Algunos de ellos son:</p>
+
+                <ul>
+                    <li><code>checked</code> (en <code>&lt;input&gt;</code>)</li>
+                    <li><code>disabled</code> (en <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>)</li>
+                    <li><code>readonly</code></li>
+                    <li><code>required</code></li>
+                    <li><code>autofocus</code></li>
+                    <li><code>multiple</code></li>
+                    <li><code>hidden</code></li>
+                    <li><code>selected</code></li>
+                </ul>
+
+                <a href="#beginning">☝️ Inicio</a>
+            </article>
+
+            <article>
+                <h3 id="custom-attributes">Atributos personalizados (<code>data-*</code>)</h3>
+
+                <ul>
+                    <li>Permiten almacenar información adicional en los elementos sin afectar su funcionalidad.</li>
+                    <li>Son útiles para JavaScript y el manejo dinámico de datos.</li>
+                    <li>Se escriben con el prefijo <code>data-</code> seguido de un nombre definido por el desarrollador.</li>
+                </ul>
+
+                <p>Ejemplo:</p>
+
+                <pre><code>&lt;div data-usuario="42" data-rol="admin"&gt;Guillermo&lt;/div&gt;</code></pre>
+
+                <p>Acceso mediante JavaScript:</p>
+
+                <pre><code>const div = document.querySelector('div');
+console.log(div.dataset.usuario); // 42
+console.log(div.dataset.rol); // admin</code></pre>
+
+                <a href="#beginning">☝️ Inicio</a>
+            </article>
+
+        </article>
+    </main>
+</body>
+</html>
