@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/01-styles.css">
+    <title>Listas en HTML</title>
+</head>
+<body id="beginning">
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+
+    <main>
+        <h1>LISTAS EN HTML</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#ol">Listas ordenadas</a></li>
+                <li><a href="#ul">Listas desordenadas</a></li>
+                <li><a href="#dl">Listas de definición</a></li>
+                <li><a href="#nl">Listas anidadas</a></li>
+            </ul>
+        </nav>
+
+        <p>Las listas sirven para organizar contenido en forma de elementos agrupados.</p>
+
+        <article>
+            <h2 id="ol">1. Listas ordenadas</h2>
+            <ul>
+                <li>Sirven para representar listas cuyos elementos sí tienen un orden específico.</li>
+                <li>Se definen con la etiqueta <code>&lt;ol&gt;</code> (Ordered List).</li>
+                <li>Los elementos se definen con la etiqueta <code>&lt;li&gt;</code>.</li>
+            </ul>
+
+            <section>
+                <h3>Atributos de las listas ordenadas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Valores</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>type</code></td>
+                            <td><code>1</code> (predeterminado), <code>i</code>, <code>I</code>, <code>a</code>, <code>A</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>start</code></td>
+                            <td>Número desde el cual inicia la lista.</td>
+                        </tr>
+                        <tr>
+                            <td><code>reversed</code></td>
+                            <td>Indica si la lista se muestra en orden inverso.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h3>Ejemplo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <pre><code>&lt;ol start="4" type="I" reversed&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+    &lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                            </td>
+                            <td>
+                                <ol start="4" type="I" reversed>
+                                    <li>Elemento 1</li>
+                                    <li>Elemento 2</li>
+                                    <li>Elemento 3</li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="ul">2. Listas desordenadas</h2>
+            <ul>
+                <li>Sirven para representar listas cuyos elementos no tienen un orden específico.</li>
+                <li>Se definen con la etiqueta <code>&lt;ul&gt;</code> (Unordered List).</li>
+                <li>Los elementos se definen con la etiqueta <code>&lt;li&gt;</code>.</li>
+            </ul>
+
+            <section>
+                <h3>Atributos de las listas desordenadas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Valores</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>type</code></td>
+                            <td><code>disc</code> (predeterminado), <code>circle</code>, <code>square</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h3>Ejemplo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <pre><code>&lt;ul type="circle"&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+    &lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                            </td>
+                            <td>
+                                <ul type="circle">
+                                    <li>Elemento 1</li>
+                                    <li>Elemento 2</li>
+                                    <li>Elemento 3</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="dl">3. Listas de definición</h2>
+            <ul>
+                <li>Sirven para representar listas cuyos elementos tienen conceptos y descripciones asociadas.</li>
+                <li>Se definen con la etiqueta <code>&lt;dl&gt;</code> (Definition List).</li>
+                <li>Los términos se definen con <code>&lt;dt&gt;</code> (Definition Term).</li>
+                <li>Las descripciones se definen con <code>&lt;dd&gt;</code> (Definition Description).</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <pre><code>&lt;dl&gt;
+    &lt;dt&gt;API&lt;/dt&gt;
+    &lt;dd&gt;Interfaz para la comunicación entre sistemas.&lt;/dd&gt;
+
+    &lt;dt&gt;DOM&lt;/dt&gt;
+    &lt;dd&gt;Estructura jerárquica del documento HTML.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                            </td>
+                            <td>
+                                <dl>
+                                    <dt>API</dt>
+                                    <dd>Interfaz para la comunicación entre sistemas.</dd>
+
+                                    <dt>DOM</dt>
+                                    <dd>Estructura jerárquica del documento HTML.</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+        <article>
+            <h2 id="nl">4. Listas anidadas</h2>
+            <p>Son listas que contienen otras listas dentro de sus elementos.</p>
+
+            <section>
+                <h3>Ejemplo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <pre><code>&lt;ul&gt;
+    &lt;li&gt;Frontend
+        &lt;ol&gt;
+            &lt;li&gt;HTML&lt;/li&gt;
+            &lt;li&gt;CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Backend&lt;/li&gt;
+    &lt;li&gt;Base de datos&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Frontend
+                                        <ol>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                            <li>JavaScript</li>
+                                        </ol>
+                                    </li>
+                                    <li>Backend</li>
+                                    <li>Base de datos</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <a href="#beginning">☝️ Inicio</a>
+        </article>
+
+    </main>
+</body>
+</html>
