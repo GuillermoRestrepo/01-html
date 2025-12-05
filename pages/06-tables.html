@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/01-styles.css">
+    <title>Tablas</title>
+</head>
+<body id="beginning">
+    <header>
+        <a href="../index.html">Regresar al índice</a>
+    </header>
+
+    <main>
+        <h1>Tablas en HTML</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#tags">Etiquetas</a></li>
+                <li><a href="#attr">Atributos</a></li>
+                <li><a href="#example">Ejemplo</a></li>
+            </ul>
+        </nav>
+
+        <article id="tags">
+            <h2>Etiquetas para tablas en HTML</h2>
+            <p>Las etiquetas que pueden componer una tabla en HTML son las siguientes:</p>
+
+            <ul>
+                <li><code>&lt;table&gt;</code>: Contenedor principal de la tabla que agrupa filas, columnas, encabezados y pies de tabla.</li>
+                <li><code>&lt;caption&gt;</code>: Define el título de la tabla.</li>
+                <li><code>&lt;thead&gt;</code>: Agrupa los encabezados de la tabla.</li>
+                <li><code>&lt;tbody&gt;</code>: Agrupa los datos principales de la tabla.</li>
+                <li><code>&lt;tfoot&gt;</code>: Representa el pie de tabla, donde pueden colocarse totales o notas.</li>
+                <li><code>&lt;tr&gt;</code>: Define las filas de una tabla.</li>
+                <li><code>&lt;td&gt;</code>: Define las celdas de datos dentro de una fila.</li>
+                <li><code>&lt;th&gt;</code>: Define las celdas de encabezado dentro de una fila.</li>
+                <li><code>&lt;colgroup&gt;</code>: Agrupa columnas de una tabla.</li>
+                <li><code>&lt;col&gt;</code>: Representa columnas individuales o grupos de columnas.</li>
+            </ul>
+        </article>
+
+        <article id="attr">
+            <h2>Atributos de una tabla</h2>
+            <p>Los atributos de una tabla son los siguientes:</p>
+
+            <ul>
+                <li><code>colspan</code>: Hace que una celda ocupe más de una columna. (Se usa en <code>&lt;td&gt;</code> / <code>&lt;th&gt;</code>)</li>
+                <li><code>rowspan</code>: Hace que una celda ocupe más de una fila. (Se usa en <code>&lt;td&gt;</code> / <code>&lt;th&gt;</code>)</li>
+                <li><code>span</code>: Hace que una etiqueta <code>&lt;col&gt;</code> represente más de una columna. (Se usa en <code>&lt;col&gt;</code>)</li>
+            </ul>
+        </article>
+
+        <article id="example">
+            <h2>Ejemplo de una tabla</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+<pre><code>&lt;table&gt;
+    &lt;caption&gt;HORARIO DE CLASES&lt;/caption&gt;
+
+    &lt;colgroup&gt;
+        &lt;col span="3"&gt;
+        &lt;col span="2"&gt;
+    &lt;/colgroup&gt;
+
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Lunes&lt;/th&gt;
+            &lt;th&gt;Martes&lt;/th&gt;
+            &lt;th&gt;Miércoles&lt;/th&gt;
+            &lt;th&gt;Jueves&lt;/th&gt;
+            &lt;th&gt;Viernes&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td colspan="2"&gt;Matemáticas&lt;/td&gt;
+            &lt;td&gt;Sociales&lt;/td&gt;
+            &lt;td colspan="2"&gt;Matemáticas&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Lengua&lt;/td&gt;
+            &lt;td rowspan="2"&gt;Lengua&lt;/td&gt;
+            &lt;td&gt;Matemáticas&lt;/td&gt;
+            &lt;td rowspan="2"&gt;Ciencias&lt;/td&gt;
+            &lt;td&gt;Lengua&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Educación Física&lt;/td&gt;
+            &lt;td&gt;Lengua&lt;/td&gt;
+            &lt;td&gt;Educación Física&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td colspan="5"&gt;Recreo&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Inglés&lt;/td&gt;
+            &lt;td&gt;Sociales&lt;/td&gt;
+            &lt;td&gt;Inglés&lt;/td&gt;
+            &lt;td&gt;Tutoría&lt;/td&gt;
+            &lt;td&gt;Inglés&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Música&lt;/td&gt;
+            &lt;td&gt;Educación Física&lt;/td&gt;
+            &lt;td&gt;Plástica&lt;/td&gt;
+            &lt;td&gt;Religión&lt;/td&gt;
+            &lt;td&gt;Música&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Tecnología&lt;/td&gt;
+            &lt;td&gt;Francés&lt;/td&gt;
+            &lt;td&gt;Tecnología&lt;/td&gt;
+            &lt;td&gt;Francés&lt;/td&gt;
+            &lt;td&gt;Tecnología&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="4"&gt;Total de asignaturas&lt;/td&gt;
+            &lt;td&gt;12&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                        </td>
+
+                        <td>
+                            <table>
+                                <caption>HORARIO DE CLASES</caption>
+
+                                <colgroup>
+                                    <col span="3">
+                                    <col span="2">
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th>Lunes</th>
+                                        <th>Martes</th>
+                                        <th>Miércoles</th>
+                                        <th>Jueves</th>
+                                        <th>Viernes</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">Matemáticas</td>
+                                        <td>Sociales</td>
+                                        <td colspan="2">Matemáticas</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lengua</td>
+                                        <td rowspan="2">Lengua</td>
+                                        <td>Matemáticas</td>
+                                        <td rowspan="2">Ciencias</td>
+                                        <td>Lengua</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Educación Física</td>
+                                        <td>Lengua</td>
+                                        <td>Educación Física</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">Recreo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Inglés</td>
+                                        <td>Sociales</td>
+                                        <td>Inglés</td>
+                                        <td>Tutoría</td>
+                                        <td>Inglés</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Música</td>
+                                        <td>Educación Física</td>
+                                        <td>Plástica</td>
+                                        <td>Religión</td>
+                                        <td>Música</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tecnología</td>
+                                        <td>Francés</td>
+                                        <td>Tecnología</td>
+                                        <td>Francés</td>
+                                        <td>Tecnología</td>
+                                    </tr>
+                                </tbody>
+
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4">Total de asignaturas</td>
+                                        <td>12</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </main>
+</body>
+</html>
