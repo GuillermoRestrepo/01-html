@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ETIQUETAS</h1>
+        <article>
+            <h2>1. Tipos De Etiquetas</h2>
+            <p>Existen dos tipos de etiquetas en HTML:</p>
+
+            <article>
+                <h3>1.1. Etiquetas De Apertura y Cierre</h3>
+                <ul>
+                    <li>Son el tipo de etiqueta más común en HTML.</li>
+                    <li>
+                        Tienen dos partes:
+                        <ol>
+                            <li>Etiqueta de apertura (<code>&lt;nombre&gt;</code>).</li>
+                            <li>Etiqueta de cierre (<code>&lt;/nombre&gt;</code>).</li>
+                        </ol>
+                    </li>
+                    <li>Pueden contener texto, otras etiquetas o ambas.</li>
+                    <li>La etiqueta de cierre siempre lleva <code>/</code>.</li>
+                </ul>
+
+                <section>
+                    <h4>Ejemplo</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <pre><code>&lt;p&gt;
+    Esta es una etiqueta
+    de apertura y cierre.
+&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>
+                                    <p>Esta es una etiqueta de apertura y cierre.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+
+            <article>
+                <h3>1.2. Etiquetas Autocerradas</h3>
+                <ul>
+                    <li>Son etiquetas que no tienen contenido.</li>
+                    <li>No tienen etiqueta de cierre.</li>
+                    <li>Su función es insertar o declarar algo.</li>
+                </ul>
+
+                <section>
+                    <h4>Ejemplo</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <pre><code>&lt;p&gt;
+    &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;
+    es una etiqueta&lt;br&gt;
+    autocerrada.
+&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>
+                                    <p><code>&lt;br&gt;</code> es una etiqueta<br>autocerrada.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+        </article>
+
+        <article>
+            <h2>2. Etiquetas De Bloque Y Etiquetas De Línea</h2>
+            <p>
+                Esta clasificación se basa en cómo se muestran visualmente las etiquetas y cómo ocupan
+                el espacio en la página.
+            </p>
+
+            <article>
+                <h3>2.1. Etiquetas de bloque</h3>
+                <ul>
+                    <li>Comienzan en una nueva línea.</li>
+                    <li>Por defecto, generan un salto de línea.</li>
+                    <li>Ocupan todo el ancho disponible.</li>
+                    <li>Pueden contener otras etiquetas de bloque y de línea.</li>
+                </ul>
+
+                <section>
+                    <h4>Ejemplo</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <pre><code>&lt;p&gt;Esto es un párrafo.&lt;/p&gt;
+&lt;p&gt;Esto es otro párrafo.&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>
+                                    <p>Esto es un párrafo.</p>
+                                    <p>Esto es otro párrafo.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+
+            <article>
+                <h3>2.2. Etiquetas de línea</h3>
+                <ul>
+                    <li>No rompen la línea.</li>
+                    <li>No generan salto de línea.</li>
+                    <li>Ocupan solo el espacio de su contenido.</li>
+                    <li>Se colocan una junto a otra.</li>
+                </ul>
+
+                <section>
+                    <h4>Ejemplo</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <pre><code>&lt;p&gt;
+    Esto es &lt;em&gt;importante&lt;/em&gt;,
+    pero esto otro es más &lt;strong&gt;importante&lt;/strong&gt;.
+&lt;/p&gt;</code></pre>
+                                </td>
+                                <td>
+                                    <p>
+                                        Esto es <em>importante</em>, pero esto otro es más
+                                        <strong>importante</strong>.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+        </article>
+    </main>
+    <footer>
+        <p>Última actualización: 30 de diciembre del 2025.</p>
+    </footer>
+</body>
+</html>
