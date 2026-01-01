@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura básica HTML</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ESTRUCTURA BÁSICA DE UN DOCUMENTO HTML</h1>
+
+        <p>
+            Todo documento HTML sigue una estructura mínima obligatoria que le permite al navegador
+            interpretar correctamente la página, la cual es la siguiente:
+        </p>
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título de la página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <article>
+            <h2>1. <code>&lt;!DOCTYPE html&gt;</code></h2>
+            <ul>
+                <li>Indica que el documento usa HTML5.</li>
+                <li>Activa el modo estándar del navegador.</li>
+                <li>Siempre va en la primera línea.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>2. <code>&lt;html&gt;</code></h2>
+            <ul>
+                <li>Es la etiqueta raíz del documento.</li>
+                <li>Contiene todo el contenido HTML.</li>
+                <li>
+                    El atributo <code>lang</code> indica el idioma del contenido
+                    (importante para la accesibilidad y el SEO).
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>3. <code>&lt;head&gt;</code></h2>
+            <p>
+                Contiene información no visible para el usuario, pero esencial para el navegador.
+            </p>
+
+            <section>
+                <h3>3.1. <code>&lt;head&gt;</code> Suele Contener:</h3>
+
+                <pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Título de la página&lt;/title&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>3.2. Contenido Principal:</h3>
+                <ul>
+                    <li>Codificación de caracteres (UTF-8).</li>
+                    <li>Metadatos.</li>
+                    <li>Título de la pestaña.</li>
+                    <li>Enlaces a CSS.</li>
+                    <li>Scripts.</li>
+                </ul>
+            </section>
+        </article>
+
+        <article>
+            <h2>4. <code>&lt;body&gt;</code></h2>
+            <ul>
+                <li>Contiene todo el contenido visible de la página.</li>
+                <li>Aquí van textos, imágenes, enlaces, formularios, etc.</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer>
+        <p>Última actualización: 31 de diciembre del 2025.</p>
+    </footer>
+</body>
+</html>
