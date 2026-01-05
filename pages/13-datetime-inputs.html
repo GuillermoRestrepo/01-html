@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input de fecha y hora</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>INPUT DE FECHA Y HORA EN HTML</h1>
+
+        <p>
+            El atributo <code>type</code> del elemento <code>&lt;input&gt;</code> define el tipo de dato
+            que el usuario puede ingresar. HTML incluye varios tipos específicos para trabajar con
+            fechas y horas.
+        </p>
+
+        <section>
+            <h2>1. <code>type="date"</code></h2>
+            <ul>
+                <li>Permite seleccionar una fecha.</li>
+                <li>Incluye día, mes y año.</li>
+                <li>Muestra un selector de calendario.</li>
+            </ul>
+
+            <pre><code>&lt;label for="fecha"&gt;Fecha:&lt;/label&gt;
+&lt;input type="date" id="fecha" name="fecha"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>2. <code>type="time"</code></h2>
+            <ul>
+                <li>Permite seleccionar una hora.</li>
+                <li>Incluye horas y minutos.</li>
+                <li>Puede incluir segundos según el navegador.</li>
+            </ul>
+
+            <pre><code>&lt;label for="hora"&gt;Hora:&lt;/label&gt;
+&lt;input type="time" id="hora" name="hora"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>3. <code>type="datetime-local"</code></h2>
+            <ul>
+                <li>Permite seleccionar fecha y hora.</li>
+                <li>No incluye zona horaria.</li>
+                <li>Es el reemplazo moderno de <code>datetime</code>.</li>
+            </ul>
+
+            <pre><code>&lt;label for="fecha-hora"&gt;Fecha y hora:&lt;/label&gt;
+&lt;input type="datetime-local" id="fecha-hora" name="fecha_hora"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>4. <code>type="month"</code></h2>
+            <ul>
+                <li>Permite seleccionar un mes y un año.</li>
+                <li>No incluye el día.</li>
+                <li>Útil para periodos mensuales.</li>
+            </ul>
+
+            <pre><code>&lt;label for="mes"&gt;Mes:&lt;/label&gt;
+&lt;input type="month" id="mes" name="mes"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>5. <code>type="week"</code></h2>
+            <ul>
+                <li>Permite seleccionar una semana del año.</li>
+                <li>Incluye el número de semana y el año.</li>
+                <li>Formato basado en el estándar ISO.</li>
+            </ul>
+
+            <pre><code>&lt;label for="semana"&gt;Semana:&lt;/label&gt;
+&lt;input type="week" id="semana" name="semana"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Nota Sobre <code>type="datetime"</code></h2>
+            <p>
+                El valor <code>datetime</code> está obsoleto y no debe usarse.
+                En su lugar, se recomienda <code>datetime-local</code>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Última actualización: 04 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
