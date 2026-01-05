@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>FORMULARIOS EN HTML</h1>
+
+        <p>
+            Un formulario HTML tiene una estructura básica que permite capturar datos del usuario
+            y enviarlos correctamente.
+        </p>
+
+        <section>
+            <h2>1. Etiqueta Principal: <code>&lt;form&gt;</code></h2>
+            <ul>
+                <li>Es el contenedor principal del formulario.</li>
+                <li>Todo campo de entrada debe estar dentro de esta etiqueta.</li>
+            </ul>
+
+            <pre><code>&lt;form&gt;
+&lt;/form&gt;</code></pre>
+
+            <h3>Funciones Principales</h3>
+            <ul>
+                <li>Agrupa los campos del formulario.</li>
+                <li>Define cómo y a dónde se envían los datos.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Atributos Esenciales De <code>&lt;form&gt;</code></h2>
+            <p>
+                Aunque no son obligatorios, estos atributos son fundamentales para el
+                funcionamiento del formulario.
+            </p>
+
+            <article>
+                <h3><code>action</code></h3>
+                <ul>
+                    <li>Indica a dónde se envían los datos.</li>
+                    <li>Puede ser un archivo, una URL o una ruta.</li>
+                </ul>
+
+                <pre><code>&lt;form action="procesar.php"&gt;
+&lt;/form&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3><code>method</code></h3>
+                <ul>
+                    <li>Define cómo se envían los datos.</li>
+                    <li>Valores principales: <code>get</code> y <code>post</code>.</li>
+                </ul>
+
+                <pre><code>&lt;form method="post"&gt;
+&lt;/form&gt;</code></pre>
+            </article>
+        </section>
+
+        <section>
+            <h2>3. Campos De Entrada: <code>&lt;input&gt;</code></h2>
+            <p>
+                Es la etiqueta más utilizada para capturar datos del usuario.
+            </p>
+
+            <pre><code>&lt;input type="text"&gt;</code></pre>
+
+            <h3>Características</h3>
+            <ul>
+                <li>Es una etiqueta autocerrada.</li>
+                <li>Su comportamiento depende del atributo <code>type</code>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Etiqueta <code>&lt;label&gt;</code></h2>
+            <p>Describe el campo de entrada.</p>
+
+            <pre><code>&lt;label for="nombre"&gt;Nombre&lt;/label&gt;</code></pre>
+
+            <h3>Funciones</h3>
+            <ul>
+                <li>Asocia texto descriptivo al campo.</li>
+                <li>Mejora la accesibilidad.</li>
+                <li>Permite enfocar el campo al hacer clic en el texto.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Asociación <code>label</code> + <code>input</code></h2>
+            <p>
+                La asociación se realiza utilizando los atributos <code>for</code> e <code>id</code>.
+            </p>
+
+            <pre><code>&lt;label for="nombre"&gt;Nombre&lt;/label&gt;
+&lt;input type="text" id="nombre" name="nombre"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>6. Etiqueta <code>&lt;button&gt;</code></h2>
+            <p>Permite enviar el formulario o ejecutar acciones.</p>
+
+            <pre><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></pre>
+
+            <h3>Tipos Comunes</h3>
+            <ul>
+                <li><code>submit</code></li>
+                <li><code>reset</code></li>
+                <li><code>button</code></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Última actualización: 04 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
