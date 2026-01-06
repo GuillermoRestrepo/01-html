@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otros tipos de input</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>OTROS TIPOS DE INPUT EN HTML</h1>
+
+        <p>
+            Además de los campos más comunes, HTML ofrece otros valores del atributo
+            <code>type</code> en la etiqueta <code>&lt;input&gt;</code> que permiten
+            capturar distintos tipos de información y mejorar la experiencia del usuario.
+        </p>
+
+        <section>
+            <h2>1. <code>type="text"</code></h2>
+            <ul>
+                <li>Es el tipo de input más básico y utilizado.</li>
+                <li>Permite ingresar texto libre.</li>
+                <li>Es el valor por defecto si no se especifica <code>type</code>.</li>
+            </ul>
+
+            <pre><code>&lt;input type="text" name="usuario"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>2. <code>type="color"</code></h2>
+            <ul>
+                <li>Permite seleccionar un color.</li>
+                <li>Muestra un selector de colores del navegador.</li>
+                <li>El valor se devuelve en formato hexadecimal.</li>
+            </ul>
+
+            <pre><code>&lt;input type="color" name="color_favorito"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>3. <code>type="range"</code></h2>
+            <ul>
+                <li>Representa un control deslizante.</li>
+                <li>Se usa para seleccionar valores dentro de un rango.</li>
+                <li>Funciona junto con <code>min</code>, <code>max</code> y <code>step</code>.</li>
+            </ul>
+
+            <pre><code>&lt;input type="range" name="volumen" min="0" max="100"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>4. <code>type="hidden"</code></h2>
+            <ul>
+                <li>Permite enviar datos que el usuario no ve.</li>
+                <li>No se muestra en la interfaz.</li>
+                <li>Se usa para enviar identificadores o valores internos.</li>
+            </ul>
+
+            <pre><code>&lt;input type="hidden" name="id_usuario" value="123"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>5. <code>type="file"</code></h2>
+            <ul>
+                <li>Permite seleccionar archivos del dispositivo.</li>
+                <li>Abre el explorador de archivos del sistema.</li>
+                <li>Se puede limitar el tipo de archivo con <code>accept</code>.</li>
+            </ul>
+
+            <pre><code>&lt;input type="file" name="archivo"&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>¿Cuándo Usar Estos Tipos?</h2>
+            <ul>
+                <li>Cuando se requiere una entrada específica (color, archivo, rango).</li>
+                <li>Para mejorar la usabilidad del formulario.</li>
+                <li>Para reducir errores de entrada.</li>
+                <li>Para enviar información adicional sin interacción del usuario.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Última actualización: 06 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
