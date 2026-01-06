@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botones en formularios</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>BOTONES EN FORMULARIOS HTML</h1>
+
+        <p>
+            En HTML existen dos formas principales de crear botones dentro de formularios:
+            usando la etiqueta <code>&lt;input&gt;</code> con el atributo <code>type</code> y
+            usando la etiqueta <code>&lt;button&gt;</code>. Aunque ambos pueden realizar
+            acciones similares, tienen diferencias importantes.
+        </p>
+
+        <section>
+            <h2>1. <code>&lt;input&gt;</code> Como Botón</h2>
+            <p>
+                El elemento <code>&lt;input&gt;</code> puede comportarse como botón dependiendo
+                del valor de su atributo <code>type</code>.
+            </p>
+
+            <article>
+                <h3>1.1. <code>type="button"</code></h3>
+                <ul>
+                    <li>Crea un botón sin acción predeterminada.</li>
+                    <li>No envía el formulario.</li>
+                    <li>Se usa normalmente con JavaScript.</li>
+                </ul>
+
+                <pre><code>&lt;input type="button" value="Acción"&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>1.2. <code>type="submit"</code></h3>
+                <ul>
+                    <li>Envía el formulario.</li>
+                    <li>Ejecuta la acción definida en <code>action</code>.</li>
+                    <li>Es el botón de envío por defecto.</li>
+                </ul>
+
+                <pre><code>&lt;input type="submit" value="Enviar"&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>1.3. <code>type="reset"</code></h3>
+                <ul>
+                    <li>Restablece todos los campos del formulario.</li>
+                    <li>Vuelve a los valores iniciales.</li>
+                    <li>Debe usarse con precaución.</li>
+                </ul>
+
+                <pre><code>&lt;input type="reset" value="Restablecer"&gt;</code></pre>
+            </article>
+        </section>
+
+        <section>
+            <h2>2. Etiqueta <code>&lt;button&gt;</code></h2>
+            <p>
+                La etiqueta <code>&lt;button&gt;</code> es más flexible que <code>&lt;input&gt;</code>,
+                ya que puede contener texto, iconos y otras etiquetas.
+            </p>
+
+            <article>
+                <h3>2.1. <code>type="button"</code></h3>
+                <ul>
+                    <li>No envía el formulario.</li>
+                    <li>Se usa para ejecutar acciones con JavaScript.</li>
+                    <li>Es ideal para botones interactivos.</li>
+                </ul>
+
+                <pre><code>&lt;button type="button"&gt;Acción&lt;/button&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>2.2. <code>type="submit"</code></h3>
+                <ul>
+                    <li>Envía el formulario.</li>
+                    <li>Es el comportamiento por defecto de <code>&lt;button&gt;</code>.</li>
+                    <li>Debe declararse explícitamente para evitar errores.</li>
+                </ul>
+
+                <pre><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>2.3. <code>type="reset"</code></h3>
+                <ul>
+                    <li>Restablece los valores del formulario.</li>
+                    <li>Elimina los datos ingresados por el usuario.</li>
+                    <li>Su uso no es común en formularios modernos.</li>
+                </ul>
+
+                <pre><code>&lt;button type="reset"&gt;Restablecer&lt;/button&gt;</code></pre>
+            </article>
+        </section>
+
+        <section>
+            <h2>3. Diferencias Entre <code>&lt;input&gt;</code> y <code>&lt;button&gt;</code></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>&lt;input&gt;</th>
+                        <th>&lt;button&gt;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Contenido interno</td>
+                        <td>Solo texto (value)</td>
+                        <td>Texto, iconos, HTML</td>
+                    </tr>
+                    <tr>
+                        <td>Flexibilidad</td>
+                        <td>Limitada</td>
+                        <td>Alta</td>
+                    </tr>
+                    <tr>
+                        <td>Uso recomendado</td>
+                        <td>Casos simples</td>
+                        <td>Formularios modernos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>4. ¿Cuándo Usar Cada Uno?</h2>
+            <ul>
+                <li>
+                    Usa <code>&lt;button type="submit"&gt;</code> para enviar formularios.
+                </li>
+                <li>
+                    Usa <code>&lt;button type="button"&gt;</code> para acciones con JavaScript.
+                </li>
+                <li>
+                    Usa <code>&lt;input&gt;</code> solo cuando necesites simplicidad.
+                </li>
+                <li>
+                    Evita <code>reset</code> si puede causar pérdida de datos.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Última actualización: 05 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
