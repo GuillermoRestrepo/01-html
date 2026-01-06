@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos seleccionables</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ELEMENTOS SELECCIONABLES EN HTML</h1>
+
+        <p>
+            Los elementos seleccionables permiten al usuario elegir una o varias opciones
+            dentro de un formulario. HTML ofrece distintos controles según el tipo de
+            selección que se necesite.
+        </p>
+
+        <section>
+            <h2>1. <code>input type="radio"</code></h2>
+            <p>
+                Se utiliza cuando el usuario debe elegir <strong>una sola opción</strong>
+                entre varias.
+            </p>
+
+            <ul>
+                <li>Las opciones se agrupan usando el atributo <code>name</code>.</li>
+                <li>Solo un radio puede estar seleccionado a la vez.</li>
+                <li>Se suele usar junto con <code>&lt;label&gt;</code>.</li>
+            </ul>
+
+            <pre><code>&lt;label&gt;
+    &lt;input type="radio" name="genero" value="m"&gt; Masculino
+&lt;/label&gt;
+
+&lt;label&gt;
+    &lt;input type="radio" name="genero" value="f"&gt; Femenino
+&lt;/label&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>2. <code>input type="checkbox"</code></h2>
+            <p>
+                Se utiliza cuando el usuario puede seleccionar <strong>una o varias opciones</strong>.
+            </p>
+
+            <ul>
+                <li>Cada checkbox funciona de forma independiente.</li>
+                <li>Se pueden marcar múltiples opciones.</li>
+                <li>Ideal para preferencias o configuraciones.</li>
+            </ul>
+
+            <pre><code>&lt;label&gt;
+    &lt;input type="checkbox" name="lenguajes[]" value="html"&gt; HTML
+&lt;/label&gt;
+
+&lt;label&gt;
+    &lt;input type="checkbox" name="lenguajes[]" value="css"&gt; CSS
+&lt;/label&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>3. Lista desplegable: <code>&lt;select&gt;</code></h2>
+            <p>
+                Permite seleccionar una opción desde una lista desplegable.
+            </p>
+
+            <ul>
+                <li>Se compone de las etiquetas <code>&lt;select&gt;</code> y <code>&lt;option&gt;</code>.</li>
+                <li>Por defecto solo permite una selección.</li>
+                <li>Puede permitir múltiples selecciones con el atributo <code>multiple</code>.</li>
+            </ul>
+
+            <pre><code>&lt;select name="pais"&gt;
+    &lt;option value=""&gt;Seleccione un país&lt;/option&gt;
+    &lt;option value="ec"&gt;Ecuador&lt;/option&gt;
+    &lt;option value="co"&gt;Colombia&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>4. Lista de sugerencias: <code>&lt;datalist&gt;</code></h2>
+            <p>
+                Proporciona una lista de opciones sugeridas mientras el usuario escribe.
+            </p>
+
+            <ul>
+                <li>Se asocia a un <code>&lt;input&gt;</code> mediante el atributo <code>list</code>.</li>
+                <li>No obliga al usuario a elegir una opción existente.</li>
+                <li>Mejora la experiencia sin limitar la entrada.</li>
+            </ul>
+
+            <pre><code>&lt;input type="text" list="ciudades" name="ciudad"&gt;
+
+&lt;datalist id="ciudades"&gt;
+    &lt;option value="Quito"&gt;
+    &lt;option value="Guayaquil"&gt;
+    &lt;option value="Cuenca"&gt;
+&lt;/datalist&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Diferencias clave entre los elementos seleccionables</h2>
+            <ul>
+                <li><strong>radio:</strong> una sola opción obligatoria.</li>
+                <li><strong>checkbox:</strong> múltiples opciones independientes.</li>
+                <li><strong>select:</strong> lista cerrada de opciones.</li>
+                <li><strong>datalist:</strong> sugerencias abiertas para el usuario.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Última actualización: 06 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
