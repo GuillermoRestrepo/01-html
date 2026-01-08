@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes en HTML</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>USO DE IMÁGENES EN HTML</h1>
+        <p>Las imágenes son elementos fundamentales dentro de cualquier página web. Permiten ilustrar contenido, complementar información y mejorar la experiencia visual del usuario. HTML ofrece varias etiquetas y atributos para trabajar correctamente con imágenes.</p>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>1. Etiqueta Principal: <code>&lt;img&gt;</code></h2>
+            <p>Es la etiqueta usada para insertar imágenes en una página web. Es una etiqueta autocerrada (no requiere cierre).</p>
+
+            <section>
+                <h3>Uso Básico</h3>
+                <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>Atributos Esenciales</h3>
+                <ul>
+                    <li><strong>src</strong>: Indica la ruta o URL de la imagen.</li>
+                    <li><strong>alt</strong>: Describe la imagen para accesibilidad y casos donde no carga.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Importancia Del Atributo <code>alt</code></h3>
+                <ul>
+                    <li>Permite a los lectores de pantalla interpretar la imagen.</li>
+                    <li>Ayuda al posicionamiento SEO.</li>
+                    <li>Muestra texto alternativo si la imagen falla o está bloqueada.</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>2. Atributos Adicionales Comunes</h2>
+
+            <section>
+                <h3>width y height</h3>
+                <p>Establecen el tamaño de la imagen (en píxeles o porcentaje).</p>
+                <pre><code>&lt;img src="foto.jpg" width="300" height="200" alt="Foto"&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>title</h3>
+                <p>Muestra un texto emergente cuando el usuario pasa el cursor por encima.</p>
+            </section>
+
+            <section>
+                <h3>loading</h3>
+                <p>Controla la carga diferida (lazy loading).</p>
+                <ul>
+                    <li><strong>lazy</strong>: carga la imagen solo cuando está cerca de ser visible.</li>
+                    <li><strong>eager</strong>: se carga inmediatamente.</li>
+                </ul>
+                <pre><code>&lt;img src="foto.jpg" loading="lazy" alt="Foto"&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>decoding</h3>
+                <p>Indica cómo se debe decodificar la imagen.</p>
+                <ul>
+                    <li><strong>async</strong>: recomendada, permite un rendimiento más fluido.</li>
+                    <li><strong>sync</strong></li>
+                    <li><strong>auto</strong></li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>3. Etiqueta <code>&lt;picture&gt;</code>: imágenes adaptativas</h2>
+            <p>Permite definir varias versiones de la misma imagen para diferentes tamaños de pantalla o resoluciones.</p>
+
+            <section>
+                <h3>Estructura</h3>
+                <pre><code>&lt;picture&gt;
+    &lt;source srcset="imagen.webp" type="image/webp"&gt;
+    &lt;source srcset="imagen.jpg" type="image/jpeg"&gt;
+    &lt;img src="imagen.jpg" alt="Ejemplo"&gt;
+&lt;/picture&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>Ventajas</h3>
+                <ul>
+                    <li>Permite usar formatos modernos (como WebP o AVIF).</li>
+                    <li>Optimiza carga según el dispositivo.</li>
+                    <li>Mejora rendimiento y SEO.</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>4. Formatos De Imagen Más Comunes</h2>
+            <p>Cada formato tiene fortalezas y debilidades; elegir el adecuado depende de su uso.</p>
+
+            <section>
+                <h3>PNG</h3>
+                <ul>
+                    <li>Soporta transparencia.</li>
+                    <li>Alta calidad, pero archivos más pesados.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>JPG / JPEG</h3>
+                <ul>
+                    <li>Formato comprimido con pérdida.</li>
+                    <li>Ideal para fotografías.</li>
+                    <li>Archivos ligeros.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>GIF</h3>
+                <ul>
+                    <li>Solo 256 colores.</li>
+                    <li>Permite animación.</li>
+                    <li>Desuso en muchos casos.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>SVG</h3>
+                <ul>
+                    <li>Gráficos vectoriales.</li>
+                    <li>Escalables sin perder calidad.</li>
+                    <li>Perfecto para iconos y logos.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>WEBP</h3>
+                <ul>
+                    <li>Excelente calidad.</li>
+                    <li>Compresión muy alta.</li>
+                    <li>Soporta transparencia.</li>
+                    <li>Reemplazo moderno para PNG/JPEG.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>AVIF</h3>
+                <ul>
+                    <li>Mejor compresión y calidad que WebP.</li>
+                    <li>Soporta HDR.</li>
+                    <li>Formato más reciente.</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>5. ¿Cuál Es El Formato Más Recomendable?</h2>
+            <p>Depende del caso:</p>
+            <ul>
+                <li><strong>WebP</strong>: mejor equilibrio entre calidad y peso → recomendado para casi todo.</li>
+                <li><strong>AVIF</strong>: mejor calidad y compresión, pero menor soporte.</li>
+                <li><strong>SVG</strong>: ideal para logos, iconos y gráficos simples.</li>
+                <li><strong>JPG</strong>: útil para fotos si necesitas compatibilidad universal.</li>
+                <li><strong>PNG</strong>: cuando necesitas transparencias o máxima nitidez.</li>
+            </ul>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>6. Buenas Prácticas Al Usar Imágenes</h2>
+            <ul>
+                <li>Optimizar el peso antes de subirlas.</li>
+                <li>Usar <code>alt</code> descriptivo.</li>
+                <li>Preferir formatos modernos como WebP.</li>
+                <li>Evitar usar imágenes demasiado grandes.</li>
+                <li>Usar <code>&lt;picture&gt;</code> para responsive.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Última actualización: 08 de enero del 2026.</p>
+    </footer>
+
+</body>
+</html>
