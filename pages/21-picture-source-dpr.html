@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture y Source</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>USO DE LAS ETIQUETAS &lt;picture&gt; Y &lt;source&gt;</h1>
+        <p>HTML ofrece herramientas avanzadas para mostrar imágenes adaptadas a distintos dispositivos, resoluciones y condiciones. Las etiquetas <code>&lt;picture&gt;</code> y <code>&lt;source&gt;</code> permiten proporcionar varias versiones de una misma imagen, mejorando el rendimiento y la experiencia del usuario.</p>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>1. Etiqueta <code>&lt;picture&gt;</code></h2>
+            <p>La etiqueta <code>&lt;picture&gt;</code> funciona como un contenedor para definir múltiples recursos de imagen. Permite mostrar diferentes versiones según:</p>
+            <ul>
+                <li>Ancho del dispositivo.</li>
+                <li>Formato soportado por el navegador.</li>
+                <li>Resolución de pantalla.</li>
+            </ul>
+
+            <section>
+                <h3>Estructura Básica</h3>
+                <pre><code>&lt;picture&gt;
+    &lt;source srcset="imagen.avif" type="image/avif"&gt;
+    &lt;source srcset="imagen.webp" type="image/webp"&gt;
+    &lt;img src="imagen.jpg" alt="Descripción"&gt;
+&lt;/picture&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>Ventajas Del Uso De <code>&lt;picture&gt;</code></h3>
+                <ul>
+                    <li>Permite imagen responsive avanzada.</li>
+                    <li>Soporta cambio de formato según compatibilidad.</li>
+                    <li>Optimiza rendimiento en dispositivos móviles.</li>
+                    <li>Permite servir imágenes de alta resolución solo si el dispositivo lo necesita.</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>2. Etiqueta <code>&lt;source&gt;</code></h2>
+            <p>La etiqueta <code>&lt;source&gt;</code> se usa dentro de <code>&lt;picture&gt;</code> para definir condiciones específicas en las que se utilizará una imagen.</p>
+
+            <section>
+                <h3>Atributos importantes</h3>
+                <ul>
+                    <li><strong>srcset</strong>: Lista de imágenes alternativas según resolución.</li>
+                    <li><strong>media</strong>: Permite usar imágenes basadas en media queries.</li>
+                    <li><strong>type</strong>: Indica el formato (image/webp, image/avif, etc.).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Ejemplo con media queries</h3>
+                <pre><code>&lt;picture&gt;
+    &lt;source media="(max-width: 600px)" srcset="imagen-pequena.jpg"&gt;
+    &lt;source media="(min-width: 601px)" srcset="imagen-grande.jpg"&gt;
+    &lt;img src="imagen-grande.jpg" alt="Imagen adaptativa"&gt;
+&lt;/picture&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>Ejemplo Con Múltiples Resoluciones</h3>
+                <pre><code>&lt;picture&gt;
+    &lt;source 
+        srcset="foto-1x.webp 1x, foto-2x.webp 2x" 
+        type="image/webp"&gt;
+
+    &lt;img 
+        src="foto-1x.jpg" 
+        srcset="foto-1x.jpg 1x, foto-2x.jpg 2x" 
+        alt="Foto en alta resolución"&gt;
+&lt;/picture&gt;</code></pre>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>3. Device Pixel Ratio (DPR)</h2>
+            <p>El <strong>Device Pixel Ratio (DPR)</strong> es la relación entre los píxeles físicos de un dispositivo y los píxeles CSS. Indica cuántos píxeles reales se usan para dibujar un solo píxel lógico.</p>
+
+            <section>
+                <h3>Ejemplos De DPR</h3>
+                <ul>
+                    <li>DPR 1 → pantallas normales (monitores antiguos o básicos).</li>
+                    <li>DPR 2 → pantallas Retina (muchos móviles y laptops).</li>
+                    <li>DPR 3 o más → dispositivos de gama alta.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>¿Por Qué Es Importante?</h3>
+                <ul>
+                    <li>Permite mostrar imágenes más nítidas en pantallas de alta densidad.</li>
+                    <li>Evita que las imágenes se vean borrosas.</li>
+                    <li>Optimiza carga, sirviendo imágenes más pesadas solo cuando el dispositivo las necesita.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Uso De DPR Con <code>srcset</code></h3>
+                <pre><code>&lt;img 
+    src="logo-1x.png" 
+    srcset="logo-1x.png 1x, logo-2x.png 2x, logo-3x.png 3x" 
+    alt="Logo responsive"&gt;</code></pre>
+                <p>El navegador elegirá automáticamente la mejor imagen según la densidad de pantalla.</p>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>4. Combinando <code>&lt;picture&gt;</code> + <code>srcset</code> + DPR</h2>
+            <p>Es posible mezclar formatos modernos, condiciones de tamaño y resoluciones avanzadas. Esto brinda el máximo nivel de optimización.</p>
+
+            <section>
+                <h3>Ejemplo completo</h3>
+                <pre><code>&lt;picture&gt;
+    &lt;source 
+        srcset="paisaje.avif 1x, paisaje@2x.avif 2x" 
+        type="image/avif"&gt;
+
+    &lt;source 
+        srcset="paisaje.webp 1x, paisaje@2x.webp 2x" 
+        type="image/webp"&gt;
+
+    &lt;img 
+        src="paisaje.jpg" 
+        srcset="paisaje.jpg 1x, paisaje@2x.jpg 2x" 
+        alt="Paisaje adaptativo"&gt;
+&lt;/picture&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>Beneficios</h3>
+                <ul>
+                    <li>Imágenes más ligeras si el navegador soporta AVIF/WebP.</li>
+                    <li>Compatible con navegadores antiguos.</li>
+                    <li>Nitidez automática según densidad del dispositivo.</li>
+                    <li>Mejor rendimiento y menor consumo de datos móviles.</li>
+                </ul>
+            </section>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Última actualización: 08 de enero del 2026.</p>
+    </footer>
+
+</body>
+</html>
