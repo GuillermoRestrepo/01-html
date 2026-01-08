@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audios en HTML</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>AUDIOS EN HTML</h1>
+        <p>HTML permite insertar audio directamente dentro de una página web utilizando etiquetas específicas. Estas herramientas ofrecen controles, compatibilidad con múltiples formatos y diferentes formas de reproducción.</p>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>1. Etiqueta Principal: <code>&lt;audio&gt;</code></h2>
+            <p>La etiqueta <code>&lt;audio&gt;</code> es el contenedor que permite reproducir archivos de sonido. Es compatible con distintos formatos y puede incluir controles para el usuario.</p>
+
+            <section>
+                <h3>Estructura Básica</h3>
+                <pre><code>&lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+                <p>El atributo <code>controls</code> muestra los botones estándar de reproducción, pausa, volumen, etc.</p>
+            </section>
+
+            <section>
+                <h3>Ventajas</h3>
+                <ul>
+                    <li>Reproducción integrada sin plugins externos.</li>
+                    <li>Permite múltiples formatos para mayor compatibilidad.</li>
+                    <li>Compatible con dispositivos móviles y navegadores modernos.</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>2. Etiqueta <code>&lt;source&gt;</code> Dentro De Audio</code></h2>
+            <p>Cuando se quiere ofrecer el mismo audio en diferentes formatos, se utilizan varias etiquetas <code>&lt;source&gt;</code> dentro de <code>&lt;audio&gt;</code>. El navegador elige la primera opción que pueda reproducir.</p>
+
+            <section>
+                <h3>Ejemplo De Uso</h3>
+                <pre><code>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>Ventajas De Usar <code>&lt;source&gt;</code></h3>
+                <ul>
+                    <li>Mayor compatibilidad entre navegadores.</li>
+                    <li>Permite formatos modernos con mejor compresión.</li>
+                    <li>Proporciona un fallback claro al navegador.</li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>3. Formatos De Audio Recomendados</h2>
+            <p>Diferentes navegadores soportan diferentes formatos de audio. Los principales son:</p>
+
+            <section>
+                <h3>Formatos Comunes</h3>
+                <ul>
+                    <li><strong>MP3 (audio/mpeg):</strong> El más compatible; funciona en casi todos los navegadores.</li>
+                    <li><strong>OGG (audio/ogg):</strong> Formato libre; buena calidad y tamaño reducido.</li>
+                    <li><strong>WAV (audio/wav):</strong> Alta calidad, pero archivos muy pesados.</li>
+                    <li><strong>AAC (audio/aac):</strong> Soportado por Safari y dispositivos Apple.</li>
+                    <li><strong>Opus (audio/opus):</strong> Excelente compresión y calidad; ideal para web moderna.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Formato Más Aconsejable</h3>
+                <p>Para máxima compatibilidad y eficiencia:</p>
+                <ul>
+                    <li><strong>Primario:</strong> <code>.mp3</code></li>
+                    <li><strong>Alternativo:</strong> <code>.ogg</code> o <code>.opus</code></li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>4. Atributos Más Importantes De <code>&lt;audio&gt;</code></h2>
+
+            <section>
+                <h3>1. <code>controls</code></h3>
+                <p>Muestra la interfaz para reproducir audio.</p>
+                <pre><code>&lt;audio controls&gt;&lt;/audio&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>2. <code>autoplay</code></h3>
+                <p>Reproduce automáticamente (normalmente requiere estar silenciado).</p>
+                <pre><code>&lt;audio autoplay muted&gt;&lt;/audio&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>3. <code>loop</code></h3>
+                <p>Hace que el audio se repita continuamente.</p>
+                <pre><code>&lt;audio controls loop&gt;&lt;/audio&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>4. <code>muted</code></h3>
+                <p>El audio inicia silenciado.</p>
+                <pre><code>&lt;audio controls muted&gt;&lt;/audio&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>5. <code>preload</code></h3>
+                <p>Indica cómo debe cargarse el audio:</p>
+                <ul>
+                    <li><strong>none:</strong> No se carga hasta que el usuario lo reproduzca.</li>
+                    <li><strong>metadata:</strong> Solo carga información básica (duración, tamaño, etc.).</li>
+                    <li><strong>auto:</strong> Intenta cargar todo el archivo.</li>
+                </ul>
+
+                <pre><code>&lt;audio controls preload="metadata"&gt;&lt;/audio&gt;</code></pre>
+            </section>
+
+        </article>
+
+        <!-- ====================================================== -->
+        <article>
+            <h2>5. Texto Alternativo Para Navegadores Antiguos</h2>
+            <p>Si un navegador no soporta la etiqueta <code>&lt;audio&gt;</code>, todo el contenido dentro de ella se mostrará como texto. Se recomienda incluir un mensaje o un enlace de descarga.</p>
+
+            <section>
+                <h3>Ejemplo</h3>
+                <pre><code>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Tu navegador no puede reproducir audio. 
+    &lt;a href="audio.mp3"&gt;Descargar archivo&lt;/a&gt;
+&lt;/audio&gt;</code></pre>
+            </section>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Última actualización: 08 de enero del 2026.</p>
+    </footer>
+
+</body>
+</html>
