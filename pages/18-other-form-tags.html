@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otras etiquetas de formularios</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>OTRAS ETIQUETAS UTILIZADAS EN FORMULARIOS</h1>
+
+        <p>
+            Además de los campos básicos como <code>&lt;input&gt;</code> y 
+            <code>&lt;select&gt;</code>, HTML incluye otras etiquetas diseñadas para
+            mejorar la organización, accesibilidad y representación visual de datos
+            dentro de formularios.
+        </p>
+
+        <!-- FIELDSET -->
+        <section>
+            <h2>1. <code>&lt;fieldset&gt;</code></h2>
+            <p>
+                Es un contenedor que agrupa campos relacionados dentro de un formulario.
+            </p>
+
+            <ul>
+                <li>Mejora la organización visual.</li>
+                <li>Aporta semántica al formulario.</li>
+                <li>Puede usarse junto con <code>&lt;legend&gt;</code>.</li>
+                <li>Puede deshabilitarse usando <code>disabled</code>.</li>
+            </ul>
+
+            <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Información Personal&lt;/legend&gt;
+
+    &lt;label for="nombre"&gt;Nombre&lt;/label&gt;
+    &lt;input type="text" id="nombre"&gt;
+
+    &lt;label for="edad"&gt;Edad&lt;/label&gt;
+    &lt;input type="number" id="edad"&gt;
+&lt;/fieldset&gt;</code></pre>
+        </section>
+
+        <!-- LEGEND -->
+        <section>
+            <h2>2. <code>&lt;legend&gt;</code></h2>
+            <p>
+                Proporciona un título o descripción al contenido del 
+                <code>&lt;fieldset&gt;</code>.
+            </p>
+
+            <ul>
+                <li>Se muestra como encabezado del grupo.</li>
+                <li>Mejora accesibilidad para lectores de pantalla.</li>
+                <li>Debe ser el primer elemento dentro del fieldset.</li>
+            </ul>
+
+            <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Datos de contacto&lt;/legend&gt;
+&lt;/fieldset&gt;</code></pre>
+        </section>
+
+        <!-- TEXTAREA -->
+        <section>
+            <h2>3. <code>&lt;textarea&gt;</code></h2>
+            <p>
+                Permite introducir texto de varias líneas.
+            </p>
+
+            <ul>
+                <li>Ideal para mensajes, comentarios o descripciones.</li>
+                <li>Puede ajustarse con <code>rows</code> y <code>cols</code>.</li>
+                <li>Permite redimensionarse dependiendo del navegador.</li>
+                <li>No es una etiqueta autocerrada.</li>
+            </ul>
+
+            <pre><code>&lt;textarea id="mensaje" rows="4" cols="40"&gt;Escribe aquí...&lt;/textarea&gt;</code></pre>
+        </section>
+
+        <!-- METER -->
+        <section>
+            <h2>4. <code>&lt;meter&gt;</code></h2>
+            <p>
+                Representa un valor dentro de un rango conocido, útil para indicadores.
+            </p>
+
+            <ul>
+                <li>Útil para niveles como batería, almacenamiento, reputación.</li>
+                <li>Requiere atributos como <code>min</code>, <code>max</code> y <code>value</code>.</li>
+                <li>No es una barra de progreso, sino un medidor.</li>
+            </ul>
+
+            <pre><code>&lt;meter min="0" max="100" value="70"&gt;70%&lt;/meter&gt;</code></pre>
+        </section>
+
+        <!-- PROGRESS -->
+        <section>
+            <h2>5. <code>&lt;progress&gt;</code></h2>
+            <p>
+                Muestra el progreso de una tarea en curso.
+            </p>
+
+            <ul>
+                <li>Ideal para cargas, descargas o procesos.</li>
+                <li>Puede mostrar progreso definido o indeterminado.</li>
+                <li>No representa un valor estático como meter.</li>
+            </ul>
+
+            <pre><code>&lt;progress max="100" value="45"&gt;45%&lt;/progress&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>Diferencias clave entre <code>meter</code> y <code>progress</code></h2>
+            <ul>
+                <li><strong>meter:</strong> indica un valor dentro de un rango conocido.</li>
+                <li><strong>progress:</strong> indica el avance de una tarea que cambia con el tiempo.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Última actualización: 07 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
