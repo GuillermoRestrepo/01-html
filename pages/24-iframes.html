@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes en HTML</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>IFRAMES EN HTML</h1>
+        <p>La etiqueta <code>&lt;iframe&gt;</code> permite incrustar contenido externo dentro de una página web. Puede incluir otras páginas HTML, videos, mapas, documentos y más.</p>
+
+        <article>
+            <h2>1. ¿Qué Es Un Iframe?</h2>
+            <p>Un <strong>iframe</strong> (Inline Frame) es un marco embebido que carga una página o recurso externo dentro del documento actual.</p>
+
+            <section>
+                <h3>Ejemplo Básico:</h3>
+                <pre><code>&lt;iframe src="pagina.html"&gt;&lt;/iframe&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>2. Atributos Principales De &lt;iframe&gt;</h2>
+            <ul>
+                <li><strong>src</strong>: URL o ruta del contenido a mostrar.</li>
+                <li><strong>width</strong>: ancho del iframe.</li>
+                <li><strong>height</strong>: alto del iframe.</li>
+                <li><strong>title</strong>: describe el contenido para accesibilidad.</li>
+                <li><strong>loading</strong>: controla la carga diferida (<em>lazy</em>).</li>
+                <li><strong>allow</strong>: permite permisos al contenido incrustado.</li>
+                <li><strong>sandbox</strong>: restringe funcionalidades por seguridad.</li>
+                <li><strong>referrerpolicy</strong>: controla si se envía información del referidor.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo Con Atributos:</h3>
+                <pre><code>&lt;iframe 
+    src="https://example.com"
+    width="600"
+    height="400"
+    title="Contenido externo"
+    loading="lazy"&gt;
+&lt;/iframe&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>3. Seguridad En Iframes</h2>
+            <p>Los iframes pueden representar riesgos de seguridad si cargan contenido no confiable. Para mitigarlos, existen atributos específicos:</p>
+
+            <section>
+                <h3>3.1 Atributo <code>sandbox</code></h3>
+                <p>Restringe lo que puede hacer el contenido del iframe. Sin parámetros, bloquea casi todo.</p>
+
+                <ul>
+                    <li><strong>allow-scripts</strong>: permite ejecutar scripts.</li>
+                    <li><strong>allow-same-origin</strong>: permite tratar el contenido como del mismo origen.</li>
+                    <li><strong>allow-forms</strong>: permite enviar formularios.</li>
+                    <li><strong>allow-popups</strong>: permite abrir ventanas emergentes.</li>
+                </ul>
+
+                <pre><code>&lt;iframe src="pagina.html" sandbox="allow-scripts allow-forms"&gt;&lt;/iframe&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>3.2 Atributo <code>allow</code></h3>
+                <p>Define qué permisos se otorgan al iframe.</p>
+
+                <ul>
+                    <li><strong>camera</strong>: acceso a la cámara.</li>
+                    <li><strong>microphone</strong>: acceso al micrófono.</li>
+                    <li><strong>fullscreen</strong>: permitir modo pantalla completa.</li>
+                </ul>
+
+                <pre><code>&lt;iframe src="video.html" allow="fullscreen"&gt;&lt;/iframe&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>4. Casos Comunes De Uso</h2>
+            <ul>
+                <li>Incrustar mapas (Google Maps).</li>
+                <li>Incrustar videos desde plataformas externas.</li>
+                <li>Mostrar contenido HTML independiente.</li>
+                <li>Mostrar widgets externos (clima, feeds, etc.).</li>
+                <li>Incrustar documentos (PDF, presentaciones, etc.).</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo De Uso Con Google Maps:</h3>
+                <pre><code>&lt;iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18..."
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"&gt;
+&lt;/iframe&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>5. Buenas Prácticas</h2>
+            <ul>
+                <li>Usar <strong>title</strong> para accesibilidad.</li>
+                <li>Preferir <strong>loading="lazy"</strong> para mejorar rendimiento.</li>
+                <li>Aplicar <strong>sandbox</strong> al contenido no confiable.</li>
+                <li>Evitar cargar muchos iframes en una sola página.</li>
+                <li>Utilizar dimensiones proporcionales (CSS) para videos e incrustaciones.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Última actualización: 09 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
