@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos en HTML</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>VIDEOS EN HTML</h1>
+        <p>HTML permite insertar y reproducir contenido multimedia nativo sin depender de plugins externos. La etiqueta principal para trabajar con videos es <code>&lt;video&gt;</code>.</p>
+
+        <article>
+            <h2>1. Etiqueta <code>&lt;video&gt;</code></h2>
+            <p>Es la etiqueta principal para mostrar videos en una página web.</p>
+
+            <section>
+                <h3>Ejemplo Básico:</h3>
+                <pre><code>&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>Atributos Principales:</h3>
+                <ul>
+                    <li><strong>controls</strong>: muestra los controles del reproductor (play, pausa, volumen, etc.).</li>
+                    <li><strong>autoplay</strong>: reproduce el video automáticamente al cargar la página.</li>
+                    <li><strong>loop</strong>: reproduce el video en bucle.</li>
+                    <li><strong>muted</strong>: inicia el video sin sonido.</li>
+                    <li><strong>poster</strong>: muestra una imagen previa antes de reproducir el video.</li>
+                    <li><strong>width</strong> y <strong>height</strong>: definen el tamaño del reproductor.</li>
+                    <li><strong>preload</strong>: controla si el video debe cargarse antes de reproducción (<em>none</em>, <em>metadata</em> o <em>auto</em>).</li>
+                </ul>
+            </section>
+        </article>
+
+        <article>
+            <h2>2. Etiqueta <code>&lt;source&gt;</code></h2>
+            <p>Permite definir múltiples archivos de video con distintos formatos para mejorar compatibilidad.</p>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    Tu navegador no soporta el video.
+&lt;/video&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>3. Formatos De Video Compatibles</h2>
+            <ul>
+                <li><strong>MP4 (H.264 + AAC)</strong>: el formato más compatible entre navegadores.</li>
+                <li><strong>WebM</strong>: buena compresión y calidad. Formato abierto.</li>
+                <li><strong>Ogg/Theora</strong>: menos usado, pero soportado por navegadores modernos.</li>
+            </ul>
+
+            <section>
+                <h3>Formato Recomendado:</h3>
+                <p>El formato más aconsejable es <strong>MP4</strong> por su compatibilidad universal en prácticamente todos los navegadores y dispositivos.</p>
+            </section>
+        </article>
+
+        <article>
+            <h2>4. Subtítulos Y Pistas (<code>&lt;track&gt;</code>)</h2>
+            <p>Se usa dentro de <code>&lt;video&gt;</code> para agregar subtítulos, descripciones de audio u otros tipos de pistas.</p>
+
+            <section>
+                <h3>Ejemplo:</h3>
+                <pre><code>&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español"&gt;
+&lt;/video&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>5. Buenas Prácticas</h2>
+            <ul>
+                <li>Optimizar el tamaño del archivo para mejorar el rendimiento.</li>
+                <li>Incluir varios formatos usando <code>&lt;source&gt;</code>.</li>
+                <li>Usar <code>controls</code> para mejorar usabilidad.</li>
+                <li>Evitar <code>autoplay</code> con sonido porque afecta la experiencia del usuario.</li>
+                <li>Utilizar <code>poster</code> para mostrar una miniatura atractiva.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Última actualización: 09 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
