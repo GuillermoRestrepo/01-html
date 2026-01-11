@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure y Figcaption</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>FIGURE Y FIGCAPTION EN HTML</h1>
+        <p>Las etiquetas <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code> se utilizan para agrupar contenido visual o ilustrativo junto con una descripción o leyenda relacionada. Estas etiquetas mejoran la semántica y la accesibilidad del documento.</p>
+
+        <article>
+            <h2>1. ¿Qué Es La Etiqueta &lt;figure&gt;?</h2>
+            <p><strong>&lt;figure&gt;</strong> es un contenedor semántico diseñado para agrupar contenido independiente del flujo principal, generalmente medios como imágenes, gráficos, código, tablas u otros elementos ilustrativos.</p>
+
+            <ul>
+                <li>Representa un contenido que podría moverse de lugar sin afectar el significado del texto.</li>
+                <li>Mejora la semántica del documento.</li>
+                <li>Se usa comúnmente para imágenes con descripción.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo Básico:</h3>
+                <pre><code>&lt;figure&gt;
+    &lt;img src="imagen.jpg" alt="Descripción de imagen"&gt;
+&lt;/figure&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>2. ¿Qué Es La Etiqueta &lt;figcaption&gt;?</h2>
+            <p><strong>&lt;figcaption&gt;</strong> proporciona una leyenda o descripción para el contenido dentro de <code>&lt;figure&gt;</code>. Es opcional pero muy útil para accesibilidad y claridad.</p>
+
+            <ul>
+                <li>Debe colocarse como hijo directo de <code>&lt;figure&gt;</code>.</li>
+                <li>Puede ubicarse antes o después del contenido ilustrativo.</li>
+                <li>Se utiliza para explicar o contextualizar la imagen o figura.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo Con Figcaption:</h3>
+                <pre><code>&lt;figure&gt;
+    &lt;img src="playa.jpg" alt="Playa al atardecer"&gt;
+    &lt;figcaption&gt;Fotografía de una playa al atardecer.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>3. Atributos De &lt;figure&gt; Y &lt;figcaption&gt;</h2>
+            <p>Las etiquetas <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code> no poseen atributos propios especiales, pero admiten los atributos globales de HTML:</p>
+
+            <ul>
+                <li><strong>id</strong>: identifica la figura.</li>
+                <li><strong>class</strong>: permite aplicar estilos.</li>
+                <li><strong>style</strong>: define estilos en línea.</li>
+                <li><strong>title</strong>: añade información contextual.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo Con Atributos Globales:</h3>
+                <pre><code>&lt;figure id="grafico-ventas" class="figura-destacada"&gt;
+    &lt;img src="grafico.png" alt="Gráfico de ventas 2025"&gt;
+    &lt;figcaption&gt;Gráfico oficial de ventas del año 2025.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>4. ¿Cuándo Usar &lt;figure&gt;?</h2>
+            <p>Es recomendable utilizar esta etiqueta en los siguientes casos:</p>
+
+            <ul>
+                <li>Cuando la imagen requiere una explicación adicional.</li>
+                <li>Cuando el contenido es independiente del texto.</li>
+                <li>Cuando se necesita un elemento más semántico para SEO y accesibilidad.</li>
+                <li>Para gráficos, code snippets, diagramas, tablas ilustrativas.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo Con Código Dentro De Figure:</h3>
+                <pre><code>&lt;figure&gt;
+    &lt;pre&gt;&lt;code&gt;console.log("Hola Mundo");&lt;/code&gt;&lt;/pre&gt;
+    &lt;figcaption&gt;Ejemplo de impresión en consola con JavaScript.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>5. Beneficios Del Uso De Figure Y Figcaption</h2>
+            <ul>
+                <li>Mejor semántica del documento HTML.</li>
+                <li>Mayor accesibilidad para personas que usan lectores de pantalla.</li>
+                <li>Contenido visual más organizado.</li>
+                <li>Posicionamiento SEO mejorado.</li>
+                <li>Separación clara entre contenido principal y contenido complementario.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Última actualización: 10 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
