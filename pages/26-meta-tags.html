@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas Meta en HTML</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ETIQUETAS META EN HTML</h1>
+        <p>Las etiquetas <code>&lt;meta&gt;</code> se utilizan dentro de la sección <code>&lt;head&gt;</code> para definir metadatos sobre el documento. Estos datos no son visibles en la página, pero sí son esenciales para navegadores, motores de búsqueda y aplicaciones internas del sistema.</p>
+
+        <article>
+            <h2>1. ¿Qué Es Una tiqueta Meta?</h2>
+            <p>Una etiqueta <code>&lt;meta&gt;</code> es un elemento vacío (no tiene etiqueta de cierre) que proporciona información extra sobre la página. Los navegadores la usan para interpretar correctamente el documento y ciertos servicios externos pueden utilizarla para extraer información técnica.</p>
+
+            <ul>
+                <li>No se muestra en pantalla.</li>
+                <li>Debe colocarse siempre dentro del <code>&lt;head&gt;</code>.</li>
+                <li>Ayuda a controlar comportamientos del navegador.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplo Básico:</h3>
+                <pre><code>&lt;meta name="description" content="Página sobre etiquetas meta en HTML"&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>2. Atributos Principales De La Etiqueta &lt;meta&gt;</h2>
+
+            <ul>
+                <li><strong>name</strong>: especifica el tipo de metadato (autor, descripción, etc.).</li>
+                <li><strong>content</strong>: contiene la información del metadato.</li>
+                <li><strong>charset</strong>: establece la codificación del documento.</li>
+                <li><strong>http-equiv</strong>: permite definir encabezados HTTP dentro del HTML.</li>
+            </ul>
+
+            <section>
+                <h3>Ejemplos:</h3>
+                <pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="author" content="Juan Pérez"&gt;
+&lt;meta http-equiv="refresh" content="20"&gt;</code></pre>
+            </section>
+        </article>
+
+        <article>
+            <h2>3. Tipos Comunes De Metaetiquetas</h2>
+
+            <article>
+                <h3>3.1. Codificación De Caracteres</h3>
+                <p>Define cómo se interpretan los caracteres especiales del documento.</p>
+                <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>3.2. Meta Viewport (importante para móviles)</h3>
+                <p>Ajusta el ancho y la escala del contenido para que se vea correctamente en dispositivos móviles.</p>
+                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>3.3. Descripción Del Sitio</h3>
+                <p>Proporciona un resumen breve de la página, útil para buscadores.</p>
+                <pre><code>&lt;meta name="description" content="Curso completo de HTML"&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>3.4. Palabras Clave (obsoleto para SEO moderno)</h3>
+                <p>Pueden usarse, pero los motores de búsqueda ya no consideran este metadato para posicionamiento.</p>
+                <pre><code>&lt;meta name="keywords" content="HTML, programación, desarrollo web"&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>3.5. Autor Del Documento</h3>
+                <p>Especifica quién creó la página.</p>
+                <pre><code>&lt;meta name="author" content="Nombre del autor"&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>3.6. Control De Caché</h3>
+                <p>Utiliza <code>http-equiv</code> para definir directrices de almacenamiento.</p>
+                <pre><code>&lt;meta http-equiv="cache-control" content="no-cache"&gt;</code></pre>
+            </article>
+
+            <article>
+                <h3>3.7. Redirecciones Automáticas</h3>
+                <p>Permiten recargar la página o enviar al usuario a otra ruta después de un tiempo.</p>
+                <pre><code>&lt;meta http-equiv="refresh" content="5; url=otra-pagina.html"&gt;</code></pre>
+            </article>
+        </article>
+
+        <article>
+            <h2>4. Importancia DDl Uso De Metaetiquetas</h2>
+            <ul>
+                <li>Mejoran la accesibilidad del documento.</li>
+                <li>Ayudan a los motores de búsqueda a interpretar el contenido.</li>
+                <li>Permiten controlar cómo se visualiza la página en dispositivos móviles.</li>
+                <li>Definen parámetros técnicos como codificación o comportamiento del navegador.</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer>
+        <p>Última actualización: 10 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
