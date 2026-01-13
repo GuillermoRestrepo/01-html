@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo Twitter Cards</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>PROTOCOLO TWITTER CARDS</h1>
+
+        <p>
+            <strong>Twitter Cards</strong> permite mostrar vistas previas enriquecidas de enlaces 
+            compartidos en Twitter. Funciona mediante metaetiquetas colocadas en la sección 
+            <code>&lt;head&gt;</code>.
+        </p>
+
+        <article>
+            <h2>1. Tipos De Twitter Cards</h2>
+
+            <ul>
+                <li><strong>summary</strong>: Tarjeta con imagen pequeña.</li>
+                <li><strong>summary_large_image</strong>: Tarjeta con imagen grande (la más utilizada).</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>2. Etiquetas Principales</h2>
+
+            <ul>
+                <li><strong>twitter:card</strong>: Tipo de tarjeta.</li>
+                <li><strong>twitter:title</strong>: Título que se mostrará.</li>
+                <li><strong>twitter:description</strong>: Descripción.</li>
+                <li><strong>twitter:image</strong>: URL de la imagen.</li>
+                <li><strong>twitter:site</strong>: Usuario del sitio (opcional).</li>
+            </ul>
+
+            <h3>Ejemplo:</h3>
+            <pre><code>&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Mi Página"&gt;
+&lt;meta name="twitter:description" content="Descripción breve del contenido."&gt;
+&lt;meta name="twitter:image" content="https://ejemplo.com/imagen.jpg"&gt;
+</code></pre>
+        </article>
+
+        <article>
+            <h2>3. Diferencias Respecto A Open Graph</h2>
+
+            <ul>
+                <li>Es exclusivo de Twitter, mientras que Open Graph es general.</li>
+                <li>Usa nombres de atributos distintos.</li>
+                <li>Puede usar Open Graph como respaldo si faltan etiquetas.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Última actualización: 12 de enero del 2026.</p>
+    </footer>
+
+</body>
+</html>
