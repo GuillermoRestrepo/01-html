@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento sobre la etiqueta link</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>LA ETIQUETA &lt;link&gt; EN HTML</h1>
+        <p>
+            La etiqueta <strong>&lt;link&gt;</strong> es un elemento vacío (sin cierre) que se utiliza para 
+            definir relaciones entre el documento HTML y recursos externos. 
+            Su ubicación correcta es siempre dentro del elemento <strong>&lt;head&gt;</strong>.
+        </p>
+
+        <h2>¿Para Qué Se Etiliza La Etiqueta &lt;link&gt;?</h2>
+        <p>Los usos más comunes son:</p>
+
+        <ul>
+            <li>Vincular hojas de estilo CSS externas.</li>
+            <li>Definir iconos del sitio (favicon).</li>
+            <li>Cargar fuentes externas.</li>
+            <li>Definir recursos alternativos (como estilos alternativos).</li>
+            <li>Precargar, prerenderizar o preconectar recursos.</li>
+        </ul>
+
+        <h2>Atributos Principales De &lt;link&gt;</h2>
+
+        <h3>1. <code>rel</code> (relationship)</h3>
+        <p>Define la relación del documento con el recurso. Es el atributo más importante.</p>
+
+        <p>Valores comunes:</p>
+        <ul>
+            <li><strong>stylesheet</strong>: indica que es una hoja de estilo CSS.</li>
+            <li><strong>icon</strong>: define el favicon.</li>
+            <li><strong>preload</strong>: permite precargar un recurso clave.</li>
+            <li><strong>preconnect</strong>: prepara la conexión con un servidor externo.</li>
+            <li><strong>alternate</strong>: define variantes del documento.</li>
+            <li><strong>manifest</strong>: para aplicaciones web progresivas (PWA).</li>
+        </ul>
+
+        <h3>2. <code>href</code></h3>
+        <p>Especifica la URL del recurso indicado.</p>
+
+        <h3>3. <code>type</code></h3>
+        <p>Indica el tipo MIME del recurso. No siempre es necesario.</p>
+
+        <h3>4. <code>sizes</code></h3>
+        <p>Se usa en iconos para indicar su tamaño en píxeles.</p>
+
+        <h3>5. <code>media</code></h3>
+        <p>Define condiciones para aplicar un recurso (como hojas de estilo para dispositivos específicos).</p>
+
+        <h3>6. <code>as</code></h3>
+        <p>Usado cuando <code>rel="preload"</code> para indicar el tipo de recurso que se precarga.</p>
+
+        <h2>Ejemplos De Uso</h2>
+
+        <h3>1. Vincular Un Archivo CSS</h3>
+        <pre>
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+        </pre>
+
+        <h3>2. Usar Un Favicon</h3>
+        <pre>
+    &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+        </pre>
+
+        <h3>3. Precargar Recursos</h3>
+        <pre>
+    &lt;link rel="preload" href="hero-image.jpg" as="image"&gt;
+    &lt;link rel="preload" href="main.css" as="style"&gt;
+        </pre>
+
+        <h3>4. Preconectar Para Mejorar Rendimiento</h3>
+        <pre>
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+        </pre>
+
+        <h3>5. Cargar Fuentes Externas</h3>
+        <pre>
+    &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto"&gt;
+        </pre>
+
+        <h3>6. Hojas De Estilo Alternativas</h3>
+        <pre>
+    &lt;link rel="alternate stylesheet" href="dark-mode.css" title="Modo Oscuro"&gt;
+        </pre>
+
+        <h2>Buenas Prácticas</h2>
+
+        <ul>
+            <li>Colocar siempre la etiqueta dentro del &lt;head&gt;.</li>
+            <li>Optimizar el rendimiento usando <code>preload</code> y <code>preconnect</code> cuando sea necesario.</li>
+            <li>Evitar cargar hojas de estilo externas innecesarias.</li>
+            <li>Comprimir y minimizar los archivos vinculados (CSS, iconos, etc.).</li>
+            <li>Usar tamaños correctos para los iconos del sitio.</li>
+        </ul>
+
+        <h2>Errores Comunes</h2>
+        <ul>
+            <li>Intentar cerrar la etiqueta (&lt;/link&gt;), lo cual es incorrecto.</li>
+            <li>Olvidar el atributo <code>rel</code>, haciendo que el navegador no sepa cómo usar el recurso.</li>
+            <li>Cargar demasiados estilos externos que afecten al rendimiento.</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>Última actualización: 12 de enero del 2026.</p>
+    </footer>
+</body>
+</html>
