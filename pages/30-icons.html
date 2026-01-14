@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Iconos y Favicons</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ICONOS Y FAVICONS EN HTML</h1>
+
+        <p>
+            Los íconos y favicons se utilizan para identificar un sitio web en navegadores, 
+            pestañas, marcadores, accesos directos y dispositivos móviles.
+            Se definen mediante la etiqueta <code>&lt;link&gt;</code> dentro del <code>&lt;head&gt;</code>.
+        </p>
+
+        <article>
+            <h2>1. ¿Qué Es Un Favicon?</h2>
+            <ul>
+                <li>Es el pequeño ícono que aparece en la pestaña del navegador.</li>
+                <li>Representa visualmente al sitio web.</li>
+                <li>Puede mostrarse también en marcadores o historial.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>2. Formatos Recomendados</h2>
+            <ul>
+                <li><strong>.ico</strong> — El más compatible con todos los navegadores.</li>
+                <li><strong>.png</strong> — Alta calidad, recomendado para pantallas modernas.</li>
+                <li><strong>.svg</strong> — Escalable, ideal para diseños limpios (no compatible con todos los navegadores antiguos).</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>3. Tamaños Comunes</h2>
+            <ul>
+                <li>16×16 px — Pestañas del navegador.</li>
+                <li>32×32 px — Favoritos o accesos directos.</li>
+                <li>180×180 px — Icono para Apple Touch.</li>
+                <li>192×192 / 512×512 px — Para Android o PWA.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>4. Cómo Agregar Un Favicon</h2>
+            <p>Se debe añadir dentro de <code>&lt;head&gt;</code> usando la etiqueta <code>&lt;link&gt;</code>.</p>
+
+            <h3>Ejemplo básico:</h3>
+            <pre><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code></pre>
+
+            <h3>Ejemplo usando PNG:</h3>
+            <pre><code>&lt;link rel="icon" href="favicon.png" type="image/png"&gt;</code></pre>
+        </article>
+
+        <article>
+            <h2>5. Iconos Para Dispositivos Móviles</h2>
+            <p>Los dispositivos Apple requieren un ícono especial.</p>
+
+            <pre><code>&lt;link rel="apple-touch-icon" href="apple-icon.png"&gt;</code></pre>
+
+            <p>Para Android o PWA:</p>
+
+            <pre><code>&lt;link rel="icon" sizes="192x192" href="icon-192.png"&gt;
+&lt;link rel="icon" sizes="512x512" href="icon-512.png"&gt;</code></pre>
+        </article>
+
+        <article>
+            <h2>6. Buenas pPrácticas</h2>
+            <ul>
+                <li>Incluir varios tamaños para mejor compatibilidad.</li>
+                <li>Usar imágenes simples y de buena resolución.</li>
+                <li>Preferir PNG para mejor calidad, ICO para compatibilidad total.</li>
+                <li>Utilizar rutas absolutas si el ícono no carga correctamente.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Última actualización: 13 de enero del 2026.</p>
+    </footer>
+
+</body>
+</html>
