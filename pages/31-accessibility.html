@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad en HTML</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ACCESIBILIDAD EN HTML</h1>
+
+        <p>
+            La accesibilidad en HTML permite que las páginas web sean utilizables por todas las personas, 
+            incluyendo usuarios con discapacidades visuales, auditivas, cognitivas o motrices.  
+            HTML incorpora atributos especiales y buenas prácticas para mejorar la experiencia en lectores de pantalla, 
+            navegación por teclado y otras tecnologías asistivas.
+        </p>
+
+        <article>
+            <h2>1. Atributo <code>alt</code> En Imágenes</h2>
+            <ul>
+                <li>Proporciona una descripción textual de la imagen.</li>
+                <li>Es fundamental para lectores de pantalla.</li>
+                <li>Permite entender el contenido cuando la imagen no carga.</li>
+            </ul>
+
+            <pre><code>&lt;img src="foto.jpg" alt="Persona usando un computador"&gt;</code></pre>
+        </article>
+
+        <article>
+            <h2>2. Atributo <code>title</code></h2>
+            <ul>
+                <li>Muestra información adicional al pasar el mouse (tooltip).</li>
+                <li>No reemplaza a <code>alt</code>.</li>
+                <li>Puede servir para aclarar funciones de enlaces o botones.</li>
+            </ul>
+
+            <pre><code>&lt;a href="descarga.pdf" title="Descargar archivo en PDF"&gt;Descargar&lt;/a&gt;</code></pre>
+        </article>
+
+        <article>
+            <h2>3. Atributos ARIA (Accessible Rich Internet Applications)</h2>
+            <p>Se utilizan para mejorar la semántica en elementos complejos o personalizados.</p>
+
+            <h3>3.1. <code>role</code></h3>
+            <ul>
+                <li>Define el propósito del elemento.</li>
+                <li>Útil cuando un elemento no semántico actúa como otro.</li>
+            </ul>
+
+            <pre><code>&lt;div role="button"&gt;Abrir menú&lt;/div&gt;</code></pre>
+
+            <h3>3.2. Atributos aria-*</h3>
+            <ul>
+                <li><code>aria-label</code>: etiqueta accesible sin texto visible.</li>
+                <li><code>aria-labelledby</code>: etiqueta accesible enlazada a otro elemento.</li>
+                <li><code>aria-describedby</code>: agrega descripción adicional.</li>
+                <li><code>aria-hidden</code>: oculta elementos a lectores de pantalla.</li>
+            </ul>
+
+            <pre><code>&lt;button aria-label="Abrir menú de usuario"&gt;
+    &lt;img src="icono-menu.svg" alt=""&gt;
+&lt;/button&gt;</code></pre>
+        </article>
+
+        <article>
+            <h2>4. Navegación Mediante Teclado</h2>
+
+            <h3>4.1. Atributo <code>tabindex</code></h3>
+            <ul>
+                <li>Define el orden de navegación por teclado.</li>
+                <li><code>0</code>: elemento entra en el orden natural.</li>
+                <li><code>-1</code>: accesible por JavaScript, pero no por tabulación.</li>
+            </ul>
+
+            <pre><code>&lt;div tabindex="0"&gt;Elemento enfocable&lt;/div&gt;</code></pre>
+        </article>
+
+        <article>
+            <h2>5. Atributo <code>lang</code></h2>
+            <ul>
+                <li>Indica el idioma del documento o fragmento.</li>
+                <li>Ayuda a los lectores de pantalla a pronunciar correctamente.</li>
+            </ul>
+
+            <pre><code>&lt;p lang="en"&gt;Hello World&lt;/p&gt;</code></pre>
+        </article>
+
+        <article>
+            <h2>6. Etiquetas Semánticas Para Accesibilidad</h2>
+            <ul>
+                <li><code>&lt;header&gt;</code> — Encabezado</li>
+                <li><code>&lt;main&gt;</code> — Contenido principal</li>
+                <li><code>&lt;nav&gt;</code> — Navegación</li>
+                <li><code>&lt;section&gt;</code> — Sección temática</li>
+                <li><code>&lt;article&gt;</code> — Contenido independiente</li>
+                <li><code>&lt;footer&gt;</code> — Pie de página</li>
+            </ul>
+
+            <p>Estas etiquetas ayudan a los lectores de pantalla a entender la estructura del documento.</p>
+        </article>
+
+        <article>
+            <h2>7. Contraste Y Texto Visible</h2>
+            <ul>
+                <li>Los enlaces deben ser distinguibles (color + subrayado).</li>
+                <li>El texto debe tener suficiente contraste con el fondo.</li>
+                <li>No depender solo del color para transmitir información.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Última actualización: 13 de enero del 2026.</p>
+    </footer>
+
+</body>
+</html>
