@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de documento</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html">Índice</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Estructura básica de un documento HTML</h1>
+        <p>La estructura básica de un documento HTML contiene los siguientes elementos:</p>
+
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Título de la página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <article>
+            <header>
+                <h2>1. &lt;!DOCTYPE html&gt;</h2>
+            </header>
+
+            <section>
+                <h3>¿Qué es?</h3>
+                <p>No es una etiqueta HTML.</p>
+                <p>Es una declaración que le dice al navegador:</p>
+                <blockquote>
+                    «Este documento utiliza HTML5.»
+                </blockquote>
+                <p>Debe ir siempre en la primera línea del documento.</p>
+            </section>
+
+            <section>
+                <h3>¿Por qué es importante?</h3>
+                <p>
+                    Sin esta declaración, el navegador puede entrar en modo quirks 
+                    (modo de compatibilidad heredada) y el diseño puede comportarse de manera inesperada.
+                </p>
+                <p>Siempre debe escribirse exactamente así:</p>
+
+                <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+
+                <p><strong>No lleva etiqueta de cierre.</strong></p>
+            </section>
+        </article>
+
+        <article>
+            <header>
+                <h2>2. &lt;html&gt;</h2>
+            </header>
+
+            <p>Es el elemento raíz del documento.</p>
+            <p>Todo el contenido debe estar dentro de esta etiqueta.</p>
+
+            <pre><code>&lt;html lang="es"&gt;</code></pre>
+
+            <section>
+                <h3>El atributo <code>lang</code></h3>
+                <p>Indica el idioma principal del contenido.</p>
+
+                <h4>Ejemplos:</h4>
+                <ul>
+                    <li><code>&lt;html lang="es"&gt;</code></li>
+                    <li><code>&lt;html lang="en"&gt;</code></li>
+                    <li><code>&lt;html lang="fr"&gt;</code></li>
+                </ul>
+
+                <h4>Esto mejora:</h4>
+                <ul>
+                    <li>La accesibilidad</li>
+                    <li>El SEO</li>
+                    <li>El funcionamiento de los lectores de pantalla</li>
+                </ul>
+            </section>
+        </article>
+
+        <article>
+            <header>
+                <h2>3. &lt;head&gt;</h2>
+            </header>
+
+            <p>Contiene información sobre el documento.</p>
+            <p><strong>Nada dentro del &lt;head&gt; se muestra como contenido visual de la página.</strong></p>
+
+            <section>
+                <h3>Elementos importantes dentro del &lt;head&gt;</h3>
+
+                <article>
+                    <h4>&lt;meta charset="UTF-8"&gt;</h4>
+                    <p>Define la codificación de caracteres.</p>
+                    <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+                    <p>Permite usar:</p>
+                    <ul>
+                        <li>Tildes</li>
+                        <li>La letra ñ</li>
+                        <li>Símbolos especiales</li>
+                    </ul>
+                    <p>Siempre debe colocarse al inicio del &lt;head&gt;.</p>
+                </article>
+
+                <article>
+                    <h4>&lt;meta name="viewport"&gt;</h4>
+                    <p>Es esencial para el diseño responsive.</p>
+                    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                    <p>Permite que la página se adapte correctamente en dispositivos móviles.</p>
+                    <p><strong>Actualmente es un estándar en proyectos reales.</strong></p>
+                </article>
+
+                <article>
+                    <h4>&lt;title&gt;</h4>
+                    <p>Define el título que aparece en:</p>
+                    <ul>
+                        <li>La pestaña del navegador</li>
+                        <li>Los resultados de búsqueda</li>
+                    </ul>
+                    <pre><code>&lt;title&gt;Mi página web&lt;/title&gt;</code></pre>
+                    <p>Debe existir siempre en todo documento HTML.</p>
+                </article>
+
+                <article>
+                    <h4>&lt;link&gt; (para CSS)</h4>
+                    <p>Permite conectar hojas de estilo externas.</p>
+                    <pre><code>&lt;link rel="stylesheet" href="estilos.css"&gt;</code></pre>
+                </article>
+
+                <article>
+                    <h4>&lt;script&gt; (para JavaScript)</h4>
+                    <p>Se utiliza para incluir código JavaScript. Puede colocarse dentro del &lt;head&gt; o antes de cerrar la etiqueta &lt;body&gt;.</p>
+                </article>
+            </section>
+        </article>
+
+        <article>
+            <header>
+                <h2>4. &lt;body&gt;</h2>
+            </header>
+
+            <p>Aquí va <strong>todo el contenido visible</strong> de la página.</p>
+
+            <h4>Ejemplo:</h4>
+            <pre><code>&lt;body&gt;
+    &lt;h1&gt;Hola mundo&lt;/h1&gt;
+    &lt;p&gt;Bienvenido a mi sitio web.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+        </article>
+    </main>
+
+    <footer>
+        <p>Última modificación: 28 de febrero de 2026.</p>
+    </footer>
+</body>
+</html>
